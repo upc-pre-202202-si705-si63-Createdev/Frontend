@@ -18,6 +18,8 @@ import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 import{MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/artesanos-listar.component';
+import { ClientesListarComponent } from './page/Clientes/Clientes-listar/clientes-listar.component';
+import { ProductoListarComponent } from './page/Producto/Producto-listar/producto-listar.component';
 
 
 
@@ -34,7 +36,9 @@ import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/arte
     SolicitudDisenioComponent,
     TipoProductoComponent,
     UsuariosComponent,
-    ArtesanosListarComponent
+    ArtesanosListarComponent,
+    ClientesListarComponent,
+    ProductoListarComponent
     
   ],
   imports: [
