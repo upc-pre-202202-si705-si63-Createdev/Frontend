@@ -20,6 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/artesanos-listar.component';
 import { ClientesListarComponent } from './page/Clientes/Clientes-listar/clientes-listar.component';
 import { ProductoListarComponent } from './page/Producto/Producto-listar/producto-listar.component';
+import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import{MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,15 +43,19 @@ import { ProductoListarComponent } from './page/Producto/Producto-listar/product
     UsuariosComponent,
     ArtesanosListarComponent,
     ClientesListarComponent,
-    ProductoListarComponent
-    
+    ProductoListarComponent,
+    ProductoCreaeditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,8 @@ import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-di
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 
+import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
+
 const routes: Routes = [{
   path: 'artesano', component: ArtesanosComponent, children: [
 
@@ -38,7 +40,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'producto', component: ProductoComponent, children: [
-
+    { path: 'nuevo', component: ProductoCreaeditaComponent }
   ]
 }, {
   path: 'solicitud-disenio', component: SolicitudDisenioComponent, children: [
