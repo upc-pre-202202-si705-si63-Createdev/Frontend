@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../model/Usuario';
 
-import { Subject } from 'rxjs';
+import { Subject,EMPTY } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,13 @@ export class UsuariosService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Usuarios[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
 
