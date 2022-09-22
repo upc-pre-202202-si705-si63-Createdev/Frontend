@@ -16,7 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
-
+import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/u
     UsuariosComponent,
     ClientesComponent,
     UsuariosListarComponent,
-    UsuariosCreaeditaComponent
+    UsuariosCreaeditaComponent,
+    UsuariosDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/u
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    MatDialogModule
 
 
   ],

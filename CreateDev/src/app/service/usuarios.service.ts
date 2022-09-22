@@ -11,6 +11,7 @@ import { Subject } from 'rxjs';
 export class UsuariosService {
   url: string = "http://localhost:5000/Usuarios"
   private listaCambio = new Subject<Usuarios[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
 
   listar() {
@@ -30,6 +31,15 @@ export class UsuariosService {
   }
   listarId(id: number) {
     return this.http.get<Usuarios>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }
 
