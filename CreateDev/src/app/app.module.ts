@@ -10,9 +10,9 @@ import { ClientesComponent } from './page/clientes/clientes.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import{MatIconModule} from'@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import{MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
@@ -32,13 +32,13 @@ import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/u
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule, 
+    HttpClientModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
