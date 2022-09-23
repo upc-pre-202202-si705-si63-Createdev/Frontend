@@ -12,7 +12,6 @@ import { EstadoComponent } from './page/Estado/estado.component';
 import { PedidoComponent } from './page/Pedido/pedido.component';
 import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
-import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 
 import{MatTableModule} from '@angular/material/table';
@@ -39,7 +38,6 @@ import { FormsModule } from '@angular/forms';
     PedidoComponent,
     ProductoComponent,
     SolicitudDisenioComponent,
-    TipoProductoComponent,
     UsuariosComponent,
     ArtesanosListarComponent,
     ClientesListarComponent,

@@ -57,19 +57,8 @@
     <input matInput required placeholder="lugar de fabricacion" [(ngModel)]="Producto.lugar_fabricacion">
   </mat-form-field>
   <br>
-  <mat-form-field class="example-full-width">
-  <mat-label>Id tipo Producto</mat-label>
-  <input matInput required placeholder="Id tipo Producto" [(ngModel)]="Producto.Tipo_Producto_id">
-</mat-form-field>
 
-<br>
-<mat-form-field class="example-full-width">
-<mat-label>Id artesano</mat-label>
-<input matInput required placeholder="Id artesano" [(ngModel)]="Producto.artesanos_usuario_id">
-</mat-form-field>
-<br>
-
-
+  
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/Producto">Cancelar</button>
   <p>{{mensaje}}</p>

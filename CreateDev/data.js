@@ -200,13 +200,13 @@ module.exports = function () {
           tipo:"factura"
         }
       ],
-      Tipo_Producto:[
+      TipoProducto:[
         {
           id:1,
           tipo:"Artesania"
         },{
           id:2,
-          tipo:"Diseño"
+          tipo:"Disenio"
         }
       ],
       Producto:[
@@ -219,15 +219,7 @@ module.exports = function () {
           precio_unitario:13.00,
           material:"madera",
           fecha_creacion:"01/01/2022",
-          lugar_fabricacion:"01/01/2021",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:2
-            }
-          }
+          lugar_fabricacion:"huanuco"     
         },{
           id:2,
           nombre:"Arte unico",
@@ -237,15 +229,7 @@ module.exports = function () {
           precio_unitario:18.00,
           material:"madera",
           fecha_creacion:"11/04/2022",
-          lugar_fabricacion:"12/04/2022",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:2
-            }
-          }
+          lugar_fabricacion:"pasco"
         },{
           id:3,
           nombre:"mate-burilado4",
@@ -255,15 +239,7 @@ module.exports = function () {
           precio_unitario:250.00,
           material:"calabaza",
           fecha_creacion:"11/04/2022",
-          lugar_fabricacion:"junin",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:2
-            }
-          }
+          lugar_fabricacion:"junin"
         },{
           id:4,
           nombre:"Dia Soleado",
@@ -273,15 +249,7 @@ module.exports = function () {
           precio_unitario:23.00,
           material:"burilado",
           fecha_creacion:"10/08/2022",
-          lugar_fabricacion:"Huancayo",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:1
-            }
-          }
+          lugar_fabricacion:"libertad"
         },{
           id:5,
           nombre:"Una sola vez",
@@ -291,15 +259,7 @@ module.exports = function () {
           precio_unitario:27.00,
           material:"burilado",
           fecha_creacion:"10/09/2022",
-          lugar_fabricacion:"Huancan",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:1
-            }
-          }
+          lugar_fabricacion:"Huancan"
         },{
           id:6,
           nombre:"Sol de primavera",
@@ -309,15 +269,7 @@ module.exports = function () {
           precio_unitario:29.00,
           material:"burilado",
           fecha_creacion:"05/09/2022",
-          lugar_fabricacion:"Huancan",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:1
-            }
-          }
+          lugar_fabricacion:"Huancan"
         },{
           id:7,
           nombre:"mate-burilado-extra",
@@ -327,15 +279,7 @@ module.exports = function () {
           precio_unitario:13.00,
           material:"madera",
           fecha_creacion:"01/01/2022",
-          lugar_fabricacion:"libertad",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:5
-            }
-          }
+          lugar_fabricacion:"libertad"
         },{
           id:8,
           nombre:"mate-burilado dios",
@@ -345,15 +289,7 @@ module.exports = function () {
           precio_unitario:180.00,
           material:"calabaza",
           fecha_creacion:"01/01/2022",
-          lugar_fabricacion:"piura",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:5
-            }
-          }
+          lugar_fabricacion:"piura"
         },{
           id:9,
           nombre:"mate-burilado dios",
@@ -363,15 +299,7 @@ module.exports = function () {
           precio_unitario:18.00,
           material:"calabaza",
           fecha_creacion:"01/01/2022",
-          lugar_fabricacion:"piura",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:5
-            }
-          }
+          lugar_fabricacion:"piura"
         },{
           id:10,
           nombre:"Mate burilado en fondo negro",
@@ -381,15 +309,7 @@ module.exports = function () {
           precio_unitario:25.00,
           material:"burilado",
           fecha_creacion:"14/09/2022",
-          lugar_fabricacion:"Acobamba",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:3
-            }
-          }
+          lugar_fabricacion:"Acobamba"
         },{
           id:11,
           nombre:"Mate Selva Morado",
@@ -399,15 +319,7 @@ module.exports = function () {
           precio_unitario:200.00,
           material:"burilado",
           fecha_creacion:"04/07/2022",
-          lugar_fabricacion:"Acobamba",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:3
-            }
-          }
+          lugar_fabricacion:"Acobamba"
         },{
           id:12,
           nombre:"Mate Selva Virgen",
@@ -417,15 +329,7 @@ module.exports = function () {
           precio_unitario:120.00,
           material:"burilado",
           fecha_creacion:"26/08/2022",
-          lugar_fabricacion:"Acobamba",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:3
-            }
-          }
+          lugar_fabricacion:"Acobamba"
         },{
           id:13,
           nombre:"Paseo del lago",
@@ -435,15 +339,7 @@ module.exports = function () {
           precio_unitario:20.00,
           material:"burilado",
           fecha_creacion:"07/04/2022",
-          lugar_fabricacion:"Lambayeque",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:4
-            }
-          }
+          lugar_fabricacion:"Lambayeque"
         },{
           id:14,
           nombre:"Amanecer en los andes",
@@ -453,15 +349,7 @@ module.exports = function () {
           precio_unitario:25.00,
           material:"burilado",
           fecha_creacion:"08/02/2022",
-          lugar_fabricacion:"Lambayeque",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:4
-            }
-          }
+          lugar_fabricacion:"Lambayeque"
         },{
           id:15,
           nombre:"Bastion del inca",
@@ -471,15 +359,7 @@ module.exports = function () {
           precio_unitario:35.00,
           material:"burilado",
           fecha_creacion:"16/06/2022",
-          lugar_fabricacion:"Lambayeque",
-          Tipo_Producto:{
-            id:1
-          },
-          Artesanos:{
-            Usuarios:{
-              id:4
-            }
-          }
+          lugar_fabricacion:"Lambayeque"
         }
       ],
       Solicitud_Diseño:[

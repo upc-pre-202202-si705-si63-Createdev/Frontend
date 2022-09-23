@@ -8,6 +8,9 @@ export class Producto {
     material: string = "";
     fecha_creacion: string = "";
     lugar_fabricacion: string = "";
-    Tipo_Producto_id: number = 0;
-    artesanos_usuario_id: number = 0;
 }
+
+/*
+Tipo_Producto_id: number = 0;
+artesanos_usuario_id: number = 0;
+*/
