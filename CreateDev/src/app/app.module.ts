@@ -28,9 +28,33 @@ import { FormsModule } from '@angular/forms';
 
 
 
+import { UsuariosComponent } from './page/Usuarios/usuarios.component';
+import { ClientesComponent } from './page/clientes/clientes.component';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
+import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
+import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
+
+    UsuariosComponent,
+    ClientesComponent,
+    UsuariosListarComponent,
+    UsuariosCreaeditaComponent,
+    UsuariosDialogoComponent,
+    UsuariosBuscarComponent
+
     ArtesanosComponent,
     ClientesComponent,
     CompraComponent,
@@ -45,6 +69,7 @@ import { FormsModule } from '@angular/forms';
     ClientesListarComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +80,13 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+
+    FormsModule,
+    MatDialogModule
+
+
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
