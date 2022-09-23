@@ -10,13 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-
-
   constructor(public route:ActivatedRoute) { }
-
-  constructor() { }
-
-
   ngOnInit(): void {
   }
 
