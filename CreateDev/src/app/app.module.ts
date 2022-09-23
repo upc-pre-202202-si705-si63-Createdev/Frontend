@@ -14,7 +14,6 @@ import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
-
 import{MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/artesanos-listar.component';
@@ -25,38 +24,27 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
-
-
-import { UsuariosComponent } from './page/Usuarios/usuarios.component';
-import { ClientesComponent } from './page/clientes/clientes.component';
-
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
 import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
 import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
+import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comprobante.component';
+import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
+import { TipoComprobanteBuscarComponent } from './page/tipo-comprobante/tipo-comprobante-buscar/tipo-comprobante-buscar.component';
+import { TipoComprobanteListarComponent } from './page/tipo-comprobante/tipo-comprobante-listar/tipo-comprobante-listar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     UsuariosComponent,
     ClientesComponent,
     UsuariosListarComponent,
     UsuariosCreaeditaComponent,
     UsuariosDialogoComponent,
-    UsuariosBuscarComponent
-
+    UsuariosBuscarComponent,
     ArtesanosComponent,
-    ClientesComponent,
     CompraComponent,
     DetalleCompraComponent,
     EstadoComponent,
@@ -64,11 +52,14 @@ import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuario
     ProductoComponent,
     SolicitudDisenioComponent,
     TipoProductoComponent,
-    UsuariosComponent,
     ArtesanosListarComponent,
     ClientesListarComponent,
     ProductoListarComponent,
-    ProductoCreaeditaComponent
+    ProductoCreaeditaComponent,
+    TipoComprobanteComponent,
+    TipoComprobanteCreaeditaComponent,
+    TipoComprobanteBuscarComponent,
+    TipoComprobanteListarComponent
 
   ],
   imports: [
@@ -80,11 +71,8 @@ import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuario
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-
     FormsModule,
-    MatDialogModule
-
-
+    MatDialogModule,
     FormsModule
 
   ],
