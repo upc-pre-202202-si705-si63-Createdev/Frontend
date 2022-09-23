@@ -1,0 +1,77 @@
+<p>producto-creaedita works!</p>
+<div class="container">
+
+  <h1>Producto</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="Producto.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="Producto.nombre">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Descripcion</mat-label>
+    <input matInput required placeholder="descripcion" [(ngModel)]="Producto.descripcion">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Stock</mat-label>
+    <input matInput required placeholder="stock" [(ngModel)]="Producto.stock">
+  </mat-form-field>
+  
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Peso</mat-label>
+    <input matInput required placeholder="peso" [(ngModel)]="Producto.peso">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Precio Unitario</mat-label>
+    <input matInput required placeholder="precio unitario" [(ngModel)]="Producto.precio_unitario">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Material</mat-label>
+    <input matInput required placeholder="material" [(ngModel)]="Producto.material">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha de Creacion</mat-label>
+    <input matInput required placeholder="fecha de creacion" [(ngModel)]="Producto.fecha_creacion">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Lugar de Fabricacion</mat-label>
+    <input matInput required placeholder="lugar de fabricacion" [(ngModel)]="Producto.lugar_fabricacion">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+  <mat-label>Id tipo Producto</mat-label>
+  <input matInput required placeholder="Id tipo Producto" [(ngModel)]="Producto.Tipo_Producto_id">
+</mat-form-field>
+
+<br>
+<mat-form-field class="example-full-width">
+<mat-label>Id artesano</mat-label>
+<input matInput required placeholder="Id artesano" [(ngModel)]="Producto.artesanos_usuario_id">
+</mat-form-field>
+<br>
+
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/Producto">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
