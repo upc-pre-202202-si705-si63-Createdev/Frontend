@@ -31,6 +31,7 @@ import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuario
 import { PedidoListarComponent } from './page/Pedido/pedido-listar/pedido-listar.component';
 import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-creaedita.component';
 import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialogo/pedido-dialogo.component';
+import { PedidoBuscarComponent } from './page/Pedido/pedido-buscar/pedido-buscar.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialo
     ProductoCreaeditaComponent,
     PedidoListarComponent,
     PedidoCreaeditaComponent,
-    PedidoDialogoComponent
+    PedidoDialogoComponent,
+    PedidoBuscarComponent
 
   ],
   imports: [
