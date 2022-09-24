@@ -28,6 +28,7 @@ import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/u
 import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
+import { PedidoListarComponent } from './page/Pedido/pedido-listar/pedido-listar.component';
 
 
 @NgModule({
@@ -48,11 +49,11 @@ import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuario
     ProductoComponent,
     SolicitudDisenioComponent,
     TipoProductoComponent,
-    UsuariosComponent,
     ArtesanosListarComponent,
     ClientesListarComponent,
     ProductoListarComponent,
-    ProductoCreaeditaComponent
+    ProductoCreaeditaComponent,
+    PedidoListarComponent
 
   ],
   imports: [

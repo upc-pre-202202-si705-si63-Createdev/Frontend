@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
-import { Usuarios } from 'src/app/model/Usuario';
+import { Usuarios } from 'src/app/model/Usuarios';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.component';
