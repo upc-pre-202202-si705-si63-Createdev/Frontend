@@ -30,6 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
 import { PedidoListarComponent } from './page/Pedido/pedido-listar/pedido-listar.component';
 import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-creaedita.component';
+import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialogo/pedido-dialogo.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-
     ProductoListarComponent,
     ProductoCreaeditaComponent,
     PedidoListarComponent,
-    PedidoCreaeditaComponent
+    PedidoCreaeditaComponent,
+    PedidoDialogoComponent
 
   ],
   imports: [
