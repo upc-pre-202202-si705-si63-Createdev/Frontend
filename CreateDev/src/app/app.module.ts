@@ -29,6 +29,7 @@ import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/u
 import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuario
     MatIconModule,
     FormsModule,
     MatDialogModule,
-    FormsModule
+    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},]),
+
 
   ],
   providers: [],
