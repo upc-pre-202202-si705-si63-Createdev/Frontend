@@ -1,6 +1,6 @@
-import { PedidoService } from './../../../service/pedido.service';
+import { PedidoService } from 'src/app/service/pedido.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Pedido } from 'src/app/model/Pedido';
 
 @Component({
@@ -11,22 +11,49 @@ import { Pedido } from 'src/app/model/Pedido';
 export class PedidoCreaeditaComponent implements OnInit {
   pedido: Pedido = new Pedido();
   mensaje: string = "";
+  edicion: boolean = false;
+  id: number = 0;
 
-  constructor(private PedidoService: PedidoService, private router: Router) { }
+  constructor(private PedidoService: PedidoService, private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    });
   }
-  aceptar(): void {
-    if (this.pedido.caracteristicas.length > 0 && this.pedido.estado.length > 0 && this.pedido.nombre.length > 0) {
 
-      this.PedidoService.insertar(this.pedido).subscribe(data => {
-        this.PedidoService.listar().subscribe(data => {
-          this.PedidoService.setLista(data);
+  aceptar(): void {
+    if (this.pedido.nombre.length > 0 && this.pedido.caracteristicas.length > 0 && this.pedido.estado.length > 0) {
+      if (this.edicion) {
+        this.PedidoService.modificar(this.pedido).subscribe(data => {
+          this.PedidoService.listar().subscribe(data => {
+            this.PedidoService.setLista(data);
+          })
         })
-      })
+      } else {
+
+        this.PedidoService.insertar(this.pedido).subscribe(data => {
+          this.PedidoService.listar().subscribe(data => {
+            this.PedidoService.setLista(data);
+          })
+        })
+      }
       this.router.navigate(['pedido']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
+  }
+
+
+  init() {
+    if (this.edicion) {
+      this.PedidoService.listarId(this.id).subscribe(data => {
+        this.pedido = data;
+      })
+    }
+
   }
 }

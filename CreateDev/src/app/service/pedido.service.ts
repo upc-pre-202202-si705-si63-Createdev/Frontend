@@ -13,13 +13,19 @@ export class PedidoService {
   listar() {
     return this.http.get<Pedido[]>(this.url);
   }
-  insertar(pedido: Pedido) {
-    return this.http.post(this.url, pedido);
+  insertar(Pedido: Pedido) {
+    return this.http.post(this.url, Pedido);
   }
   setLista(listaNueva: Pedido[]) {
     this.listaCambio.next(listaNueva);
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  modificar(Pedido: Pedido) {
+    return this.http.put(this.url + "/" + Pedido.id, Pedido);
+  }
+  listarId(id: number) {
+    return this.http.get<Pedido>(`${this.url}/${id}`);
   }
 }

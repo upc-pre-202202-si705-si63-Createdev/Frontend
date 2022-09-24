@@ -32,11 +32,12 @@ const routes: Routes = [{
   ]
 }, {
   path: 'pedido', component: PedidoComponent, children: [
-    { path: 'nuevo', component: PedidoCreaeditaComponent }
+    { path: 'nuevo', component: PedidoCreaeditaComponent },
+    { path: 'edicion/:id', component: PedidoCreaeditaComponent }
   ]
 }, {
   path: 'producto', component: ProductoComponent, children: [
-    { path: 'nuevo', component: ProductoCreaeditaComponent }
+    { path: 'nuevo', component: ProductoCreaeditaComponent },
   ]
 }, {
   path: 'solicitud-disenio', component: SolicitudDisenioComponent, children: [
@@ -50,9 +51,6 @@ const routes: Routes = [{
   path: 'usuario', component: UsuariosComponent, children: [
     { path: 'nuevo', component: UsuariosCreaeditaComponent },
     { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
-
-
-
   ]
 }];
 
