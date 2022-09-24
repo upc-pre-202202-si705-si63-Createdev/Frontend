@@ -10,6 +10,7 @@ export class TipoComporbanteService {
  url: string = "http://localhost:5000/Tipo_Comprobante"
   constructor(private http: HttpClient) { }
   private listaCambio = new Subject<Tipo_Comprobante[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
 
   listar() {
     return this.http.get<Tipo_Comprobante	[]>(this.url);
@@ -28,5 +29,14 @@ export class TipoComporbanteService {
   }
   listarId(id: number) {
     return this.http.get<Tipo_Comprobante>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

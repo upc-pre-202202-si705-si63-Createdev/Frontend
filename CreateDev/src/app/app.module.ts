@@ -33,6 +33,7 @@ import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comproban
 import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
 import { TipoComprobanteBuscarComponent } from './page/tipo-comprobante/tipo-comprobante-buscar/tipo-comprobante-buscar.component';
 import { TipoComprobanteListarComponent } from './page/tipo-comprobante/tipo-comprobante-listar/tipo-comprobante-listar.component';
+import { TipoComprobanteDialogoComponent } from './page/tipo-comprobante/tipo-comprobante-listar/tipo-comprobante-dialogo/tipo-comprobante-dialogo.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { TipoComprobanteListarComponent } from './page/tipo-comprobante/tipo-com
     TipoComprobanteComponent,
     TipoComprobanteCreaeditaComponent,
     TipoComprobanteBuscarComponent,
-    TipoComprobanteListarComponent
+    TipoComprobanteListarComponent,
+    TipoComprobanteDialogoComponent
 
   ],
   imports: [

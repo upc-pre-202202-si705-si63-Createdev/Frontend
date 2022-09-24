@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tipo-comprobante',
   templateUrl: './tipo-comprobante.component.html',
@@ -10,6 +10,6 @@ export class TipoComprobanteComponent implements OnInit {
   constructor(public route:ActivatedRoute) { }
 
   ngOnInit(): void {
-  } 
+  }  
 
 }

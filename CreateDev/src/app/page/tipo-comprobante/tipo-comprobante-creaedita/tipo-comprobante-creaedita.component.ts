@@ -2,7 +2,7 @@ import { TipoComporbanteService } from 'src/app/service/tipo-comporbante.service
 import { Tipo_Comprobante } from './../../../model/tipo-comprobante';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Params,Router } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-tipo-comprobante-creaedita',
   templateUrl: './tipo-comprobante-creaedita.component.html',

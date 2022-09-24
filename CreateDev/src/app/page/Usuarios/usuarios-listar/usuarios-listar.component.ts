@@ -8,7 +8,7 @@ import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.co
 @Component({
   selector: 'app-usuarios-listar',
   templateUrl: './usuarios-listar.component.html',
-  styleUrls: ['./usuarios-listar.component.css']
+  styleUrls: ['./usuarios-listar.component.css'] 
 })
 export class UsuariosListarComponent implements OnInit {
 
