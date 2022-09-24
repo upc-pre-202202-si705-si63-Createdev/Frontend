@@ -1,3 +1,4 @@
+import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtesanosComponent } from './page/Artesanos/artesanos.component';
@@ -31,7 +32,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'pedido', component: PedidoComponent, children: [
-
+    { path: 'nuevo', component: PedidoCreaeditaComponent }
   ]
 }, {
   path: 'producto', component: ProductoComponent, children: [

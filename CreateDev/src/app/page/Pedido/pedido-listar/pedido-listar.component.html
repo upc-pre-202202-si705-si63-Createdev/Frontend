@@ -8,25 +8,25 @@
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- 1 -->
-    <ng-container matColumnDef="id">
+    <ng-container matColumnDef="id" style="text-align: center;">
       <th mat-header-cell *matHeaderCellDef> ID </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- 2 -->
-    <ng-container matColumnDef="nombre">
+    <ng-container matColumnDef="nombre" style="text-align: center;">
       <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
       <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
     </ng-container>
 
     <!-- 3 -->
-    <ng-container matColumnDef="caracteristicas">
+    <ng-container matColumnDef="caracteristicas" style="text-align: center;">
       <th mat-header-cell *matHeaderCellDef> DESCRIPCION </th>
       <td mat-cell *matCellDef="let element"> {{element.caracteristicas}} </td>
     </ng-container>
 
     <!-- 4 -->
-    <ng-container matColumnDef="estado">
+    <ng-container matColumnDef="estado" style="text-align: center;">
       <th mat-header-cell *matHeaderCellDef> ESTADO </th>
       <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
     </ng-container>
@@ -35,4 +35,11 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-</div>
+
+  <div class="example-button-container" class="container">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/pedido/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
