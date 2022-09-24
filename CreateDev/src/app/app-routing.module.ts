@@ -63,7 +63,8 @@ const routes: Routes = [{
 },
 {
   path: 'Tipo Comprobante', component: TipoComprobanteComponent, children: [
-    { path: 'nuevo', component:TipoComprobanteCreaeditaComponent }
+    { path: 'nuevo', component:TipoComprobanteCreaeditaComponent },
+    { path: 'edicion/:id', component:TipoComprobanteCreaeditaComponent }
   ] 
 }
 ];

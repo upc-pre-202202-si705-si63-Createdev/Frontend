@@ -8,13 +8,12 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./tipo-comprobante-listar.component.css']
 })
 export class TipoComprobanteListarComponent implements OnInit {
-
   dataSource: MatTableDataSource<Tipo_Comprobante> = new MatTableDataSource();
-  displayedColumns:string[]=['id','tipo'];
+  displayedColumns:string[]=['id','tipo','acciones'];
   constructor(private ps: TipoComporbanteService) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe((data: Tipo_Comprobante[] | undefined) => {
+    this.ps.listar().subscribe(data=> {
       this.dataSource=new MatTableDataSource(data);
     })
     this.ps.getLista().subscribe(data => {
