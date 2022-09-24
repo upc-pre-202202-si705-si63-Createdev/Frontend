@@ -17,6 +17,9 @@ export class TipoComprobanteListarComponent implements OnInit {
     this.ps.listar().subscribe((data: Tipo_Comprobante[] | undefined) => {
       this.dataSource=new MatTableDataSource(data);
     })
+    this.ps.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+  }
   }
 
-}

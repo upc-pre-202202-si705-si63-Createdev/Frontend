@@ -1,3 +1,4 @@
+import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
 import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comprobante.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -62,7 +63,7 @@ const routes: Routes = [{
 },
 {
   path: 'Tipo Comprobante', component: TipoComprobanteComponent, children: [
-
+    { path: 'nuevo', component:TipoComprobanteCreaeditaComponent }
   ] 
 }
 ];
