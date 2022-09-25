@@ -79,7 +79,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
 
     MatDialogModule,
-    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},]),
+    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},{path: 'pedido', component: PedidoListarComponent}]),
 
 
 

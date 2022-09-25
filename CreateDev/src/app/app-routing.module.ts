@@ -15,8 +15,7 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 
-import { UsuariosComponent } from './page/Usuarios/usuarios.component';
-import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
+
 
 
 

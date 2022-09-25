@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Usuarios } from '../model/Usuario';
+import { Usuarios } from '../model/Usuarios';
 
 import { Subject,EMPTY } from 'rxjs';
 
