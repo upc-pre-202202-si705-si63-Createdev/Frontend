@@ -1,4 +1,3 @@
-import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor(public route:ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

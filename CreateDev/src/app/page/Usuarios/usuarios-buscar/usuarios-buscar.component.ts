@@ -1,4 +1,4 @@
-import { Usuarios } from './../../../model/Usuario';
+import { Usuarios } from './../../../model/Usuarios';
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
 
