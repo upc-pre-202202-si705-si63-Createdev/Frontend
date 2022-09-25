@@ -1,7 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: brown;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    background-size: auto;
+    
+    
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.logo img {
+    height: 70px;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link {
+    font-weight: 600;
+    padding-right: 20px;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+#dis {
+    display: flex;
+    
+    padding-bottom: 0;
+    padding-right: 20px;
+
+}
+
+html,
+body {
+    height: 100%;
+    
+}
+
+body {
+    background-image: url('https://yerbamateargentina.org.ar/imagenes/archivos/imagenes/7408_imagen.jpg');
+    resize: both;
+    overflow: auto;
+    background-size: contain;
+    background-repeat: round;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
