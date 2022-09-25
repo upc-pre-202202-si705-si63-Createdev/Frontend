@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
 import { ActivatedRoute,Params,Router } from '@angular/router';
-import { Usuarios } from 'src/app/model/Usuario';
+import { Usuarios } from 'src/app/model/Usuarios';
 
 @Component({
   selector: 'app-usuarios-creaedita',
