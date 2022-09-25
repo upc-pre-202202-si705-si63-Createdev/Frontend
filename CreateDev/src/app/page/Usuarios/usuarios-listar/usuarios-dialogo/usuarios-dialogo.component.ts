@@ -9,7 +9,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class UsuariosDialogoComponent implements OnInit {
 
-  constructor(private UsuariosService:UsuariosService, private dialogRef: MatDialogRef<UsuariosDialogoComponent> ) { }
+  constructor(private UsuariosService:UsuariosService, 
+  private dialogRef: MatDialogRef<UsuariosDialogoComponent> ) { }
 
   ngOnInit(): void {
   }
