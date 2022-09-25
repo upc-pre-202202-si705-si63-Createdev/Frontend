@@ -7,4 +7,10 @@
   .example-full-width {
     width: 100%;
   }
+  .container{
+    background-color: whitesmoke;
+    opacity: 0.85;
+    border: 1px solid black;
+
+  }
   
