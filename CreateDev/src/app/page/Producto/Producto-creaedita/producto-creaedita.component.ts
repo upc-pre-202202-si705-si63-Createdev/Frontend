@@ -10,7 +10,7 @@ import { Producto } from './../../../model/Producto';
 })
 export class ProductoCreaeditaComponent implements OnInit {
 
- Producto: Producto = new Producto();
+ producto: Producto = new Producto();
   mensaje: string = "";
 
 
@@ -20,14 +20,14 @@ export class ProductoCreaeditaComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.Producto.nombre.length > 0 && this.Producto.descripcion.length > 0 && this.Producto.stock > 0 && this.Producto.peso > 0 && this.Producto.precio_unitario > 0 && this.Producto.material.length > 0 && this.Producto.fecha_creacion.length > 0 && this.Producto.lugar_fabricacion.length > 0 ) {
+    if (this.producto.nombre.length > 0 && this.producto.descripcion.length > 0 && this.producto.stock > 0 && this.producto.peso > 0 && this.producto.precio_unitario > 0 && this.producto.material.length > 0 && this.producto.fecha_creacion.length > 0 && this.producto.lugar_fabricacion.length > 0 ) {
 
-      this.productoService.insertar(this.Producto).subscribe(data => {
+      this.productoService.insertar(this.producto).subscribe(data => {
         this.productoService.listar().subscribe(data => {
           this.productoService.setLista(data);
         })
       })
-      this.router.navigate(['productos']);
+      this.router.navigate(['/producto']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

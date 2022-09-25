@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class ProductoService {
 
-  url: string = "http://localhost:5000/Producto"
+  url: string = "http://localhost:5000/producto"
   private listaCambio = new Subject<Producto[]>()
   constructor(private http: HttpClient) { }
 
@@ -16,8 +16,8 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  insertar(Producto: Producto) {
-    return this.http.post(this.url, Producto);
+  insertar(producto: Producto) {
+        return this.http.post(this.url, producto);
   }
 
   setLista(listaNueva: Producto[]) {
