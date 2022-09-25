@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Subject , EMPTY} from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Tipo_Producto } from '../model/tipo-producto';
 
@@ -46,4 +46,12 @@ export class TipoProductoService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Tipo_Producto[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
+  }
+
 }

@@ -31,6 +31,8 @@ import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-dialogo/tipo-producto-dialogo/tipo-producto-dialogo.component';
 import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Producto-dialogo/producto-dialogo/producto-dialogo.component';
+import { ProductoBuscarComponent } from './page/Producto/Producto-buscar/producto-buscar.component';
+import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
 
 
 
@@ -54,7 +56,9 @@ import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Produc
     TipoProductoListarComponent,
     TipoProductoCreaeditaComponent,
     TipoProductoDialogoComponent,
-    ProductoDialogoComponent
+    ProductoDialogoComponent,
+    ProductoBuscarComponent,
+    TipoProductoBuscarComponent
   ],
   imports: [
     BrowserModule,
