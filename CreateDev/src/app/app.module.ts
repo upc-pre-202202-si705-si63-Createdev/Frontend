@@ -24,6 +24,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
+import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
+import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 
 
 
@@ -42,7 +45,10 @@ import { FormsModule } from '@angular/forms';
     ArtesanosListarComponent,
     ClientesListarComponent,
     ProductoListarComponent,
-    ProductoCreaeditaComponent
+    ProductoCreaeditaComponent,
+    TipoProductoComponent,
+    TipoProductoListarComponent,
+    TipoProductoCreaeditaComponent
   ],
   imports: [
     BrowserModule,

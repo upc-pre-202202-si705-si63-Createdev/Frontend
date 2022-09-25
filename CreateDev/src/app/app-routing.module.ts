@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ArtesanosComponent } from './page/Artesanos/artesanos.component';
 import { ClientesComponent } from './page/Clientes/clientes.component';
 import { CompraComponent } from './page/Compra/compra.component';
 import { DetalleCompraComponent } from './page/detalle-compra/detalle-compra.component';
 import { EstadoComponent } from './page/Estado/estado.component';
 import { PedidoComponent } from './page/Pedido/pedido.component';
-
-import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 
+import { ProductoComponent } from './page/Producto/producto.component';
+import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
+
+
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
+import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
+
+
 
 const routes: Routes = [{
   path: 'artesano', component: ArtesanosComponent, children: [
@@ -52,7 +58,11 @@ const routes: Routes = [{
   path: 'usuarios', component: UsuariosComponent, children: [
 
   ]
-}
+},{
+  path: 'tipo-producto', component: TipoProductoComponent, children: [
+    { path: 'nuevo', component: TipoProductoCreaeditaComponent }
+  ]
+},
 ];
 
 

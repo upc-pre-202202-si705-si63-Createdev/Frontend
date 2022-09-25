@@ -200,7 +200,7 @@ module.exports = function () {
           tipo:"factura"
         }
       ],
-      TipoProducto:[
+      Tipo_Producto:[
         {
           id:1,
           tipo:"Artesania"
