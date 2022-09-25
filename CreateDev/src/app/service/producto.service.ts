@@ -10,6 +10,9 @@ export class ProductoService {
 
   url: string = "http://localhost:5000/producto"
   private listaCambio = new Subject<Producto[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
+
+
   constructor(private http: HttpClient) { }
 
   listar() {
@@ -27,4 +30,21 @@ export class ProductoService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+
+  modificar(producto: Producto) {
+    return this.http.put(this.url + "/" + producto.id, producto);
+  }
+  listarId(id: number) {
+    return this.http.get<Producto>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+
 }

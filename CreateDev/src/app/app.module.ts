@@ -23,10 +23,14 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { FormsModule } from '@angular/forms';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
+import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-dialogo/tipo-producto-dialogo/tipo-producto-dialogo.component';
+import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Producto-dialogo/producto-dialogo/producto-dialogo.component';
 
 
 
@@ -48,7 +52,9 @@ import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-produc
     ProductoCreaeditaComponent,
     TipoProductoComponent,
     TipoProductoListarComponent,
-    TipoProductoCreaeditaComponent
+    TipoProductoCreaeditaComponent,
+    TipoProductoDialogoComponent,
+    ProductoDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,8 @@ import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-produc
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

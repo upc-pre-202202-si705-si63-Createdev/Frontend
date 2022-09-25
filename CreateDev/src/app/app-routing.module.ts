@@ -45,22 +45,22 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'producto', component: ProductoComponent, children: [
-    { path: 'nuevo', component: ProductoCreaeditaComponent }
-  ]
-}, {
   path: 'solicitud-disenio', component: SolicitudDisenioComponent, children: [
 
   ]
-},
-
-{
+}, {
   path: 'usuarios', component: UsuariosComponent, children: [
 
   ]
-},{
+}, {
+  path: 'producto', component: ProductoComponent, children: [
+    { path: 'nuevo', component: ProductoCreaeditaComponent },
+    { path: 'edicion/:id', component: ProductoCreaeditaComponent }
+  ]
+}, {
   path: 'tipo-producto', component: TipoProductoComponent, children: [
-    { path: 'nuevo', component: TipoProductoCreaeditaComponent }
+    { path: 'nuevo', component: TipoProductoCreaeditaComponent },
+    { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
   ]
 },
 ];
