@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-usuarios',
@@ -6,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
+  constructor(public route:ActivatedRoute) { }
 
-  constructor() { }
 
   ngOnInit(): void {
   }

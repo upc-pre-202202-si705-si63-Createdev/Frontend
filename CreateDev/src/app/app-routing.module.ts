@@ -1,21 +1,29 @@
+
+import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
+import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comprobante.component';
+
+import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-creaedita.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { UsuariosComponent } from './page/Usuarios/usuarios.component';
+import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
+
 
 import { ArtesanosComponent } from './page/Artesanos/artesanos.component';
 import { ClientesComponent } from './page/Clientes/clientes.component';
 import { CompraComponent } from './page/Compra/compra.component';
 import { DetalleCompraComponent } from './page/detalle-compra/detalle-compra.component';
-import { EstadoComponent } from './page/Estado/estado.component';
 import { PedidoComponent } from './page/Pedido/pedido.component';
-import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
-import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 
 import { ProductoComponent } from './page/Producto/producto.component';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
-
-
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
+import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
+
+
 
 
 
@@ -37,14 +45,12 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'estado', component: EstadoComponent, children: [
-
-  ]
-}, {
   path: 'pedido', component: PedidoComponent, children: [
-
+    { path: 'nuevo', component: PedidoCreaeditaComponent },
+    { path: 'edicion/:id', component: PedidoCreaeditaComponent }
   ]
 }, {
+
   path: 'solicitud-disenio', component: SolicitudDisenioComponent, children: [
 
   ]
@@ -53,6 +59,7 @@ const routes: Routes = [{
 
   ]
 }, {
+
   path: 'producto', component: ProductoComponent, children: [
     { path: 'nuevo', component: ProductoCreaeditaComponent },
     { path: 'edicion/:id', component: ProductoCreaeditaComponent }
@@ -63,7 +70,29 @@ const routes: Routes = [{
     { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
   ]
 },
+
+
+  path:'usuario', component: UsuariosComponent,children:[
+    { path: 'nuevo', component: UsuariosCreaeditaComponent },
+    { path: 'edicion/:id', component: UsuariosCreaeditaComponent}]
+},
+{
+  path: 'Tipo Comprobante', component: TipoComprobanteComponent, children: [
+    { path: 'nuevo', component:TipoComprobanteCreaeditaComponent },
+    { path: 'edicion/:id', component:TipoComprobanteCreaeditaComponent }
+  ] 
+}
+
 ];
+
+
+
+  
+
+
+
+  
+
 
 
 @NgModule({
