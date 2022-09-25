@@ -11,22 +11,28 @@ import { DetalleCompraComponent } from './page/detalle-compra/detalle-compra.com
 import { PedidoComponent } from './page/Pedido/pedido.component';
 import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
-import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
-
-
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 import { MatTableModule } from '@angular/material/table';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/artesanos-listar.component';
 import { ClientesListarComponent } from './page/Clientes/Clientes-listar/clientes-listar.component';
 import { ProductoListarComponent } from './page/Producto/Producto-listar/producto-listar.component';
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
-
-
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+
+
+
+
+
+import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
+import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
+import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
+import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-dialogo/tipo-producto-dialogo/tipo-producto-dialogo.component';
+import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Producto-dialogo/producto-dialogo/producto-dialogo.component';
+import { ProductoBuscarComponent } from './page/Producto/Producto-buscar/producto-buscar.component';
+import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
+
 import { MatIconModule } from '@angular/material/icon';
 
 import { FormsModule } from '@angular/forms';
@@ -50,6 +56,7 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,11 +72,19 @@ import { RouterModule } from '@angular/router';
     PedidoComponent,
     ProductoComponent,
     SolicitudDisenioComponent,
-    TipoProductoComponent,
     ArtesanosListarComponent,
     ClientesListarComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent,
+
+    TipoProductoComponent,
+    TipoProductoListarComponent,
+    TipoProductoCreaeditaComponent,
+    TipoProductoDialogoComponent,
+    ProductoDialogoComponent,
+    ProductoBuscarComponent,
+    TipoProductoBuscarComponent
+
 
     TipoComprobanteComponent,
     TipoComprobanteCreaeditaComponent,
@@ -81,6 +96,7 @@ import { RouterModule } from '@angular/router';
     PedidoCreaeditaComponent,
     PedidoDialogoComponent,
     PedidoBuscarComponent
+
 
 
   ],
@@ -96,8 +112,10 @@ import { RouterModule } from '@angular/router';
     FormsModule,
 
 
+
     MatDialogModule,
     RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},{path: 'pedido', component: PedidoListarComponent},{path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent}]),
+
 
 
 

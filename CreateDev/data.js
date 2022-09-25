@@ -137,7 +137,7 @@ module.exports = function () {
         Usuarios: {
           id: 4
         }
-      }, {
+          }, {
         id: 5,
         informacion: "Hombre dedico al arte peruano con ganas de expandir su arte a todo el mundo",
         provincia: "Moquegua",
@@ -146,6 +146,167 @@ module.exports = function () {
         }
       }
 
+      ],
+      Tipo_Producto:[
+        {
+          id:1,
+          tipo:"Artesania"
+        },{
+          id:2,
+          tipo:"Disenio"
+        }
+      ],
+      Producto:[
+        {
+          id:1,
+          nombre:"Destello Boreal",
+          descripcion:"modelo grande color naranja",
+          stock:4,
+          peso:7.00,
+          precio_unitario:13.00,
+          material:"madera",
+          fecha_creacion:"01/01/2022",
+          lugar_fabricacion:"huanuco"     
+        },{
+          id:2,
+          nombre:"Arte unico",
+          descripcion:"modelo pequeño color rojizo oscuro",
+          stock:6,
+          peso:10.00,
+          precio_unitario:18.00,
+          material:"madera",
+          fecha_creacion:"11/04/2022",
+          lugar_fabricacion:"pasco"
+        },{
+          id:3,
+          nombre:"mate-burilado4",
+          descripcion:"bañado en oro color dorado",
+          stock:1,
+          peso:100.00,
+          precio_unitario:250.00,
+          material:"calabaza",
+          fecha_creacion:"11/04/2022",
+          lugar_fabricacion:"junin"
+        },{
+          id:4,
+          nombre:"Dia Soleado",
+          descripcion:"Mate burilado de forma ovalada, con colores amarillo, verde y azul",
+          stock:10,
+          peso:45.00,
+          precio_unitario:23.00,
+          material:"burilado",
+          fecha_creacion:"10/08/2022",
+          lugar_fabricacion:"libertad"
+        },{
+          id:5,
+          nombre:"Una sola vez",
+          descripcion:"Mate burilado de forma en forma de rosa, colores utilizados blanco, rojo y naranja",
+          stock:16,
+          peso:10.00,
+          precio_unitario:27.00,
+          material:"burilado",
+          fecha_creacion:"10/09/2022",
+          lugar_fabricacion:"Huancan"
+        },{
+          id:6,
+          nombre:"Sol de primavera",
+          descripcion:"Mate burilado de forma de basija, colores utilizados blanco, negro y amarillo",
+          stock:5,
+          peso:12.00,
+          precio_unitario:29.00,
+          material:"burilado",
+          fecha_creacion:"05/09/2022",
+          lugar_fabricacion:"Huancan"
+        },{
+          id:7,
+          nombre:"mate-burilado-extra",
+          descripcion:"modelo grande color rosado",
+          stock:4,
+          peso:7.00,
+          precio_unitario:13.00,
+          material:"madera",
+          fecha_creacion:"01/01/2022",
+          lugar_fabricacion:"libertad"
+        },{
+          id:8,
+          nombre:"mate-burilado dios",
+          descripcion:"modelo bañado en arena rosada ",
+          stock:4,
+          peso:10.00,
+          precio_unitario:180.00,
+          material:"calabaza",
+          fecha_creacion:"01/01/2022",
+          lugar_fabricacion:"piura"
+        },{
+          id:9,
+          nombre:"mate-burilado dios",
+          descripcion:"modelo bañado en arena rosada ",
+          stock:4,
+          peso:10.00,
+          precio_unitario:18.00,
+          material:"calabaza",
+          fecha_creacion:"01/01/2022",
+          lugar_fabricacion:"piura"
+        },{
+          id:10,
+          nombre:"Mate burilado en fondo negro",
+          descripcion:"En esta pieza se representan los paisajes andinos",
+          stock:7,
+          peso:10.00,
+          precio_unitario:25.00,
+          material:"burilado",
+          fecha_creacion:"14/09/2022",
+          lugar_fabricacion:"Acobamba"
+        },{
+          id:11,
+          nombre:"Mate Selva Morado",
+          descripcion:"En esta pieza se representan los animales de la selva",
+          stock:2,
+          peso:12.00,
+          precio_unitario:200.00,
+          material:"burilado",
+          fecha_creacion:"04/07/2022",
+          lugar_fabricacion:"Acobamba"
+        },{
+          id:12,
+          nombre:"Mate Selva Virgen",
+          descripcion:"En esta pieza se representa la flora de la selva peruana",
+          stock:4,
+          peso:14.00,
+          precio_unitario:120.00,
+          material:"burilado",
+          fecha_creacion:"26/08/2022",
+          lugar_fabricacion:"Acobamba"
+        },{
+          id:13,
+          nombre:"Paseo del lago",
+          descripcion:"Mate burilado de forma de vasija con tonos de azul claro y oscuro",
+          stock: 10,
+          peso:18.00,
+          precio_unitario:20.00,
+          material:"burilado",
+          fecha_creacion:"07/04/2022",
+          lugar_fabricacion:"Lambayeque"
+        },{
+          id:14,
+          nombre:"Amanecer en los andes",
+          descripcion:"Mate burilado de forma de tazón de colores cálidos con tonos oscuros",
+          stock:5,
+          peso:10.00,
+          precio_unitario:25.00,
+          material:"burilado",
+          fecha_creacion:"08/02/2022",
+          lugar_fabricacion:"Lambayeque"
+        },{
+          id:15,
+          nombre:"Bastion del inca",
+          descripcion:"Mate burilado de forma de tazón con colores monoliticos",
+          stock:10,
+          peso:10.00,
+          precio_unitario:35.00,
+          material:"burilado",
+          fecha_creacion:"16/06/2022",
+          lugar_fabricacion:"Lambayeque"}
     ],
     Clientes: [
       {
@@ -200,288 +361,7 @@ module.exports = function () {
         tipo: "factura"
       }
     ],
-    Tipo_Producto: [
-      {
-        id: 1,
-        tipo: "Artesania"
-      }, {
-        id: 2,
-        tipo: "Diseño"
-      }
-    ],
-    Producto: [
-      {
-        id: 1,
-        nombre: "Destello Boreal",
-        descripcion: "modelo grande color naranja",
-        stock: 4,
-        peso: 7.00,
-        precio_unitario: 13.00,
-        material: "madera",
-        fecha_creacion: "01/01/2022",
-        lugar_fabricacion: "01/01/2021",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 2
-          }
-        }
-      }, {
-        id: 2,
-        nombre: "Arte unico",
-        descripcion: "modelo pequeño color rojizo oscuro",
-        stock: 6,
-        peso: 10.00,
-        precio_unitario: 18.00,
-        material: "madera",
-        fecha_creacion: "11/04/2022",
-        lugar_fabricacion: "12/04/2022",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 2
-          }
-        }
-      }, {
-        id: 3,
-        nombre: "mate-burilado4",
-        descripcion: "bañado en oro color dorado",
-        stock: 1,
-        peso: 100.00,
-        precio_unitario: 250.00,
-        material: "calabaza",
-        fecha_creacion: "11/04/2022",
-        lugar_fabricacion: "junin",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 2
-          }
-        }
-      }, {
-        id: 4,
-        nombre: "Dia Soleado",
-        descripcion: "Mate burilado de forma ovalada, con colores amarillo, verde y azul",
-        stock: 10,
-        peso: 45.00,
-        precio_unitario: 23.00,
-        material: "burilado",
-        fecha_creacion: "10/08/2022",
-        lugar_fabricacion: "Huancayo",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 1
-          }
-        }
-      }, {
-        id: 5,
-        nombre: "Una sola vez",
-        descripcion: "Mate burilado de forma en forma de rosa, colores utilizados blanco, rojo y naranja",
-        stock: 16,
-        peso: 10.00,
-        precio_unitario: 27.00,
-        material: "burilado",
-        fecha_creacion: "10/09/2022",
-        lugar_fabricacion: "Huancan",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 1
-          }
-        }
-      }, {
-        id: 6,
-        nombre: "Sol de primavera",
-        descripcion: "Mate burilado de forma de basija, colores utilizados blanco, negro y amarillo",
-        stock: 5,
-        peso: 12.00,
-        precio_unitario: 29.00,
-        material: "burilado",
-        fecha_creacion: "05/09/2022",
-        lugar_fabricacion: "Huancan",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 1
-          }
-        }
-      }, {
-        id: 7,
-        nombre: "mate-burilado-extra",
-        descripcion: "modelo grande color rosado",
-        stock: 4,
-        peso: 7.00,
-        precio_unitario: 13.00,
-        material: "madera",
-        fecha_creacion: "01/01/2022",
-        lugar_fabricacion: "libertad",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 5
-          }
-        }
-      }, {
-        id: 8,
-        nombre: "mate-burilado dios",
-        descripcion: "modelo bañado en arena rosada ",
-        stock: 4,
-        peso: 10.00,
-        precio_unitario: 180.00,
-        material: "calabaza",
-        fecha_creacion: "01/01/2022",
-        lugar_fabricacion: "piura",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 5
-          }
-        }
-      }, {
-        id: 9,
-        nombre: "mate-burilado dios",
-        descripcion: "modelo bañado en arena rosada ",
-        stock: 4,
-        peso: 10.00,
-        precio_unitario: 18.00,
-        material: "calabaza",
-        fecha_creacion: "01/01/2022",
-        lugar_fabricacion: "piura",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 5
-          }
-        }
-      }, {
-        id: 10,
-        nombre: "Mate burilado en fondo negro",
-        descripcion: "En esta pieza se representan los paisajes andinos",
-        stock: 7,
-        peso: 10.00,
-        precio_unitario: 25.00,
-        material: "burilado",
-        fecha_creacion: "14/09/2022",
-        lugar_fabricacion: "Acobamba",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 3
-          }
-        }
-      }, {
-        id: 11,
-        nombre: "Mate Selva Morado",
-        descripcion: "En esta pieza se representan los animales de la selva",
-        stock: 2,
-        peso: 12.00,
-        precio_unitario: 200.00,
-        material: "burilado",
-        fecha_creacion: "04/07/2022",
-        lugar_fabricacion: "Acobamba",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 3
-          }
-        }
-      }, {
-        id: 12,
-        nombre: "Mate Selva Virgen",
-        descripcion: "En esta pieza se representa la flora de la selva peruana",
-        stock: 4,
-        peso: 14.00,
-        precio_unitario: 120.00,
-        material: "burilado",
-        fecha_creacion: "26/08/2022",
-        lugar_fabricacion: "Acobamba",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 3
-          }
-        }
-      }, {
-        id: 13,
-        nombre: "Paseo del lago",
-        descripcion: "Mate burilado de forma de vasija con tonos de azul claro y oscuro",
-        stock: 10,
-        peso: 18.00,
-        precio_unitario: 20.00,
-        material: "burilado",
-        fecha_creacion: "07/04/2022",
-        lugar_fabricacion: "Lambayeque",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 4
-          }
-        }
-      }, {
-        id: 14,
-        nombre: "Amanecer en los andes",
-        descripcion: "Mate burilado de forma de tazón de colores cálidos con tonos oscuros",
-        stock: 5,
-        peso: 10.00,
-        precio_unitario: 25.00,
-        material: "burilado",
-        fecha_creacion: "08/02/2022",
-        lugar_fabricacion: "Lambayeque",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 4
-          }
-        }
-      }, {
-        id: 15,
-        nombre: "Bastion del inca",
-        descripcion: "Mate burilado de forma de tazón con colores monoliticos",
-        stock: 10,
-        peso: 10.00,
-        precio_unitario: 35.00,
-        material: "burilado",
-        fecha_creacion: "16/06/2022",
-        lugar_fabricacion: "Lambayeque",
-        Tipo_Producto: {
-          id: 1
-        },
-        Artesanos: {
-          Usuarios: {
-            id: 4
-          }
-        }
-      }
-    ],
+    
     Solicitud_Diseño: [
       {
         id: 1,

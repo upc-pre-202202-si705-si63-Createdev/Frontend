@@ -1,41 +1,41 @@
-import { Producto } from './../model/Producto';
 import { HttpClient } from '@angular/common/http';
+import { Subject , EMPTY} from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Subject , EMPTY } from 'rxjs';
+import { Tipo_Producto } from '../model/tipo-producto';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductoService {
+export class TipoProductoService {
 
-  url: string = "http://localhost:5000/producto"
-  private listaCambio = new Subject<Producto[]>()
+  url: string = "http://localhost:5000/Tipo_Producto"
+  private listaCambio = new Subject<Tipo_Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
-
 
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Producto[]>(this.url);
+    return this.http.get<Tipo_Producto[]>(this.url);
   }
 
-  insertar(producto: Producto) {
-        return this.http.post(this.url, producto);
+  insertar(tipo_producto: Tipo_Producto) {
+        return this.http.post(this.url, tipo_producto);
   }
 
-  setLista(listaNueva: Producto[]) {
+  setLista(listaNueva: Tipo_Producto[]) {
     this.listaCambio.next(listaNueva);
   }
 
   getLista() {
     return this.listaCambio.asObservable();
   }
-
-  modificar(producto: Producto) {
-    return this.http.put(this.url + "/" + producto.id, producto);
+  
+  modificar(tipo_producto: Tipo_Producto) {
+    return this.http.put(this.url + "/" + tipo_producto.id, tipo_producto);
   }
   listarId(id: number) {
-    return this.http.get<Producto>(`${this.url}/${id}`);
+    return this.http.get<Tipo_Producto>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
     return this.http.delete(this.url + "/" + id);
@@ -48,7 +48,7 @@ export class ProductoService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Producto[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Tipo_Producto[]>(`${this.url}/buscar`, texto.toLowerCase(), {
       });
     }
     return EMPTY;
