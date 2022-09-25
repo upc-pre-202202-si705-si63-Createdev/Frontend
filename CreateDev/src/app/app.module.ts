@@ -75,7 +75,7 @@ import { RouterModule } from '@angular/router';
     TipoComprobanteCreaeditaComponent,
     TipoComprobanteBuscarComponent,
     TipoComprobanteListarComponent,
-    TipoComprobanteDialogoComponent
+    TipoComprobanteDialogoComponent,
 
     PedidoListarComponent,
     PedidoCreaeditaComponent,
@@ -97,7 +97,7 @@ import { RouterModule } from '@angular/router';
 
 
     MatDialogModule,
-    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},{path: 'pedido', component: PedidoListarComponent}]),
+    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},{path: 'pedido', component: PedidoListarComponent},{path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent}]),
 
 
 
