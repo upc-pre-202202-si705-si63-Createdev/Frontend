@@ -13,7 +13,7 @@
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="Id_del_Cliente">
+        <ng-container matColumnDef="id_Clientes">
             <th mat-header-cell *matHeaderCellDef> Id del Cliente </th>
             <td mat-cell *matCellDef="let element"> {{element.id_Clientes}} </td>
         </ng-container>
@@ -36,7 +36,7 @@
         </ng-container>
 
 
-        <ng-container matColumnDef="Id_del_Tipo_de_Comprobante">
+        <ng-container matColumnDef="Tipo_Comprobante">
             <th mat-header-cell *matHeaderCellDef> Id del Tipo de Comprobante </th>
             <td mat-cell *matCellDef="let element"> {{element.Tipo_Comprobante}} </td>
         </ng-container>
@@ -46,6 +46,13 @@
             <th mat-header-cell *matHeaderCellDef> Fecha de Cancelacion </th>
             <td mat-cell *matCellDef="let element"> {{element.fecha_cancelacion}} </td>
         </ng-container>
+
+        <ng-container matColumnDef="accion1">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+        [routerLink]="['edicion', element?.id]">Actualizar</button>
+    </td>
+  </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { CompraService } from 'src/app/service/compra.service';
 import { Compra } from 'src/app/model/Compra';
 
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-compra-creaedita',
@@ -14,22 +16,45 @@ export class CompraCreaeditaComponent implements OnInit {
   compra: Compra = new Compra();
   mensaje: string = "";
 
+  edicion: boolean = false;
+  id: number = 0;
 
-  constructor(private compraService: CompraService, private route: Router) { }
+
+  constructor(private CompraService: CompraService, private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    });
+
+  }
+
+  init() {
+    if (this.edicion) {
+      this.CompraService.listarId(this.id).subscribe(data => {
+        this.compra = data;
+      })
+    }
 
   }
 
 
   aceptar(): void {
-    if (this.compra.id > 0 && this.compra.Clientes_Usuarios_id > 0 && this.compra.cantidad_total > 0 && this.compra.cantidad_total > 0 && this.compra.precio_total > 0 && this.compra.peso_total > 0 && (this.compra.Tipo_Comprobante_Id == 1 || this.compra.Tipo_Comprobante_Id == 2) && this.compra.fecha_cancelacion != "") {
-      this.compraService.insertar(this.compra).subscribe(data => {
-        this.compraService.listar().subscribe(data => {
-          this.compraService.setLista(data);
-        });
-      })
-      this.route.navigate(['compra']);
+    if (this.compra.id > 0 && this.compra.id_Clientes > 0 && this.compra.cantidad_total > 0 && this.compra.cantidad_total > 0 && this.compra.precio_total > 0 && this.compra.peso_total > 0 && (this.compra.Tipo_Comprobante == 1 || this.compra.Tipo_Comprobante == 2) && this.compra.fecha_cancelacion != "") {
+      if (this.edicion) {
+        
+      }else{
+        this.CompraService.insertar(this.compra).subscribe(data => {
+          this.CompraService.listar().subscribe(data => {
+            this.CompraService.setLista(data);
+          });
+        })
+      }
+
+      this.router.navigate(['compra']);
     }
 
     else {
