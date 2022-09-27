@@ -15,7 +15,7 @@ export class CompraService {
 
   constructor(private http : HttpClient) { }
 
-  getLista(){
-    return this.listaCAmbio.asObservable();
+  listar(){
+    return this.http.get<Compra[]>(this.url);
   } 
 }

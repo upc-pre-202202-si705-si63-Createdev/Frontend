@@ -16,11 +16,12 @@ import { Component, OnInit } from '@angular/core';
 export class CompraListarComponent implements OnInit {
 
   dataSource : MatTableDataSource<Compra> = new MatTableDataSource();
-  displayedColumns : string[] = ['id','Id_del_Cliente', 'Cantidad_Total','Precio_Total','Peso_Total','Id_del_Tipo_de_Comprobante','Fecha_Cancelacion'];
+  displayedColumns : string[] = ['id','Id_del_Cliente', 'Cantidad_Total',
+  'Precio_Total','Peso_Total','Id_del_Tipo_de_Comprobante','Fecha_Cancelacion'];
   constructor(private ps : CompraService) { }
 
   ngOnInit(): void {
-    this.ps.getLista().subscribe(data => {
+    this.ps.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 

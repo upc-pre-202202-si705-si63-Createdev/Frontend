@@ -106,6 +106,7 @@ import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar
       {path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent},
       {path: 'producto', component: ProductoListarComponent},
       {path: 'tipo-producto', component: TipoProductoListarComponent},
+      {path: 'compra', component: CompraListarComponent}
     ]),
 
 
