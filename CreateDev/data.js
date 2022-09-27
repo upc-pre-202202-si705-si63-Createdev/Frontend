@@ -422,21 +422,33 @@ module.exports = function () {
     Compra: [
       {
         id: 1,
-        Clientes: {
-          Usuarios: {
-            id: 2
-          }
-        },
+        nombre_Cliente: "Alexandra",
         cantidad_total: 1,
         precio_total: 23.00,
         peso_total: 5,
-        Tipo_Comprobante: {
-          id: 1
-        },
+        Tipo_Comprobante: 1,
         fecha_cancelacion: "23-04-2022",
-        Solicitud_Diseño: {
-          id: 1
-        }
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 2,
+        nombre_Cliente: "Ramiro",
+        cantidad_total: 4,
+        precio_total: 128.00,
+        peso_total: 10,
+        Tipo_Comprobante: 2,
+        fecha_cancelacion: "28-07-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 3,
+        nombre_Cliente: "Felicia",
+        cantidad_total: 2,
+        precio_total: 56.00,
+        peso_total: 8,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "15-07-2022",
+        Solicitud_Diseño: 0
       }
     ],
     Detalle_Compra: [

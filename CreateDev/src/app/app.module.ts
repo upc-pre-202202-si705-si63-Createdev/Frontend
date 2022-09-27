@@ -43,6 +43,10 @@ import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-
 import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialogo/pedido-dialogo.component';
 import { PedidoBuscarComponent } from './page/Pedido/pedido-buscar/pedido-buscar.component';
 import { RouterModule } from '@angular/router';
+import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar.component';
+import { CompraCreaeditaComponent } from './page/Compra/compra-creaedita/compra-creaedita.component';
+import { CompraDialogoComponent } from './page/Compra/compra-listar/compra-dialogo/compra-dialogo.component';
+import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar.component';
 
 
 @NgModule({
@@ -79,7 +83,11 @@ import { RouterModule } from '@angular/router';
     PedidoListarComponent,
     PedidoCreaeditaComponent,
     PedidoDialogoComponent,
-    PedidoBuscarComponent
+    PedidoBuscarComponent,
+    CompraListarComponent,
+    CompraCreaeditaComponent,
+    CompraDialogoComponent,
+    CompraBuscarComponent
 
 
 
@@ -104,6 +112,7 @@ import { RouterModule } from '@angular/router';
       {path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent},
       {path: 'producto', component: ProductoListarComponent},
       {path: 'tipo-producto', component: TipoProductoListarComponent},
+      {path: 'compra', component: CompraListarComponent}
     ]),
 
 
