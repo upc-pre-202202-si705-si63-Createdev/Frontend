@@ -422,21 +422,13 @@ module.exports = function () {
     Compra: [
       {
         id: 1,
-        Clientes: {
-          Usuarios: {
-            id: 2
-          }
-        },
+        id_Clientes: 65,
         cantidad_total: 1,
         precio_total: 23.00,
         peso_total: 5,
-        Tipo_Comprobante: {
-          id: 1
-        },
+        Tipo_Comprobante: 1,
         fecha_cancelacion: "23-04-2022",
-        Solicitud_Diseño: {
-          id: 1
-        }
+        Solicitud_Diseño: 0
       }
     ],
     Detalle_Compra: [
