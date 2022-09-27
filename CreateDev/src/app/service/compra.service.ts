@@ -15,6 +15,8 @@ export class CompraService {
   private listaCAmbio = new Subject<Compra[]>();
 
 
+  private confirmaEliminacion = new Subject<Boolean>();
+
   constructor(private http: HttpClient) { }
 
   listar() {
@@ -40,5 +42,16 @@ export class CompraService {
 
   listarId(id: number) {
     return this.http.get<Compra>(`${this.url}/${id}`);
+  }
+
+
+  eliminar(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }
