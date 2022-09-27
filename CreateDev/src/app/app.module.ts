@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,11 +19,6 @@ import { ProductoListarComponent } from './page/Producto/Producto-listar/product
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
-
-
-
-
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
@@ -32,9 +26,7 @@ import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto
 import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Producto-dialogo/producto-dialogo/producto-dialogo.component';
 import { ProductoBuscarComponent } from './page/Producto/Producto-buscar/producto-buscar.component';
 import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
-
 import { MatIconModule } from '@angular/material/icon';
-
 import { FormsModule } from '@angular/forms';
 import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
@@ -46,15 +38,11 @@ import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-
 import { TipoComprobanteBuscarComponent } from './page/tipo-comprobante/tipo-comprobante-buscar/tipo-comprobante-buscar.component';
 import { TipoComprobanteListarComponent } from './page/tipo-comprobante/tipo-comprobante-listar/tipo-comprobante-listar.component';
 import { TipoComprobanteDialogoComponent } from './page/tipo-comprobante/tipo-comprobante-listar/tipo-comprobante-dialogo/tipo-comprobante-dialogo.component';
-
 import { PedidoListarComponent } from './page/Pedido/pedido-listar/pedido-listar.component';
 import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-creaedita.component';
 import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialogo/pedido-dialogo.component';
 import { PedidoBuscarComponent } from './page/Pedido/pedido-buscar/pedido-buscar.component';
-
 import { RouterModule } from '@angular/router';
-
-
 
 
 @NgModule({
@@ -76,7 +64,6 @@ import { RouterModule } from '@angular/router';
     ClientesListarComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent,
-
     TipoProductoComponent,
     TipoProductoListarComponent,
     TipoProductoCreaeditaComponent,
@@ -84,14 +71,11 @@ import { RouterModule } from '@angular/router';
     ProductoDialogoComponent,
     ProductoBuscarComponent,
     TipoProductoBuscarComponent,
-
-
     TipoComprobanteComponent,
     TipoComprobanteCreaeditaComponent,
     TipoComprobanteBuscarComponent,
     TipoComprobanteListarComponent,
     TipoComprobanteDialogoComponent,
-
     PedidoListarComponent,
     PedidoCreaeditaComponent,
     PedidoDialogoComponent,
@@ -114,9 +98,13 @@ import { RouterModule } from '@angular/router';
 
 
     MatDialogModule,
-    RouterModule.forRoot([ {path: 'usuarios-listar', component: UsuariosListarComponent},{path: 'pedido', component: PedidoListarComponent},{path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent}]),
-
-
+    RouterModule.forRoot([ 
+      {path: 'usuarios-listar', component: UsuariosListarComponent},
+      {path: 'pedido', component: PedidoListarComponent},
+      {path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent},
+      {path: 'producto', component: ProductoListarComponent},
+      {path: 'tipo-producto', component: TipoProductoListarComponent},
+    ]),
 
 
 

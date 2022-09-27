@@ -1,4 +1,11 @@
 table {
     width: 100%;
   }
+  .color{
+    color: black;
+    background-color: whitesmoke;
+    opacity: 0.85;
+  }
+
+
   
