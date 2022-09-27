@@ -45,8 +45,12 @@ export class CompraCreaeditaComponent implements OnInit {
   aceptar(): void {
     if (this.compra.id > 0 && this.compra.id_Clientes > 0 && this.compra.cantidad_total > 0 && this.compra.cantidad_total > 0 && this.compra.precio_total > 0 && this.compra.peso_total > 0 && (this.compra.Tipo_Comprobante == 1 || this.compra.Tipo_Comprobante == 2) && this.compra.fecha_cancelacion != "") {
       if (this.edicion) {
-        
-      }else{
+        this.CompraService.modificar(this.compra).subscribe(data => {
+          this.CompraService.listar().subscribe(data => {
+            this.CompraService.setLista(data);
+          })
+        })
+      } else {
         this.CompraService.insertar(this.compra).subscribe(data => {
           this.CompraService.listar().subscribe(data => {
             this.CompraService.setLista(data);
