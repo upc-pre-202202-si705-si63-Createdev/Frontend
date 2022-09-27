@@ -21,11 +21,13 @@ export class CompraListarComponent implements OnInit {
   constructor(private ps : CompraService) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data => {
+    this.ps.listar().subscribe((data: Compra[] | undefined) => {
       this.dataSource = new MatTableDataSource(data);
     });
 
-
+    this.ps.getLista().subscribe(data=>{
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }

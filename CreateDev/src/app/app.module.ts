@@ -44,6 +44,7 @@ import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialo
 import { PedidoBuscarComponent } from './page/Pedido/pedido-buscar/pedido-buscar.component';
 import { RouterModule } from '@angular/router';
 import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar.component';
+import { CompraCreaeditaComponent } from './page/Compra/compra-creaedita/compra-creaedita.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar
     PedidoCreaeditaComponent,
     PedidoDialogoComponent,
     PedidoBuscarComponent,
-    CompraListarComponent
+    CompraListarComponent,
+    CompraCreaeditaComponent
 
 
 

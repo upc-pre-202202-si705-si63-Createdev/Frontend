@@ -1,3 +1,4 @@
+import { CompraCreaeditaComponent } from './page/Compra/compra-creaedita/compra-creaedita.component';
 
 import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
 import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comprobante.component';
@@ -38,7 +39,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'compra', component: CompraComponent, children: [
-
+    { path: 'nuevo', component: CompraCreaeditaComponent }
   ]
 }, {
   path: 'detalle-compra', component: DetalleCompraComponent, children: [

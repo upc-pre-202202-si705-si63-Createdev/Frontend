@@ -1,0 +1,53 @@
+<div class="container">
+
+    <h1>Registrar una nueva Compra</h1>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput required placeholder="Id" [(ngModel)]="compra.id">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Id del Cliente</mat-label>
+        <input matInput required placeholder="id_Clientes" [(ngModel)]="compra.Clientes_Usuarios_id">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Cantidad Total</mat-label>
+        <input matInput placeholder="cantidad_total" [(ngModel)]="compra.cantidad_total">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Precio Total</mat-label>
+        <input matInput placeholder="precio_total" [(ngModel)]="compra.precio_total">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Peso Total</mat-label>
+        <input matInput placeholder="peso_total" [(ngModel)]="compra.peso_total">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Id Tipo del Comprobante</mat-label>
+        <input matInput required placeholder="Tipo_Comprobante" [(ngModel)]="compra.Tipo_Comprobante_Id">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Fecha de Cancelacion</mat-label>
+        <input matInput placeholder="fecha_cancelacion (dd/mm/yy)" [(ngModel)]="compra.fecha_cancelacion">
+    </mat-form-field>
+    <br>
+
+   
+    
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/compra">Cancelar</button>
+    <p>{{mensaje}}</p>
+
+</div>
