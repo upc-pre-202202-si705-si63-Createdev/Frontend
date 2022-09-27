@@ -46,6 +46,7 @@ import { RouterModule } from '@angular/router';
 import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar.component';
 import { CompraCreaeditaComponent } from './page/Compra/compra-creaedita/compra-creaedita.component';
 import { CompraDialogoComponent } from './page/Compra/compra-listar/compra-dialogo/compra-dialogo.component';
+import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { CompraDialogoComponent } from './page/Compra/compra-listar/compra-dialo
     PedidoBuscarComponent,
     CompraListarComponent,
     CompraCreaeditaComponent,
-    CompraDialogoComponent
+    CompraDialogoComponent,
+    CompraBuscarComponent
 
 
 

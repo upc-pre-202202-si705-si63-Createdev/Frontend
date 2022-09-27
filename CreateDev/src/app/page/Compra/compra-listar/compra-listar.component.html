@@ -4,7 +4,7 @@
     </div>
 
 
-
+    <app-compra-buscar></app-compra-buscar>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 
@@ -13,9 +13,9 @@
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="id_Clientes">
+        <ng-container matColumnDef="nombre_Cliente">
             <th mat-header-cell *matHeaderCellDef> Id del Cliente </th>
-            <td mat-cell *matCellDef="let element"> {{element.id_Clientes}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.nombre_Cliente}} </td>
         </ng-container>
 
         <ng-container matColumnDef="Cantidad_Total">
@@ -53,7 +53,7 @@
                     [routerLink]="['edicion', element?.id]">Actualizar</button>
             </td>
         </ng-container>
-        
+
         <ng-container matColumnDef="accion2">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let element">

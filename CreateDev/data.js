@@ -422,7 +422,7 @@ module.exports = function () {
     Compra: [
       {
         id: 1,
-        id_Clientes: 65,
+        nombre_Cliente: "Alexandra",
         cantidad_total: 1,
         precio_total: 23.00,
         peso_total: 5,
@@ -432,7 +432,7 @@ module.exports = function () {
       },
       {
         id: 2,
-        id_Clientes: 66,
+        nombre_Cliente: "Ramiro",
         cantidad_total: 4,
         precio_total: 128.00,
         peso_total: 10,
@@ -442,7 +442,7 @@ module.exports = function () {
       },
       {
         id: 3,
-        id_Clientes: 67,
+        nombre_Cliente: "Felicia",
         cantidad_total: 2,
         precio_total: 56.00,
         peso_total: 8,
