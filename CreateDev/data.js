@@ -429,6 +429,26 @@ module.exports = function () {
         Tipo_Comprobante: 1,
         fecha_cancelacion: "23-04-2022",
         Solicitud_Diseño: 0
+      },
+      {
+        id: 2,
+        id_Clientes: 66,
+        cantidad_total: 4,
+        precio_total: 128.00,
+        peso_total: 10,
+        Tipo_Comprobante: 2,
+        fecha_cancelacion: "28-07-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 3,
+        id_Clientes: 67,
+        cantidad_total: 2,
+        precio_total: 56.00,
+        peso_total: 8,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "15-07-2022",
+        Solicitud_Diseño: 0
       }
     ],
     Detalle_Compra: [
