@@ -449,6 +449,66 @@ module.exports = function () {
         Tipo_Comprobante: 1,
         fecha_cancelacion: "15-07-2022",
         Solicitud_Diseño: 0
+      },
+      {
+        id: 4,
+        nombre_Cliente: "Carlos",
+        cantidad_total: 1,
+        precio_total: 32.00,
+        peso_total: 4,
+        Tipo_Comprobante: 2,
+        fecha_cancelacion: "11-02-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 5,
+        nombre_Cliente: "Deysi",
+        cantidad_total: 4,
+        precio_total: 135.00,
+        peso_total: 10,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "14-04-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 6,
+        nombre_Cliente: "Adrian",
+        cantidad_total: 5,
+        precio_total: 160.00,
+        peso_total: 15,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "12-03-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 7,
+        nombre_Cliente: "Peter",
+        cantidad_total: 1,
+        precio_total: 30.00,
+        peso_total: 3,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "19-09-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 8,
+        nombre_Cliente: "Alonso",
+        cantidad_total: 8,
+        precio_total: 180.00,
+        peso_total: 18,
+        Tipo_Comprobante: 2,
+        fecha_cancelacion: "20-09-2022",
+        Solicitud_Diseño: 0
+      },
+      {
+        id: 9,
+        nombre_Cliente: "Stiven",
+        cantidad_total: 3,
+        precio_total: 63.00,
+        peso_total: 6,
+        Tipo_Comprobante: 1,
+        fecha_cancelacion: "12-04-2022",
+        Solicitud_Diseño: 0
       }
     ],
     Detalle_Compra: [
