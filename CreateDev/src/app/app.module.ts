@@ -83,7 +83,7 @@ import { RouterModule } from '@angular/router';
     TipoProductoDialogoComponent,
     ProductoDialogoComponent,
     ProductoBuscarComponent,
-    TipoProductoBuscarComponent
+    TipoProductoBuscarComponent,
 
 
     TipoComprobanteComponent,
