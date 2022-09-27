@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,8 +43,6 @@ import { PedidoCreaeditaComponent } from './page/Pedido/pedido-creaedita/pedido-
 import { PedidoDialogoComponent } from './page/Pedido/pedido-listar/pedido-dialogo/pedido-dialogo.component';
 import { PedidoBuscarComponent } from './page/Pedido/pedido-buscar/pedido-buscar.component';
 import { RouterModule } from '@angular/router';
-
-
 
 
 @NgModule({
@@ -108,8 +105,6 @@ import { RouterModule } from '@angular/router';
       {path: 'producto', component: ProductoListarComponent},
       {path: 'tipo-producto', component: TipoProductoListarComponent},
     ]),
-
-
 
 
 
