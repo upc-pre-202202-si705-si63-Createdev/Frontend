@@ -101,6 +101,9 @@
     }
   },
   "cli": {
-    "analytics": "1e0ba6f3-07c1-43f8-b1b6-a0d1271f4808"
+    "analytics": "1e0ba6f3-07c1-43f8-b1b6-a0d1271f4808",
+    "warnings": {
+      "versionMismatch": false
+    }
   }
 }
