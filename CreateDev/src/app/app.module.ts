@@ -47,6 +47,9 @@ import { CompraListarComponent } from './page/Compra/compra-listar/compra-listar
 import { CompraCreaeditaComponent } from './page/Compra/compra-creaedita/compra-creaedita.component';
 import { CompraDialogoComponent } from './page/Compra/compra-listar/compra-dialogo/compra-dialogo.component';
 import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar.component';
+import { PrincipalComponent } from './page/principal/principal.component';
+import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
+import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 
 
 @NgModule({
@@ -87,7 +90,10 @@ import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar
     CompraListarComponent,
     CompraCreaeditaComponent,
     CompraDialogoComponent,
-    CompraBuscarComponent
+    CompraBuscarComponent,
+    PrincipalComponent,
+    PrincipalLandingComponent,
+    PrincipalPageComponent
 
 
 
