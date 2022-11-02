@@ -50,6 +50,7 @@ import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar
 import { PrincipalComponent } from './page/principal/principal.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
+import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { PrincipalPageComponent } from './page/principal/principal-page/principa
     CompraBuscarComponent,
     PrincipalComponent,
     PrincipalLandingComponent,
-    PrincipalPageComponent
+    PrincipalPageComponent,
+    SolicitudDisenioListarComponent
 
 
 

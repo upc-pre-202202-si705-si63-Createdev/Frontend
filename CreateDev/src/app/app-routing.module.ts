@@ -105,9 +105,14 @@ const routes: Routes = [
             ]
           },
           {
-            path: 'producto', component: PedidoComponent, children: [
-              { path: 'nuevo', component: PedidoCreaeditaComponent },
-              { path: 'edicion/:id', component: PedidoCreaeditaComponent }
+            path: 'producto', component: ProductoComponent, children: [
+              { path: 'nuevo', component: ProductoCreaeditaComponent },
+              { path: 'edicion/:id', component: ProductoCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'solicitud', component: SolicitudDisenioComponent, children: [
+
             ]
           },
         ]
