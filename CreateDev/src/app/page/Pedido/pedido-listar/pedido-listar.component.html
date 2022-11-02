@@ -1,7 +1,5 @@
 <div class="container">
-  <div style=" text-align: center;">
-    <h1 style="font-size: 80px; background-color: #FF8A05;color: rgb(255, 255, 255)">Lista de pedidos</h1>
-  </div>
+  <h1>Lista de pedidos</h1>
   <app-pedido-buscar></app-pedido-buscar>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -54,7 +52,7 @@
   <div class="example-button-container" class="container">
 
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/pedido/nuevo">
+      routerLink="/home/page/pedido/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
