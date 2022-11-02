@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 
-
-
-
 header {
     display: flex;
     justify-content: space-between;
@@ -14,15 +11,13 @@ header {
     padding: 10px;
     border: 1px solid black;
     background-size: auto;
-    
-    
-
+    width: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    
+
 
 }
 
@@ -41,13 +36,13 @@ a {
     padding-right: 20px;
     text-decoration: none;
     color: black;
-
-
+    font: bold 3rem 'Maven Pro', san-serif;
+    font-size: 20px;
 }
 
 #dis {
     display: flex;
-    
+
     padding-bottom: 0;
     padding-right: 20px;
 
@@ -56,7 +51,7 @@ a {
 html,
 body {
     height: 100%;
-    
+
 }
 
 body {
