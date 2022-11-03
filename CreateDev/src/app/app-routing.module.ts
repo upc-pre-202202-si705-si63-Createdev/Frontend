@@ -30,7 +30,7 @@ import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-produc
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 
 const routes: Routes = [
-  
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home', component: PrincipalComponent, children: [
@@ -54,6 +54,30 @@ const routes: Routes = [
               { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent }
             ]
           },
+          {
+            path: 'usuarios', component: UsuariosComponent, children: [
+              { path: 'nuevo', component: UsuariosCreaeditaComponent },
+              { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'compra', component: CompraComponent, children: [
+              { path: 'nuevo', component: CompraCreaeditaComponent },
+              { path: 'edicion/:id', component: CompraCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'tipo-comprobante', component: TipoComprobanteComponent, children: [
+              { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
+              { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'tipo-producto', component: TipoProductoComponent, children: [
+              { path: 'nuevo', component: TipoProductoCreaeditaComponent },
+              { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
+            ]
+          }
         ]
       }
     ]
@@ -70,3 +94,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
