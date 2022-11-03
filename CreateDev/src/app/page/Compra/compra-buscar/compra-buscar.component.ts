@@ -20,7 +20,7 @@ export class CompraBuscarComponent implements OnInit {
     let array : Compra[]=[];
     this.compraService.listar().subscribe(data=>{
       data.forEach((element,index)=>{
-        if(element.nombre_Cliente.includes(e.target.value)){
+        if(element.nombre_usuario.includes(e.target.value)){
           array.push(data[index]);
         }
       });
