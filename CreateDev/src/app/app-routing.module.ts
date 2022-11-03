@@ -33,66 +33,6 @@ import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-di
 
 
 const routes: Routes = [
-
-  /*
-  {
-    path: 'artesano', component: ArtesanosComponent, children: [
-
-    ]
-
-  }, {
-    path: 'clientes', component: ClientesComponent, children: [
-
-    ]
-  }, {
-    path: 'home/page/compra', component: CompraComponent, children: [
-      { path: 'nuevo', component: CompraCreaeditaComponent },
-      { path: 'edicion/:id', component: CompraCreaeditaComponent }
-    ]
-  }, {
-    path: 'detalle-compra', component: DetalleCompraComponent, children: [
-
-    ]
-  }, {
-    path: 'home/page/pedido', component: PedidoComponent, children: [
-      { path: 'nuevo', component: PedidoCreaeditaComponent },
-      { path: 'edicion/:id', component: PedidoCreaeditaComponent }
-    ]
-  }, {
-
-    path: 'home/page/solicitud-disenio', component: SolicitudDisenioComponent, children: [
-
-    ]
-  }, {
-    path: 'home/page/usuarios', component: UsuariosComponent, children: [
-      { path: 'nuevo', component: UsuariosCreaeditaComponent },
-      { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
-    ]
-  }, {
-
-    path: 'home/page/producto', component: ProductoComponent, children: [
-      { path: 'nuevo', component: ProductoCreaeditaComponent },
-      { path: 'edicion/:id', component: ProductoCreaeditaComponent }
-    ]
-  }, {
-    path: 'home/page/tipo-producto', component: TipoProductoComponent, children: [
-      { path: 'nuevo', component: TipoProductoCreaeditaComponent },
-      { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
-    ]
-  },
-  {
-    path: 'home/page/tipo-comprobante', component: TipoComprobanteComponent, children: [
-      { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
-      { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
-    ]
-  },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {
-    path: 'home', component: PrincipalComponent, children: [
-      { path: 'page', component: PrincipalPageComponent }
-    ]
-  }
-  */
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home', component: PrincipalComponent, children: [
@@ -105,11 +45,35 @@ const routes: Routes = [
             ]
           },
           {
-            path: 'producto', component: PedidoComponent, children: [
-              { path: 'nuevo', component: PedidoCreaeditaComponent },
-              { path: 'edicion/:id', component: PedidoCreaeditaComponent }
+            path: 'producto', component: ProductoComponent, children: [
+              { path: 'nuevo', component: ProductoCreaeditaComponent },
+              { path: 'edicion/:id', component: ProductoCreaeditaComponent }
             ]
           },
+          //nueva agregacion
+          {
+            path: 'usuarios', component: UsuariosComponent, children: [
+              { path: 'nuevo', component: UsuariosCreaeditaComponent },
+              { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'compra', component: CompraComponent, children: [
+              { path: 'nuevo', component: CompraCreaeditaComponent },
+              { path: 'edicion/:id', component: CompraCreaeditaComponent }
+            ]
+          },{
+            path: 'tipo-comprobante', component: TipoComprobanteComponent, children: [
+              { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
+              { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
+            ]
+          },{
+            path: 'tipo-producto', component: TipoProductoComponent, children: [
+              { path: 'nuevo', component: TipoProductoCreaeditaComponent },
+              { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
+            ]
+          }
+    
         ]
       }
     ]
@@ -126,3 +90,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
