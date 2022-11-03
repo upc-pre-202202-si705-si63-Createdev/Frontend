@@ -4,8 +4,8 @@ import { Clientes } from "./Clientes";
 
 export class solicitud_disenio {
     id: number = 0;
-    Cliente: Clientes = new Clientes();
-    Artesano: Artesanos = new Artesanos();
-    Pedido: Pedido = new Pedido();
+    cliente: Clientes = new Clientes();
+    artesano: Artesanos = new Artesanos();
+    pedido: Pedido = new Pedido();
     fecha: Date = new Date();
 }

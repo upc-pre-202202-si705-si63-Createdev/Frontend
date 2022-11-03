@@ -24,4 +24,10 @@ export class SolicitudDisenioService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(solicitud_disenio: solicitud_disenio) {
+    return this.http.put(this.url + "/" + solicitud_disenio.id, solicitud_disenio);
+  }
+  listarId(id: number) {
+    return this.http.get<solicitud_disenio>(`${this.url}/${id}`);
+  }
 }
