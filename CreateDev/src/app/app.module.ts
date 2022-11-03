@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,13 +12,21 @@ import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { CustomDateAdapter } from './custom-adapter';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtesanosListarComponent } from './page/Artesanos/Artesanos-listar/artesanos-listar.component';
 import { ClientesListarComponent } from './page/Clientes/Clientes-listar/clientes-listar.component';
 import { ProductoListarComponent } from './page/Producto/Producto-listar/producto-listar.component';
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.component';
 import { TipoProductoListarComponent } from './page/tipo-producto/tipo-producto-listar/tipo-producto-listar.component';
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
@@ -26,12 +34,10 @@ import { TipoProductoDialogoComponent } from './page/tipo-producto/tipo-producto
 import { ProductoDialogoComponent } from './page/Producto/Producto-listar/Producto-dialogo/producto-dialogo/producto-dialogo.component';
 import { ProductoBuscarComponent } from './page/Producto/Producto-buscar/producto-buscar.component';
 import { TipoProductoBuscarComponent } from './page/tipo-producto/tipo-producto-buscar/tipo-producto-buscar.component';
-import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { UsuariosListarComponent } from './page/Usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosCreaeditaComponent } from './page/Usuarios/usuarios-creaedita/usuarios-creaedita.component';
 import { UsuariosDialogoComponent } from './page/Usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { UsuariosBuscarComponent } from './page/Usuarios/usuarios-buscar/usuarios-buscar.component';
 import { TipoComprobanteComponent } from './page/tipo-comprobante/tipo-comprobante.component';
 import { TipoComprobanteCreaeditaComponent } from './page/tipo-comprobante/tipo-comprobante-creaedita/tipo-comprobante-creaedita.component';
@@ -50,6 +56,8 @@ import { CompraBuscarComponent } from './page/Compra/compra-buscar/compra-buscar
 import { PrincipalComponent } from './page/principal/principal.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
+import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
+import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
 
 
 @NgModule({
@@ -93,7 +101,9 @@ import { PrincipalPageComponent } from './page/principal/principal-page/principa
     CompraBuscarComponent,
     PrincipalComponent,
     PrincipalLandingComponent,
-    PrincipalPageComponent
+    PrincipalPageComponent,
+    SolicitudDisenioListarComponent,
+    SolicitudDisenioCreaeditaComponent
 
 
 
@@ -108,23 +118,26 @@ import { PrincipalPageComponent } from './page/principal/principal-page/principa
     MatButtonModule,
     MatIconModule,
     FormsModule,
-
-
-
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatSnackBarModule,
     MatDialogModule,
-    RouterModule.forRoot([ 
-      {path: 'usuarios-listar', component: UsuariosListarComponent},
-      {path: 'pedido', component: PedidoListarComponent},
-      {path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent},
-      {path: 'producto', component: ProductoListarComponent},
-      {path: 'tipo-producto', component: TipoProductoListarComponent},
-      {path: 'compra', component: CompraListarComponent}
+    RouterModule.forRoot([
+      { path: 'usuarios-listar', component: UsuariosListarComponent },
+      { path: 'pedido', component: PedidoListarComponent },
+      { path: 'tipo-comprobante-listar', component: TipoComprobanteListarComponent },
+      { path: 'producto', component: ProductoListarComponent },
+      { path: 'tipo-producto', component: TipoProductoListarComponent },
+      { path: 'compra', component: CompraListarComponent },
+      { path: 'solicitud', component: SolicitudDisenioComponent }
     ]),
 
-
-
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+  { provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

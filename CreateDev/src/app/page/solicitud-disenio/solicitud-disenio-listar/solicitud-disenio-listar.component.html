@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Lista de solicitudes de diseño</h1>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- 1 -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- 2 -->
+        <ng-container matColumnDef="cliente">
+            <th mat-header-cell *matHeaderCellDef> CLIENTE </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- 3 -->
+        <ng-container matColumnDef="artesano">
+            <th mat-header-cell *matHeaderCellDef> ARTESANO </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- 4 -->
+        <ng-container matColumnDef="pedido">
+            <th mat-header-cell *matHeaderCellDef> PEDIDO </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- 5 -->
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef> FECHA DE SOLICITUD </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="example-button-container" class="container">
+
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+            routerLink="/home/page/solicitud/nuevo">
+            <mat-icon>plus_one</mat-icon>
+        </button>
+    </div>
