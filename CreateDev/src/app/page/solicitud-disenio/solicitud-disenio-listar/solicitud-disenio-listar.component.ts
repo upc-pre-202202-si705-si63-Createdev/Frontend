@@ -13,7 +13,9 @@ export class SolicitudDisenioListarComponent implements OnInit {
 
   lista: solicitud_disenio[] = [];
   dataSource: MatTableDataSource<solicitud_disenio> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'cliente', 'artesano', 'pedido', 'fecha'];
+  displayedColumns: string[] = ['id', 'pedido', 'fecha'];
+  private idMayor: number = 0;
+
   constructor(private solicitudDisenioService: SolicitudDisenioService) { }
 
   ngOnInit(): void {
