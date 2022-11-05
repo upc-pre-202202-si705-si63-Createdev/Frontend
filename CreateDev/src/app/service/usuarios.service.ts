@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Usuarios } from '../model/Usuarios';
+import { Usuario } from '../model/Usuario';
 
 import { Subject,EMPTY } from 'rxjs';
 
@@ -14,27 +14,27 @@ import { Subject,EMPTY } from 'rxjs';
 export class UsuariosService {
 
   url: string = "http://localhost:5000/Usuarios"
-  private listaCambio = new Subject<Usuarios[]>()
+  private listaCambio = new Subject<Usuario[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Usuarios[]>(this.url);
+    return this.http.get<Usuario[]>(this.url);
   }
-  insertar(Usuarios: Usuarios) {
+  insertar(Usuarios: Usuario) {
     return this.http.post(this.url, Usuarios);
   }
-  setLista(listaNueva: Usuarios[]) {
+  setLista(listaNueva: Usuario[]) {
     this.listaCambio.next(listaNueva);
   }
   getLista() {
     return this.listaCambio.asObservable();
   }
-  modificar(Usuarios: Usuarios) {
+  modificar(Usuarios: Usuario) {
     return this.http.put(this.url + "/" + Usuarios.id, Usuarios);
   }
   listarId(id: number) {
-    return this.http.get<Usuarios>(`${this.url}/${id}`);
+    return this.http.get<Usuario>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
     return this.http.delete(this.url + "/" + id);
@@ -47,7 +47,7 @@ export class UsuariosService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Usuarios[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      return this.http.post<Usuario[]>(`${this.url}/buscar`, texto.toLowerCase(), {
       });
     }
     return EMPTY;

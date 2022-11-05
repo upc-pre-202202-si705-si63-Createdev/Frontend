@@ -1,10 +1,10 @@
 import { Pedido } from "./Pedido";
 import { Artesanos } from "./Artesanos";
-import { Clientes } from "./Clientes";
+import { Cliente } from "./Cliente";
 
 export class solicitud_disenio {
     id: number = 0;
-    cliente: Clientes = new Clientes();
+    cliente: Cliente = new Cliente();
     artesano: Artesanos = new Artesanos();
     pedido: Pedido = new Pedido();
     fecha: Date = new Date();

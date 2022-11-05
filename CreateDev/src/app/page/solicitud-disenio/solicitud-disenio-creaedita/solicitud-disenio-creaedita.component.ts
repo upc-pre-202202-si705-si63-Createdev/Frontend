@@ -1,4 +1,4 @@
-import { Clientes } from './../../../model/Clientes';
+import { Cliente } from '../../../model/Cliente';
 import { Artesanos } from './../../../model/Artesanos';
 import { Pedido } from './../../../model/Pedido';
 import { ClientesService } from './../../../service/clientes.service';
@@ -23,7 +23,7 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
   edicion: boolean = false;
   listaPedidos: Pedido[] = [];
   listaArtesanos: Artesanos[] = [];
-  listaClientes: Clientes[] = [];
+  listaClientes: Cliente[] = [];
   id: number = 0;
   fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
   idPedidoSeleccionado: number = 0;

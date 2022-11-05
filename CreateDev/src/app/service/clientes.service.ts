@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Clientes } from '../model/Clientes';
+import { Cliente } from '../model/Cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,6 @@ export class ClientesService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Clientes[]>(this.url);
+    return this.http.get<Cliente[]>(this.url);
   }
 }
