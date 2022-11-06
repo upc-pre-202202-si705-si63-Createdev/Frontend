@@ -1,8 +1,8 @@
-import { NgModule, Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';//
+import { BrowserModule } from '@angular/platform-browser';//
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';//
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';//
 import { ArtesanosComponent } from './page/Artesanos/artesanos.component';
 import { ClientesComponent } from './page/Clientes/clientes.component';
 import { CompraComponent } from './page/Compra/compra.component';
@@ -10,7 +10,10 @@ import { DetalleCompraComponent } from './page/detalle-compra/detalle-compra.com
 import { PedidoComponent } from './page/Pedido/pedido.component';
 import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
+
+
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';

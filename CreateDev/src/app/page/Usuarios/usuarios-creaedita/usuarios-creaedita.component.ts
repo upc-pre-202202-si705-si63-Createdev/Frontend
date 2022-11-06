@@ -27,7 +27,7 @@ export class UsuariosCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.Usuarios.correo.length > 0 && this.Usuarios.contrasenia.length > 0) {
+    if (this.Usuarios.emailUsuarios.length > 0 && this.Usuarios.contrasenaUsuarios.length > 0) {
       if (this.edicion) {
         this.UsuariosService.modificar(this.Usuarios).subscribe(data => {
           this.UsuariosService.listar().subscribe(data => {
@@ -42,7 +42,7 @@ export class UsuariosCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['/home/page/usuarios']);
+      this.router.navigate(['/home/page/Usuarios']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Usuario } from '../model/Usuario';
+import { environment } from 'src/environments/environment';
 
 import { Subject,EMPTY } from 'rxjs';
 
@@ -13,7 +14,8 @@ import { Subject,EMPTY } from 'rxjs';
 })
 export class UsuariosService {
 
-  url: string = "http://localhost:5000/Usuarios"
+  //url: string = "http://localhost:5000/Usuarios"
+  private url: string = `${environment.host}/Usuarios`
   private listaCambio = new Subject<Usuario[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -31,7 +33,7 @@ export class UsuariosService {
     return this.listaCambio.asObservable();
   }
   modificar(Usuarios: Usuario) {
-    return this.http.put(this.url + "/" + Usuarios.id, Usuarios);
+    return this.http.put(this.url + "/" + Usuarios.idUsuarios, Usuarios);
   }
   listarId(id: number) {
     return this.http.get<Usuario>(`${this.url}/${id}`);

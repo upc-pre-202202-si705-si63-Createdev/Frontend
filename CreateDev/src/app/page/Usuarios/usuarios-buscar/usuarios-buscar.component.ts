@@ -19,7 +19,7 @@ export class UsuariosBuscarComponent implements OnInit {
     let array: Usuario[] = [];
     this.UsuariosService.listar().subscribe(data => {
       data.forEach((element, index) => {  
-        if (element.nombre.includes(e.target.value)) {
+        if (element.nameUsuarios.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

@@ -12,15 +12,19 @@ import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.co
 })
 export class UsuariosListarComponent implements OnInit {
 
+
+  lista: Usuario[] = [];
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource();
-  displayedColumns:string[]=['id','correo','contrasenia','nombre','apellidos','telefono','direccion','acciones','accion2'];
+  displayedColumns:string[]=['idUsuarios','emailUsuarios','contrasenaUsuarios','nameUsuarios','lastnameUsuarios','telefonoUsuarios','direccionUsuarios','acciones','accion2'];
   private idMayor: number = 0;
   constructor(private ps: UsuariosService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe((data: Usuario[] | undefined) => {
+    this.ps.listar().subscribe(data=> {
+      this.lista = data;
       this.dataSource=new MatTableDataSource(data);
     })
+
     this.ps.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     }); 

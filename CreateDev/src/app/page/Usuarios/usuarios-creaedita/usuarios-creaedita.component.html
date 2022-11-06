@@ -5,55 +5,55 @@
 
     <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
-        <input matInput placeholder="Id" [(ngModel)]="Usuarios.id">
+        <input matInput placeholder="id" [(ngModel)]="Usuarios.idUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>correo</mat-label>
-        <input matInput required placeholder="correo" [(ngModel)]="Usuarios.correo">
+        <input matInput required placeholder="emailUsuarios" [(ngModel)]="Usuarios.emailUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>contrasenia</mat-label>
-        <input type="contrasenia" matInput required placeholder="contrasenia" [(ngModel)]="Usuarios.contrasenia">
+        <input type="contrasenia" matInput required placeholder="contrasenaUsuarios" [(ngModel)]="Usuarios.contrasenaUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>nombre</mat-label>
-        <input type="nombre" matInput required placeholder="nombre" [(ngModel)]="Usuarios.nombre">
+        <input type="nombre" matInput required placeholder="nameUsuarios" [(ngModel)]="Usuarios.nameUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>apellidos</mat-label>
-        <input type="apellidos" matInput required placeholder="apellidos" [(ngModel)]="Usuarios.apellidos">
+        <input type="apellidos" matInput required placeholder="lastnameUsuarios" [(ngModel)]="Usuarios.lastnameUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>telefono</mat-label>
-        <input type="telefono" matInput required placeholder="telefono" [(ngModel)]="Usuarios.telefono">
+        <input type="telefono" matInput required placeholder="telefonoUsuarios" [(ngModel)]="Usuarios.telefonoUsuarios">
     </mat-form-field>
 
     <br>
 
     <mat-form-field class="example-full-width">
         <mat-label>direccion</mat-label>
-        <input type="direccion" matInput required placeholder="direccion" [(ngModel)]="Usuarios.direccion">
+        <input type="direccion" matInput required placeholder="dirdireccionUsuarioseccion" [(ngModel)]="Usuarios.direccionUsuarios">
     </mat-form-field>
 
     <br>
     
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/home/page/usuarios">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/home/page/Usuarios">Cancelar</button>
     <p>{{mensaje}}</p>
 
 </div>

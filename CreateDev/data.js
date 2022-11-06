@@ -4,108 +4,108 @@ module.exports = function () {
     Usuarios: [
       {
         id: 1,
-        correo: "knnth2312@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Kenneth",
-        apellidos: "Guzman Benavidez",
-        telefono: 879233892,
-        direccion: "Av. Benavides 2340, Surco"
+        emailUsuarios: "knnth2312@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Kenneth",
+        lastnameUsuarios: "Guzman Benavidez",
+        telefonoUsuarios: "879233892",
+        direccionUsuarios: "Av. Benavides 2340, Surco"
       }, {
         id: 2,
-        correo: "sebas@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Sebastian",
-        apellidos: "Torres",
-        telefono: 35346234,
-        direccion: "av. Cesar Canevaro 399"
+        emailUsuarios: "sebas@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Sebastian",
+        lastnameUsuarios: "Torres",
+        telefonoUsuarios: "35346234",
+        direccionUsuarios: "av. Cesar Canevaro 399"
       }, {
         id: 3,
-        correo: "petercasanova@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Peter",
-        apellidos: "Casanova",
-        telefono: 567567567,
-        direccion: "Av. Caminos del Inca 1404"
+        emailUsuarios: "petercasanova@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Peter",
+        lastnameUsuarios: "Casanova",
+        telefonoUsuarios: "567567567",
+        direccionUsuarios: "Av. Caminos del Inca 1404"
       }, {
         id: 4,
-        correo: "sgodoy@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "sergio",
-        apellidos: "godoy",
-        telefono: 939870566,
-        direccion: "calle vilcanota 160"
+        emailUsuarios: "sgodoy@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "sergio",
+        lastnameUsuarios: "godoy",
+        telefonoUsuarios: "939870566",
+        direccionUsuarios: "calle vilcanota 160"
       }, {
         id: 5,
-        correo: "chupetintrujillo@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Chupetin",
-        apellidos: "Trujillo",
-        telefono: 43534656,
-        direccion: "Prolongación Primavera 2390"
+        emailUsuarios: "chupetintrujillo@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Chupetin",
+        lastnameUsuarios: "Trujillo",
+        telefonoUsuarios: "43534656",
+        direccionUsuarios: "Prolongación Primavera 2390"
       }, {
         id: 6,
-        correo: "pcastillito@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Peter",
-        apellidos: "Castle Terrores",
-        telefono: 34242343,
-        direccion: "pasaje Sarratea 240"
+        emailUsuarios: "pcastillito@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Peter",
+        lastnameUsuarios: "Castle Terrores",
+        telefonoUsuarios: "34242343",
+        direccionUsuarios: "pasaje Sarratea 240"
       }, {
         id: 7,
-        correo: "sideral@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "sideral",
-        apellidos: "carrion",
-        telefono: 324242453,
-        direccion: "comas cuadra 20"
+        emailUsuarios: "sideral@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "sideral",
+        lastnameUsuarios: "carrion",
+        telefonoUsuarios: "324242453",
+        direccionUsuarios: "comas cuadra 20"
       }, {
         id: 8,
-        correo: "cookie_pounds@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Grecia",
-        apellidos: "Ordoñez",
-        telefono: 56465463,
-        direccion: "Larcomar 2343"
+        emailUsuarios: "cookie_pounds@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Grecia",
+        lastnameUsuarios: "Ordoñez",
+        telefonoUsuarios: "56465463",
+        direccionUsuarios: "Larcomar 2343"
       }, {
         id: 9,
-        correo: "jhonny@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "jhonny",
-        apellidos: "deep",
-        telefono: 987654321,
-        direccion: " Av. Washington"
+        emailUsuarios: "jhonny@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "jhonny",
+        lastnameUsuarios: "deep",
+        telefonoUsuarios: "987654321",
+        direccionUsuarios: " Av. Washington"
       }, {
         id: 10,
-        correo: "kiara@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "kiara",
-        apellidos: "diaz",
-        telefono: 65757557,
-        direccion: " Av. wilson cuadra 3"
+        emailUsuarios: "kiara@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "kiara",
+        lastnameUsuarios: "diaz",
+        telefonoUsuarios: "65757557",
+        direccionUsuarios: " Av. wilson cuadra 3"
       }, {
         id: 11,
-        correo: "bruno@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "bruno",
-        apellidos: "pinnasco",
-        telefono: 345634534,
-        direccion: " Av. canal 4"
+        emailUsuarios: "bruno@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "bruno",
+        lastnameUsuarios: "pinnasco",
+        telefonoUsuarios: "345634534",
+        direccionUsuarios: " Av. canal 4"
       }, {
         id: 12,
-        correo: "jorge@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "jorge",
-        apellidos: "curioso",
-        telefono: 868768423,
-        direccion: " Av. las americas "
+        emailUsuarios: "jorge@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "jorge",
+        lastnameUsuarios: "curioso",
+        telefonoUsuarios: "868768423",
+        direccionUsuarios: " Av. las americas "
       }, {
         id: 13,
-        correo: "RamiroM2304@createdev.com",
-        contrasenia: "upc2022",
-        nombre: "Ramiro",
-        apellidos: "Mezada",
-        telefono: 45645645,
-        direccion: " Av. Colonial 334"
+        emailUsuarios: "RamiroM2304@createdev.com",
+        contrasenaUsuarios: "upc2022",
+        nameUsuarios: "Ramiro",
+        lastnameUsuarios: "Mezada",
+        telefonoUsuarios: "45645645",
+        direccionUsuarios: " Av. Colonial 334"
       }
     ],
     Artesanos: [

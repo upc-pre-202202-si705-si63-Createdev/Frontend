@@ -1,9 +1,9 @@
 export class Usuario{
-    id:number=0;
-correo:string="";
-contrasenia:string="";
-nombre:string="";
-apellidos:string="";
-telefono:number=0;
-direccion:string="";
+    idUsuarios:number=0;
+    emailUsuarios:string="";
+    contrasenaUsuarios:string="";
+nameUsuarios:string="";
+lastnameUsuarios:string="";
+telefonoUsuarios:string="";
+direccionUsuarios:string="";
 }

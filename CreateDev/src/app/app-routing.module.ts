@@ -55,7 +55,7 @@ const routes: Routes = [
             ]
           },
           {
-            path: 'usuarios', component: UsuariosComponent, children: [
+            path: 'Usuarios', component: UsuariosComponent, children: [
               { path: 'nuevo', component: UsuariosCreaeditaComponent },
               { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
             ]
