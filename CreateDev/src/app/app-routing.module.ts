@@ -62,7 +62,7 @@ const routes: Routes = [
             ]
           },
            {
-            path: 'Clientes', component: ClientesComponent, children: [
+            path: 'clientes', component: ClientesComponent, children: [
               { path: 'nuevo', component: ClientesCreaeditaComponent },
               { path: 'edicion/:id', component: ClientesCreaeditaComponent }
             ]

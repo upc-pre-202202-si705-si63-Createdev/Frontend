@@ -61,7 +61,7 @@ export class ClientesCreaeditaComponent implements OnInit {
           console.log(err);
         });
       }
-      this.router.navigate(['/home/page/Clientes']);
+      this.router.navigate(['/home/page/clientes']);
 
     }
     else {
