@@ -14,7 +14,7 @@ export class SolicitudDisenioListarComponent implements OnInit {
 
   lista: solicitud_disenio[] = [];
   dataSource: MatTableDataSource<solicitud_disenio> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'pedido', 'fecha', 'accion2'];
+  displayedColumns: string[] = ['id', 'pedido', 'fecha', 'accion1', 'accion2'];
   private idMayor: number = 0;
 
   constructor(private solService: SolicitudDisenioService, private dialog: MatDialog) { }

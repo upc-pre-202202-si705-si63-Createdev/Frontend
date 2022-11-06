@@ -55,7 +55,7 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
         this.solicitudDisenioService.modificar(this.solicitud).subscribe(() => {
           this.solicitudDisenioService.listar().subscribe(data => {
             this.solicitudDisenioService.setLista(data);
-          })
+          });
         });
       } else {
         console.log("Ingresó");
