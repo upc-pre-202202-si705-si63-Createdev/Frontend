@@ -15,14 +15,12 @@ h1 {
   background-color: #FF8A05;
   border: 1px solid black;
   height: 80px;
-  text-align: center;
   padding-top: 10px;
 }
 
 th {
   font: bold 3rem 'Maven Pro', san-serif;
   font-size: 15px;
-  text-align: center;
 }
 
 td {
@@ -33,6 +31,7 @@ td {
 h1 {
   font: bold 3rem 'Maven Pro', san-serif;
   font-size: 45px;
+  text-align: center;
 }
 
 .mat-raised-button.mat-primary,

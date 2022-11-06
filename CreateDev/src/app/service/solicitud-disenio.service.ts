@@ -11,6 +11,7 @@ export class SolicitudDisenioService {
 
   private url: string = `${environment.host}/solicitudes`
   private listaCambio = new Subject<solicitud_disenio[]>()
+  private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }
 
   listar() {
@@ -30,5 +31,14 @@ export class SolicitudDisenioService {
   }
   listarId(id: number) {
     return this.http.get<solicitud_disenio>(`${this.url}/${id}`);
+  }
+  eliminar(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

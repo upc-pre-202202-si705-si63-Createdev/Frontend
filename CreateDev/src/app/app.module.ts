@@ -58,6 +58,7 @@ import { PrincipalLandingComponent } from './page/principal/principal-landing/pr
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
+import { SolicitudDisenioDialogoComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-dialogo/solicitud-disenio-dialogo.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/sol
     PrincipalLandingComponent,
     PrincipalPageComponent,
     SolicitudDisenioListarComponent,
-    SolicitudDisenioCreaeditaComponent
+    SolicitudDisenioCreaeditaComponent,
+    SolicitudDisenioDialogoComponent
 
 
 

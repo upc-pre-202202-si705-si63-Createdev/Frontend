@@ -1,6 +1,5 @@
 <div class="container">
     <h1>Lista de solicitudes de diseño</h1>
-
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!-- 1 -->
@@ -9,7 +8,7 @@
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
 
-        
+
         <!-- 
         <ng-container matColumnDef="cliente">
             <th mat-header-cell *matHeaderCellDef> CLIENTE </th>
@@ -33,6 +32,13 @@
         <ng-container matColumnDef="fecha">
             <th mat-header-cell *matHeaderCellDef> FECHA DE SOLICITUD </th>
             <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accion2">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+            </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
