@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Cliente</h1>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="idCliente" [(ngModel)]="cliente.idCliente">
+    </mat-form-field>
+    
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="dni" [(ngModel)]="cliente.dni">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Usaurio</mat-label>
+        <mat-select [(value)]="idUsuarioSeleccionado" required>
+            <mat-option *ngFor="let p of listaUsuarios" [value]="p.idUsuarios">
+                {{p.nameUsuarios}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/home/page/Clientes">Cancelar</button>
+    </div>
+    

@@ -1,4 +1,6 @@
+import { Usuario } from './Usuario';
 export class Cliente{
-    Usuarios_id:number=0;
-    dni:number=0;
+    idCliente:number=0;
+    dni:string="";
+    usuarios:Usuario=new Usuario();
 }
