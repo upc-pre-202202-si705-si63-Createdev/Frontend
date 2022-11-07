@@ -17,7 +17,7 @@ export class ClientesListarComponent implements OnInit {
 
   lista: Cliente[] = [];
   dataSource: MatTableDataSource<Cliente> = new MatTableDataSource();
-  displayedColumns: string[] = ['idCliente','usuarios', 'dni', 'acciones','acciones2'];
+  displayedColumns: string[] = ['idCliente', 'dni','usuarios', 'acciones','acciones2'];
   private idMayor: number = 0;
   constructor(private clientesService:ClientesService, private dialog:MatDialog ) { }
 
