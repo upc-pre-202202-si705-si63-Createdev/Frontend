@@ -21,7 +21,7 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Usuario[]>(this.url);
+    return this.http.get<Usuario[]>(this.url+"/lista");
   }
   insertar(Usuarios: Usuario) {
     return this.http.post(this.url, Usuarios);

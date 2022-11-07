@@ -16,7 +16,7 @@ export class ClientesService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Cliente[]>(this.url);
+    return this.http.get<Cliente[]>(this.url+"/lista");
   }
   insertar(cliente: Cliente) {
 

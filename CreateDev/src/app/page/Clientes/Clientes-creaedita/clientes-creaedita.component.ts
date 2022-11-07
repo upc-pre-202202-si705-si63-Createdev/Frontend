@@ -52,13 +52,11 @@ export class ClientesCreaeditaComponent implements OnInit {
         });
 
       } else {
+        console.log("ingreso");
         this.clienteservice.insertar(this.cliente).subscribe(() => {
           this.clienteservice.listar().subscribe(data => {
             this.clienteservice.setLista(data);
-          });
-        }, err => {
-          //this.mensaje=err
-          console.log(err);
+          })
         });
       }
       this.router.navigate(['/home/page/clientes']);
