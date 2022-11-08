@@ -17,8 +17,6 @@ header {
 .logo {
     display: flex;
     align-items: center;
-
-
 }
 
 .logo img {
@@ -37,7 +35,9 @@ a {
     text-decoration: none;
     color: black;
     font: bold 3rem 'Maven Pro', san-serif;
-    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #dis {

@@ -1,3 +1,4 @@
+import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { PrincipalComponent } from './page/principal/principal.component';
@@ -28,11 +29,8 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 
-
-
-
-
 const routes: Routes = [
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home', component: PrincipalComponent, children: [
@@ -50,7 +48,12 @@ const routes: Routes = [
               { path: 'edicion/:id', component: ProductoCreaeditaComponent }
             ]
           },
-          //nueva agregacion
+          {
+            path: 'solicitud', component: SolicitudDisenioComponent, children: [
+              { path: 'nuevo', component: SolicitudDisenioCreaeditaComponent },
+              { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent }
+            ]
+          },
           {
             path: 'usuarios', component: UsuariosComponent, children: [
               { path: 'nuevo', component: UsuariosCreaeditaComponent },
@@ -62,18 +65,19 @@ const routes: Routes = [
               { path: 'nuevo', component: CompraCreaeditaComponent },
               { path: 'edicion/:id', component: CompraCreaeditaComponent }
             ]
-          },{
+          },
+          {
             path: 'tipo-comprobante', component: TipoComprobanteComponent, children: [
               { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
               { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
             ]
-          },{
+          },
+          {
             path: 'tipo-producto', component: TipoProductoComponent, children: [
               { path: 'nuevo', component: TipoProductoCreaeditaComponent },
               { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
             ]
           }
-    
         ]
       }
     ]
