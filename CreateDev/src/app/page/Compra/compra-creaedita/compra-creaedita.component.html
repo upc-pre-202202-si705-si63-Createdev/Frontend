@@ -38,16 +38,20 @@
     </mat-form-field>
     <br>
 
-    <mat-form-field class="example-full-width">
+    
+
+    <mat-form-field appearance="fill">
         <mat-label>Fecha de Cancelacion</mat-label>
-        <input matInput placeholder="fecha_cancelacion (dd/mm/yy)" [(ngModel)]="compra.fecha_cancelacion">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
     <br>
 
    
     
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/compra">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/home/page/compra">Cancelar</button>
     <p>{{mensaje}}</p>
 
 </div>
