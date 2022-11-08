@@ -26,8 +26,6 @@ export class PedidoListarComponent implements OnInit {
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-
-
   }
   confirmar(id: number) {
     this.idMayor = id;
@@ -38,7 +36,7 @@ export class PedidoListarComponent implements OnInit {
   eliminar(id: number) {
     this.ps.eliminar(id).subscribe(() => {
       this.ps.listar().subscribe(data => {
-        this.ps.setLista(data);/* se ejecuta la línea 27*/
+        this.ps.setLista(data);
       });
     });
 

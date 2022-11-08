@@ -61,6 +61,7 @@ import { PrincipalLandingComponent } from './page/principal/principal-landing/pr
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
+import { SolicitudDisenioDialogoComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-dialogo/solicitud-disenio-dialogo.component';
 import { ClientesBuscarComponent } from './page/Clientes/Clientes-buscar/clientes-buscar.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
 import { ClientesDialogoComponent } from './page/Clientes/Clientes-listar/Clientes-dialogo/clientes-dialogo.component';
@@ -113,14 +114,13 @@ import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/art
     PrincipalPageComponent,
     SolicitudDisenioListarComponent,
     SolicitudDisenioCreaeditaComponent,
+    SolicitudDisenioDialogoComponent,
     ClientesBuscarComponent,
     ClientesCreaeditaComponent,
     ClientesDialogoComponent,
     ArtesanosBuscarComponent,
     ArtesanosCreaeditaComponent,
     ArtesanosDialogoComponent
-
-
 
   ],
   imports: [
