@@ -38,7 +38,7 @@ export class CompraService {
 
 
   modificar(compra: Compra) {
-    return this.http.put(this.url + "/" + compra.id, compra);
+    return this.http.put(this.url, compra);
   }
 
   listarId(id: number) {

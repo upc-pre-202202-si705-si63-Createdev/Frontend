@@ -38,7 +38,6 @@ export class CompraCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
-    this.CompraService.listar().subscribe(data=>{this.listaCompras=data});
   }
 
   init() {
