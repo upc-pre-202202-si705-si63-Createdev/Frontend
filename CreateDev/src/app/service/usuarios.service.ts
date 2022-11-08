@@ -24,7 +24,7 @@ export class UsuariosService {
     return this.http.get<Usuario[]>(this.url+"/lista");
   }
   insertar(Usuarios: Usuario) {
-    return this.http.post(this.url, Usuarios);
+    return this.http.post(this.url,Usuarios);
   }
   setLista(listaNueva: Usuario[]) {
     this.listaCambio.next(listaNueva);

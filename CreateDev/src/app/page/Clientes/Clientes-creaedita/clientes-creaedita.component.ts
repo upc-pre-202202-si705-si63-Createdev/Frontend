@@ -14,7 +14,7 @@ import * as moment from 'moment';
   styleUrls: ['./clientes-creaedita.component.css']
 })
 export class ClientesCreaeditaComponent implements OnInit {
-  cliente: Cliente = new Cliente();
+  clientes: Cliente = new Cliente();
   id: number = 0;
   edicion: boolean = false;
   listaUsuarios: Usuario[] = [];
@@ -38,14 +38,14 @@ export class ClientesCreaeditaComponent implements OnInit {
 
   }
   aceptar() {
-    if (this.cliente.dni.length > 0 &&
+    if (this.clientes.dni.length > 0 &&
       this.idUsuarioSeleccionado>0) {
       let p = new Usuario();
       p.idUsuarios = this.idUsuarioSeleccionado;
-      this.cliente.usuarios = p;
+      this.clientes.usuario = p;
       
       if (this.edicion) {
-        this.clienteservice.modificar(this.cliente).subscribe(() => {
+        this.clienteservice.modificar(this.clientes).subscribe(() => {
           this.clienteservice.listar().subscribe(data => {
             this.clienteservice.setLista(data);
           });
@@ -53,7 +53,7 @@ export class ClientesCreaeditaComponent implements OnInit {
 
       } else {
         console.log("ingreso");
-        this.clienteservice.insertar(this.cliente).subscribe(() => {
+        this.clienteservice.insertar(this.clientes).subscribe(() => {
           this.clienteservice.listar().subscribe(data => {
             this.clienteservice.setLista(data);
           })
@@ -70,9 +70,9 @@ export class ClientesCreaeditaComponent implements OnInit {
   init() {
     if (this.edicion) {
       this.clienteservice.listarId(this.id).subscribe(data => {
-        this.cliente = data
+        this.clientes = data
         console.log(data);
-       this.idUsuarioSeleccionado = data.usuarios.idUsuarios;
+       this.idUsuarioSeleccionado = data.usuario.idUsuarios;
       });
 
     }

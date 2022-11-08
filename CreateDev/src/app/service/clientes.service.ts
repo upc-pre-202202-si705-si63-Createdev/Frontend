@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Cliente } from '../model/Cliente';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { EMPTY,Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +31,12 @@ export class ClientesService {
 
     return this.http.delete(`${this.url}/${id}`);
   }
-  buscar(texto: string) {
-
-    return this.http.post<Cliente[]>(`${this.url}/buscar`, texto);
+  buscar(texto:string) {
+    //console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Cliente[]>(`${this.url}/buscar`, texto.toLowerCase()); 
+    }
+    return EMPTY;
   }
   listarId(id: number) {
 
