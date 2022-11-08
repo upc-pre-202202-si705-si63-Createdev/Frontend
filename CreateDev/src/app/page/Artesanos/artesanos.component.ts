@@ -7,8 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./artesanos.component.css']
 })
 export class ArtesanosComponent implements OnInit {
-
-  constructor(public route:ActivatedRoute) { }
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

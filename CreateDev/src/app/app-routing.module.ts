@@ -1,3 +1,4 @@
+import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
@@ -65,6 +66,12 @@ const routes: Routes = [
             path: 'clientes', component: ClientesComponent, children: [
               { path: 'nuevo', component: ClientesCreaeditaComponent },
               { path: 'edicion/:id', component: ClientesCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'artesanos', component: ArtesanosComponent, children: [
+              { path: 'nuevo', component: ArtesanosCreaeditaComponent },
+              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent }
             ]
           },
           {

@@ -1,5 +1,5 @@
 import { Cliente } from '../../../model/Cliente';
-import { Artesanos } from './../../../model/Artesanos';
+import { Artesano } from './../../../model/Artesanos';
 import { Pedido } from './../../../model/Pedido';
 import { ClientesService } from './../../../service/clientes.service';
 import { ArtesanosService } from './../../../service/artesanos.service';
@@ -22,7 +22,7 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
   maxFecha: Date = moment().add(-1, 'days').toDate();
   edicion: boolean = false;
   listaPedidos: Pedido[] = [];
-  listaArtesanos: Artesanos[] = [];
+  listaArtesanos: Artesano[] = [];
   listaClientes: Cliente[] = [];
   id: number = 0;
   fechaSeleccionada: Date = moment().add(-1, 'days').toDate();

@@ -64,6 +64,9 @@ import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/sol
 import { ClientesBuscarComponent } from './page/Clientes/Clientes-buscar/clientes-buscar.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
 import { ClientesDialogoComponent } from './page/Clientes/Clientes-listar/Clientes-dialogo/clientes-dialogo.component';
+import { ArtesanosBuscarComponent } from './page/Artesanos/artesanos-buscar/artesanos-buscar.component';
+import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
+import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/artesanos-dialogo/artesanos-dialogo.component';
 
 
 @NgModule({
@@ -112,7 +115,10 @@ import { ClientesDialogoComponent } from './page/Clientes/Clientes-listar/Client
     SolicitudDisenioCreaeditaComponent,
     ClientesBuscarComponent,
     ClientesCreaeditaComponent,
-    ClientesDialogoComponent
+    ClientesDialogoComponent,
+    ArtesanosBuscarComponent,
+    ArtesanosCreaeditaComponent,
+    ArtesanosDialogoComponent
 
 
 
