@@ -49,8 +49,7 @@ export class UsuariosService {
   }
   buscar(texto: string) {
     if (texto.length != 0) {
-      return this.http.post<Usuario[]>(`${this.url}/buscar`, texto.toLowerCase(), {
-      });
+      return this.http.post<Usuario[]>(`${this.url}/buscar`, texto.toLowerCase(), {});
     }
     return EMPTY;
   }
