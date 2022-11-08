@@ -1,29 +1,57 @@
-<p>artesanos-listar works!</p>
+<div class ="container">
+  <div style=" text-align: center;">
+    <h1 style="font-size: 80px; background-color: #FF8A05;color: rgb(255, 255, 255)" >Lista de Artesanos</h1>
+  </div>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<app-artesanos-buscar></app-artesanos-buscar>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="idArtesano">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.idArtesano}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="provincia">
+          <th mat-header-cell *matHeaderCellDef> Provincia </th>
+          <td mat-cell *matCellDef="let element"> {{element.provincia}} </td>
+      </ng-container>
 
-  <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <ng-container matColumnDef="usuarios_id">
-    <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let element"> {{element.usuarios_id}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="informacion">
-    <th mat-header-cell *matHeaderCellDef> Información </th>
-    <td mat-cell *matCellDef="let element"> {{element.informacion}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="provincia">
-    <th mat-header-cell *matHeaderCellDef> Provincia </th>
-    <td mat-cell *matCellDef="let element"> {{element.provincia}} </td>
-  </ng-container>
-
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+       <!-- Name Column -->
+       <ng-container matColumnDef="informacion">
+        <th mat-header-cell *matHeaderCellDef> Informacion </th>
+        <td mat-cell *matCellDef="let element"> {{element.informacion}} </td>
+    </ng-container>
+  
+       Weight Column 
+      <ng-container matColumnDef="usuarios">
+          <th mat-header-cell *matHeaderCellDef> Usuario </th>
+         <td mat-cell *matCellDef="let element"> {{element.usuario.nameUsuarios}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+              [routerLink]="['edicion', element?.idArtesano]">Actualizar</button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="acciones2">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" (click)="confirmar(element.idArtesano)">Eliminar</button>
+       
+          </td>
+        </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>
+  <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
+      routerLink="/home/page/artesanos/nuevo">
+      <mat-icon>plus_one</mat-icon>
+  </button>
+  </div>
+  

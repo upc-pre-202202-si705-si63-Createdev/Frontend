@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Artesano</h1>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="idArtesano" [(ngModel)]="artesanos.idArtesano">
+    </mat-form-field>
+    
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Provincia</mat-label>
+        <input matInput placeholder="provincia" [(ngModel)]="artesanos.provincia">
+    </mat-form-field>
+    <br>
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Informacion</mat-label>
+        <input matInput placeholder="informacion" [(ngModel)]="artesanos.informacion">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Usaurio</mat-label>
+        <mat-select [(value)]="idUsuarioSeleccionado" required>
+            <mat-option *ngFor="let p of listaUsuarios" [value]="p.idUsuarios">
+                {{p.nameUsuarios}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/home/page/clientes">Cancelar</button>
+    </div>

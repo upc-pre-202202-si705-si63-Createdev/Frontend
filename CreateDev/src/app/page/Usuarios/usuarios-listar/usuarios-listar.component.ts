@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
-import { Usuarios } from 'src/app/model/Usuarios';
+import { Usuario } from 'src/app/model/Usuario';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.component';
@@ -12,15 +12,19 @@ import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.co
 })
 export class UsuariosListarComponent implements OnInit {
 
-  dataSource: MatTableDataSource<Usuarios> = new MatTableDataSource();
-  displayedColumns:string[]=['id','correo','contrasenia','nombre','apellidos','telefono','direccion','acciones','accion2'];
+
+  lista: Usuario[] = [];
+  dataSource: MatTableDataSource<Usuario> = new MatTableDataSource();
+  displayedColumns:string[]=['idUsuarios','emailUsuarios','contrasenaUsuarios','nameUsuarios','lastnameUsuarios','telefonoUsuarios','direccionUsuarios','acciones','accion2'];
   private idMayor: number = 0;
   constructor(private ps: UsuariosService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe((data: Usuarios[] | undefined) => {
+    this.ps.listar().subscribe(data=> {
+      this.lista = data;
       this.dataSource=new MatTableDataSource(data);
     })
+
     this.ps.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     }); 
