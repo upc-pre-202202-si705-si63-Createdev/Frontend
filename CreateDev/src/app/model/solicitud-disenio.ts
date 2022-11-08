@@ -7,5 +7,5 @@ export class solicitud_disenio {
     //cliente: Clientes = new Clientes();
     //artesano: Artesanos = new Artesanos();
     pedido: Pedido = new Pedido();
-    fecha: string="";
+    fecha: string = "";
 }
