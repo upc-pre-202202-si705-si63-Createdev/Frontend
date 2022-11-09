@@ -41,12 +41,12 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
       this.init();
     });
     this.pedidoService.listar().subscribe(data => { this.listaPedidos = data });
-    //this.artesanoService.listar().subscribe(data => { this.listaArtesanos = data });
-    //this.clienteService.listar().subscribe(data => { this.listaClientes = data });
+    this.artesanoService.listar().subscribe(data => { this.listaArtesanos = data });
+    this.clienteService.listar().subscribe(data => { this.listaClientes = data });
   }
 
   aceptar() {
-    if (this.idPedidoSeleccionado > 0) {
+    if (this.idPedidoSeleccionado > 0 && this.idArtesanoSeleccionado && this.idClienteSeleccionado) {
       let p = new Pedido();
       p.id = this.idPedidoSeleccionado;
       this.solicitud.pedido = p;
