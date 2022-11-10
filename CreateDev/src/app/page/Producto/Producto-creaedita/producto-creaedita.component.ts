@@ -17,8 +17,8 @@ export class ProductoCreaeditaComponent implements OnInit {
   edicion: boolean = false;
   id: number = 0;
 
-  listaCompras: Producto[] = [];
-  idProductoSeleccionado: number = 0;
+  listaProductos : Producto[] = [];
+  idProductoSeleccionado : number=0;
 
   maxFecha: Date = moment().add(-1, 'days').toDate();
   fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
