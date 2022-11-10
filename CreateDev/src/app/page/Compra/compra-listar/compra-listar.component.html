@@ -1,6 +1,6 @@
 <div class="container">
     <div style=" text-align: center;">
-      <h1 style="font-size: 80px; background-color:#FF8A05;color: rgb(255, 255, 255)">Lista de Compras</h1>
+      <h1>Lista de Compras</h1>
     </div>
 
     <app-compra-buscar></app-compra-buscar>
@@ -63,6 +63,9 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+
+    <br>
+
     <div class="example-button-container">
 
         <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
