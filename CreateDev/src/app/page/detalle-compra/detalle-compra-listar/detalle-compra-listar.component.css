@@ -4,3 +4,25 @@ table {
     
   }
   
+
+  .mat-raised-button.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    color: #f0fff3;
+    background-color: black;
+    font: bold 3rem 'Maven Pro', san-serif;
+    font-size: 15px;
+    height: 37px;
+}
+
+.mat-raised-button.mat-warn,
+.mat-flat-button.mat-warn,
+.mat-fab.mat-warn,
+.mat-mini-fab.mat-warn {
+    color: #f0fff3;
+    background-color: #FF8A05;
+    font: bold 3rem 'Maven Pro', san-serif;
+    font-size: 15px;
+    height: 37px;
+}
