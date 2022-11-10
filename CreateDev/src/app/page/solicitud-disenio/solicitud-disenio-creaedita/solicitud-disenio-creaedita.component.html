@@ -28,6 +28,28 @@
 
     <br>
 
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione el nombre del artesano a cargo</mat-label>
+        <mat-select [(value)]="idArtesanoSeleccionado" required>
+            <mat-option *ngFor="let a of listaArtesanos" [value]="a.idArtesano">
+                {{a.usuario.nameUsuarios}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione el nombre del cliente solicitante</mat-label>
+        <mat-select [(value)]="idPedidoSeleccionado" required>
+            <mat-option *ngFor="let c of listaClientes" [value]="c.idCliente">
+                {{c.usuario.nameUsuarios}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br>
+
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="warn" routerLink="/home/page/solicitud">Cancelar</button>
 </div>

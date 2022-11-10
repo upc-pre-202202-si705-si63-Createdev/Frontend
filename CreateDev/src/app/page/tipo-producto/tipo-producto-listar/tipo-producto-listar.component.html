@@ -1,54 +1,53 @@
 <div class="container">
-    <div style=" text-align: center;">
-      <h1 style="font-size: 80px; background-color: #FF8A05;color: rgb(255, 255, 255)">Lista de Tipos de Productos</h1>
-    </div>
+  <div style=" text-align: center;">
+    <h1>Lista de Tipos de Productos</h1>
+  </div>
 
-    <app-tipo-producto-buscar></app-tipo-producto-buscar>
+  <app-tipo-producto-buscar></app-tipo-producto-buscar>
 
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-        <!--- Note that these columns can be defined in any order.
+    <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> Id </th>
-          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="tipo">
-          <th mat-header-cell *matHeaderCellDef> Tipo </th>
-          <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
-        </ng-container>
-      
-        <ng-container matColumnDef="accion1">
-          <th mat-header-cell *matHeaderCellDef> Acciones </th>
-          <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-              [routerLink]="['edicion', element?.id]">Actualizar</button>
-    
-          </td>
-        </ng-container>
-        <ng-container matColumnDef="accion2">
-          <th mat-header-cell *matHeaderCellDef> Acciones </th>
-          <td mat-cell *matCellDef="let element">
-              <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
-    
-          </td>
-        </ng-container>
 
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
 
-      <div class="example-button-container">
-        <br>
-          <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-            routerLink="/tipo-producto/nuevo">
-            <mat-icon>plus_one</mat-icon>
-          </button>
-        </div>
-        
-        
+    <!-- Name Column -->
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef> Tipo </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="accion1">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+          [routerLink]="['edicion', element?.id]">Actualizar</button>
+
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="accion2">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <br>
+
+  <div class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/tipo-producto/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>

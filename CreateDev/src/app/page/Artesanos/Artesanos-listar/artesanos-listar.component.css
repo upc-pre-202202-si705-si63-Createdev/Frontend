@@ -1,5 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+.container {
+  width: 100%;
+  border-color: black;
+}
+
 table {
-    width: 100%;
-    border: 1px solid black;
-    
-  }
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font: bold 3rem 'Maven Pro', san-serif;
+  background-color: #FF8A05;
+  border: 1px solid black;
+  height: 80px;
+  padding-top: 10px;
+}
+
+th {
+  font: bold 3rem 'Maven Pro', san-serif;
+  font-size: 15px;
+}
+
+td {
+  font: 3rem 'Maven Pro', san-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font: bold 3rem 'Maven Pro', san-serif;
+  font-size: 45px;
+  text-align: center;
+}
+
+.mat-raised-button.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    color: #f0fff3;
+    background-color: black;
+    font: bold 3rem 'Maven Pro', san-serif;
+    font-size: 15px;
+    height: 37px;
+}
+
+.mat-raised-button.mat-warn,
+.mat-flat-button.mat-warn,
+.mat-fab.mat-warn,
+.mat-mini-fab.mat-warn {
+    color: #f0fff3;
+    background-color: #FF8A05;
+    font: bold 3rem 'Maven Pro', san-serif;
+    font-size: 15px;
+    height: 37px;
+}
