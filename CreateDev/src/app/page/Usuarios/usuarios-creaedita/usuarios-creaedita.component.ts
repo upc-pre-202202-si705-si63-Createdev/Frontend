@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
 import { ActivatedRoute,Params,Router } from '@angular/router';
-import { Usuarios } from 'src/app/model/Usuarios';
+import { Usuario } from 'src/app/model/Usuario';
 
 @Component({
   selector: 'app-usuarios-creaedita',
@@ -9,7 +9,7 @@ import { Usuarios } from 'src/app/model/Usuarios';
   styleUrls: ['./usuarios-creaedita.component.css']
 })
 export class UsuariosCreaeditaComponent implements OnInit {
-  Usuarios: Usuarios = new Usuarios();
+  Usuarios: Usuario = new Usuario();
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
@@ -27,7 +27,7 @@ export class UsuariosCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.Usuarios.correo.length > 0 && this.Usuarios.contrasenia.length > 0) {
+    if (this.Usuarios.emailUsuarios.length > 0 && this.Usuarios.contrasenaUsuarios.length > 0) {
       if (this.edicion) {
         this.UsuariosService.modificar(this.Usuarios).subscribe(data => {
           this.UsuariosService.listar().subscribe(data => {
@@ -42,7 +42,7 @@ export class UsuariosCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['usuarios']);
+      this.router.navigate(['/home/page/Usuarios']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

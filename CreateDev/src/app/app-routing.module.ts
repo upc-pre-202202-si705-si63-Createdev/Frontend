@@ -1,4 +1,8 @@
+
 import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
+
+import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
+
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
@@ -29,6 +33,7 @@ import { TipoProductoComponent } from './page/tipo-producto/tipo-producto.compon
 import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/producto-creaedita.component';
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
+import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
 
 const routes: Routes = [
 
@@ -56,9 +61,21 @@ const routes: Routes = [
             ]
           },
           {
-            path: 'usuarios', component: UsuariosComponent, children: [
+            path: 'Usuarios', component: UsuariosComponent, children: [
               { path: 'nuevo', component: UsuariosCreaeditaComponent },
               { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
+            ]
+          },
+           {
+            path: 'clientes', component: ClientesComponent, children: [
+              { path: 'nuevo', component: ClientesCreaeditaComponent },
+              { path: 'edicion/:id', component: ClientesCreaeditaComponent }
+            ]
+          },
+          {
+            path: 'artesanos', component: ArtesanosComponent, children: [
+              { path: 'nuevo', component: ArtesanosCreaeditaComponent },
+              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent }
             ]
           },
           {

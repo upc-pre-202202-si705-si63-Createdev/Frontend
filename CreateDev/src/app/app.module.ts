@@ -1,8 +1,8 @@
-import { NgModule, Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';//
+import { BrowserModule } from '@angular/platform-browser';//
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';//
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';//
 import { ArtesanosComponent } from './page/Artesanos/artesanos.component';
 import { ClientesComponent } from './page/Clientes/clientes.component';
 import { CompraComponent } from './page/Compra/compra.component';
@@ -10,7 +10,10 @@ import { DetalleCompraComponent } from './page/detalle-compra/detalle-compra.com
 import { PedidoComponent } from './page/Pedido/pedido.component';
 import { ProductoComponent } from './page/Producto/producto.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
+
+
 import { UsuariosComponent } from './page/Usuarios/usuarios.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -58,10 +61,21 @@ import { PrincipalLandingComponent } from './page/principal/principal-landing/pr
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
+
 import { DetalleCompraListarComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-listar.component';
 import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
 import { DetalleCompraBuscarComponent } from './page/detalle-compra/detalle-compra-buscar/detalle-compra-buscar.component';
 import { DetalleCompraDialogoComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-dialogo/detalle-compra-dialogo.component';
+
+import { SolicitudDisenioDialogoComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-dialogo/solicitud-disenio-dialogo.component';
+import { ClientesBuscarComponent } from './page/Clientes/Clientes-buscar/clientes-buscar.component';
+import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
+import { ClientesDialogoComponent } from './page/Clientes/Clientes-listar/Clientes-dialogo/clientes-dialogo.component';
+import { ArtesanosBuscarComponent } from './page/Artesanos/artesanos-buscar/artesanos-buscar.component';
+import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
+import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/artesanos-dialogo/artesanos-dialogo.component';
+import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
+
 
 
 @NgModule({
@@ -108,11 +122,20 @@ import { DetalleCompraDialogoComponent } from './page/detalle-compra/detalle-com
     PrincipalPageComponent,
     SolicitudDisenioListarComponent,
     SolicitudDisenioCreaeditaComponent,
+
     DetalleCompraListarComponent,
     DetalleCompraCreaeditaComponent,
     DetalleCompraBuscarComponent,
-    DetalleCompraDialogoComponent
-
+    DetalleCompraDialogoComponent,
+    
+    SolicitudDisenioDialogoComponent,
+    ClientesBuscarComponent,
+    ClientesCreaeditaComponent,
+    ClientesDialogoComponent,
+    ArtesanosBuscarComponent,
+    ArtesanosCreaeditaComponent,
+    ArtesanosDialogoComponent,
+    SolicitudDisenioBuscarComponent
 
 
   ],

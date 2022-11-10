@@ -2,17 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pedido } from '../model/Pedido';
 import { Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class PedidoService {
-  url: string = "http://localhost:5000/pedido"
+  private url: string = `${environment.host}/pedidos`
   private listaCambio = new Subject<Pedido[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Pedido[]>(this.url);
+    return this.http.get<Pedido[]>(this.url + "/lista");
   }
   insertar(Pedido: Pedido) {
     return this.http.post(this.url, Pedido);
@@ -24,13 +25,13 @@ export class PedidoService {
     return this.listaCambio.asObservable();
   }
   modificar(Pedido: Pedido) {
-    return this.http.put(this.url + "/" + Pedido.id, Pedido);
+    return this.http.put(this.url, Pedido);
   }
   listarId(id: number) {
     return this.http.get<Pedido>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

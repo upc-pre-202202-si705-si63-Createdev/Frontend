@@ -1,0 +1,8 @@
+.buscador {
+    overflow: hidden;
+}
+
+.container {
+    float: left;
+    width: max-content; 
+}

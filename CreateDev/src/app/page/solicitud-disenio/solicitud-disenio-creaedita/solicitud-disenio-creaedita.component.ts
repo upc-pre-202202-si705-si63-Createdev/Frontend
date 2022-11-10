@@ -1,5 +1,5 @@
-import { Clientes } from './../../../model/Clientes';
-import { Artesanos } from './../../../model/Artesanos';
+import { Cliente } from '../../../model/Cliente';
+import { Artesano } from './../../../model/Artesanos';
 import { Pedido } from './../../../model/Pedido';
 import { ClientesService } from './../../../service/clientes.service';
 import { ArtesanosService } from './../../../service/artesanos.service';
@@ -22,8 +22,8 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
   maxFecha: Date = moment().add(-1, 'days').toDate();
   edicion: boolean = false;
   listaPedidos: Pedido[] = [];
-  listaArtesanos: Artesanos[] = [];
-  listaClientes: Clientes[] = [];
+  listaArtesanos: Artesano[] = [];
+  listaClientes: Cliente[] = [];
   id: number = 0;
   fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
   idPedidoSeleccionado: number = 0;
@@ -45,25 +45,29 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
     this.clienteService.listar().subscribe(data => { this.listaClientes = data });
   }
 
-  aceptar(): void {
-    if (this.solicitud.fecha != null && this.idArtesanoSeleccionado > 0 && this.idClienteSeleccionado > 0
-      && this.idPedidoSeleccionado > 0) {
+  aceptar() {
+    if (this.idPedidoSeleccionado > 0 && this.idArtesanoSeleccionado && this.idClienteSeleccionado) {
+      let p = new Pedido();
+      p.id = this.idPedidoSeleccionado;
+      this.solicitud.pedido = p;
+      this.solicitud.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
       if (this.edicion) {
-        this.solicitudDisenioService.modificar(this.solicitud).subscribe(data => {
+        this.solicitudDisenioService.modificar(this.solicitud).subscribe(() => {
           this.solicitudDisenioService.listar().subscribe(data => {
             this.solicitudDisenioService.setLista(data);
-          })
-        })
+          });
+        });
       } else {
-
-        this.solicitudDisenioService.insertar(this.solicitud).subscribe(data => {
+        console.log("Ingresó");
+        this.solicitudDisenioService.insertar(this.solicitud).subscribe(() => {
           this.solicitudDisenioService.listar().subscribe(data => {
             this.solicitudDisenioService.setLista(data);
           })
-        })
+        });
       }
       this.router.navigate(['home/page/solicitud']);
-    } else {
+    }
+    else {
       this.mensaje = "Complete los valores requeridos";
     }
   }
@@ -72,7 +76,9 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.solicitudDisenioService.listarId(this.id).subscribe(data => {
         this.solicitud = data;
-      })
+        console.log(data);
+        this.idPedidoSeleccionado = data.pedido.id;
+      });
     }
 
   }

@@ -1,80 +1,84 @@
-<div class ="container">
+<div class="container">
   <div style=" text-align: center;">
-    <h1 style="font-size: 80px; background-color: #FF8A05;color: rgb(255, 255, 255)" >Lista de Usuarios</h1>
+    <h1>Lista de Usuarios</h1>
   </div>
 
-<app-usuarios-buscar></app-usuarios-buscar>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <app-usuarios-buscar></app-usuarios-buscar>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!--- Note that these columns can be defined in any order.
+    <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-          
-  <!-- Position Column -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> Id de Usuario </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-  </ng-container>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="correo">
-    <th mat-header-cell *matHeaderCellDef> correo </th>
-    <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
-  </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="idUsuarios">
+      <th mat-header-cell *matHeaderCellDef> Id de Usuario </th>
+      <td mat-cell *matCellDef="let element"> {{element.idUsuarios}} </td>
+    </ng-container>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="contrasenia">
-    <th mat-header-cell *matHeaderCellDef> contraseña </th>
-    <td mat-cell *matCellDef="let element"> {{element.contrasenia}} </td>
-  </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="emailUsuarios">
+      <th mat-header-cell *matHeaderCellDef> correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.emailUsuarios}} </td>
+    </ng-container>
 
-  
-  <ng-container matColumnDef="nombre">
-    <th mat-header-cell *matHeaderCellDef> nombre </th>
-    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-  </ng-container>
-
-  
-  <ng-container matColumnDef="apellidos">
-    <th mat-header-cell *matHeaderCellDef> apellidos </th>
-    <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
-  </ng-container>
-
-  
-  <ng-container matColumnDef="telefono">
-    <th mat-header-cell *matHeaderCellDef> telefono </th>
-    <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-  </ng-container>
-
-  
-  <ng-container matColumnDef="direccion">
-    <th mat-header-cell *matHeaderCellDef> direccion </th>
-    <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="acciones">
-    <th mat-header-cell *matHeaderCellDef> Acciones </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-        [routerLink]="['edicion', element?.id]">Actualizar</button>
-    </td>
-  </ng-container>
-  <ng-container matColumnDef="accion2">
-    <th mat-header-cell *matHeaderCellDef> Acciones </th>
-    <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
-
-    </td>
-  </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="contrasenaUsuarios">
+      <th mat-header-cell *matHeaderCellDef> contraseña </th>
+      <td mat-cell *matCellDef="let element"> {{element.contrasenaUsuarios}} </td>
+    </ng-container>
 
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <ng-container matColumnDef="nameUsuarios">
+      <th mat-header-cell *matHeaderCellDef> nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nameUsuarios}} </td>
+    </ng-container>
 
-<div class="example-button-container">
 
-  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    routerLink="/home/page/usuarios/nuevo">
-    <mat-icon>plus_one</mat-icon>
-  </button>
-</div>
+    <ng-container matColumnDef="lastnameUsuarios">
+      <th mat-header-cell *matHeaderCellDef> apellidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastnameUsuarios}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="telefonoUsuarios">
+      <th mat-header-cell *matHeaderCellDef> telefono </th>
+      <td mat-cell *matCellDef="let element"> {{element.telefonoUsuarios}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="direccionUsuarios">
+      <th mat-header-cell *matHeaderCellDef> direccion </th>
+      <td mat-cell *matCellDef="let element"> {{element.direccionUsuarios}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+          [routerLink]="['edicion', element.idUsuarios]">Actualizar</button>
+        <!-- cambie idUsuarios por id le quite el signo ?-->
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="accion2">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.idUsuarios)">Eliminar</button>
+        <!-- cambie idUsuarios por id -->
+
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <br>
+
+  <div class="example-button-container">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/home/page/Usuarios/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>
 </div>

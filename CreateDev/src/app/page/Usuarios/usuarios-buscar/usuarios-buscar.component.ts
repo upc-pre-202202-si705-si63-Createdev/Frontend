@@ -1,4 +1,4 @@
-import { Usuarios } from './../../../model/Usuarios';
+import { Usuario } from '../../../model/Usuario';
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/service/usuarios.service';
 
@@ -16,10 +16,10 @@ export class UsuariosBuscarComponent implements OnInit {
   }
 
   buscar(e: any) {
-    let array: Usuarios[] = [];
+    let array: Usuario[] = [];
     this.UsuariosService.listar().subscribe(data => {
       data.forEach((element, index) => {  
-        if (element.nombre.includes(e.target.value)) {
+        if (element.nameUsuarios.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
