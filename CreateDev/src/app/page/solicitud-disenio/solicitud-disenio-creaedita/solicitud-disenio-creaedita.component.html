@@ -41,7 +41,7 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Seleccione el nombre del cliente solicitante</mat-label>
-        <mat-select [(value)]="idPedidoSeleccionado" required>
+        <mat-select [(value)]="idClienteSeleccionado" required>
             <mat-option *ngFor="let c of listaClientes" [value]="c.idCliente">
                 {{c.usuario.nameUsuarios}}
             </mat-option>
