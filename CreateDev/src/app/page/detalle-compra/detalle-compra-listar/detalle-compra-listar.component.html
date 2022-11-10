@@ -1,9 +1,9 @@
 <div class="container">
     <div style=" text-align: center;">
-      <h1>Lista de Compras</h1>
+      <h1 style="font-size: 80px; background-color:#FF8A05;color: rgb(255, 255, 255)">Lista de Detalles de Compra</h1>
     </div>
 
-    <app-compra-buscar></app-compra-buscar>
+    <app-detalle-compra-buscar></app-detalle-compra-buscar>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 
@@ -12,38 +12,26 @@
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="nombre_usuario">
-            <th mat-header-cell *matHeaderCellDef> Nombre del Cliente </th>
-            <td mat-cell *matCellDef="let element"> {{element.nombre_usuario}} </td>
+        <ng-container matColumnDef="idCompra">
+            <th mat-header-cell *matHeaderCellDef> Id de la Compra </th>
+            <td mat-cell *matCellDef="let element"> {{element.idCompra.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="cantidad_total">
-            <th mat-header-cell *matHeaderCellDef> Cantidad Total </th>
-            <td mat-cell *matCellDef="let element"> {{element.cantidad_total}} </td>
-        </ng-container>
-
-
-        <ng-container matColumnDef="precio_total">
-            <th mat-header-cell *matHeaderCellDef> Precio Total </th>
-            <td mat-cell *matCellDef="let element"> {{element.precio_total}} </td>
+        <ng-container matColumnDef="cantidad">
+            <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
         </ng-container>
 
 
-        <ng-container matColumnDef="peso_total">
-            <th mat-header-cell *matHeaderCellDef> Peso Total </th>
-            <td mat-cell *matCellDef="let element"> {{element.peso_total}} </td>
+        <ng-container matColumnDef="idProducto">
+            <th mat-header-cell *matHeaderCellDef> Id del Producto </th>
+            <td mat-cell *matCellDef="let element"> {{element.idProducto.id}} </td>
         </ng-container>
 
 
-        <ng-container matColumnDef="tipo_comprobante">
-            <th mat-header-cell *matHeaderCellDef> Id del Tipo de Comprobante </th>
-            <td mat-cell *matCellDef="let element"> {{element.tipo_comprobante}} </td>
-        </ng-container>
-
-
-        <ng-container matColumnDef="fecha_cancelacion">
-            <th mat-header-cell *matHeaderCellDef> Fecha de Cancelacion </th>
-            <td mat-cell *matCellDef="let element"> {{element.fecha_cancelacion}} </td>
+        <ng-container matColumnDef="precio_unitario">
+            <th mat-header-cell *matHeaderCellDef> Precio Unitario </th>
+            <td mat-cell *matCellDef="let element"> {{element.precio_unitario}} </td>
         </ng-container>
 
         <ng-container matColumnDef="accion1">
@@ -63,13 +51,10 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-
-    <br>
-
     <div class="example-button-container">
 
         <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-            routerLink="/home/page/compra/nuevo">
+            routerLink="/home/page/detallecompras/nuevo">
             <mat-icon>plus_one</mat-icon>
         </button>
     </div>

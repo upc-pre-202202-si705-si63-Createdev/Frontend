@@ -5,12 +5,13 @@ import { Compra } from './../model/Compra';
 import { Subject } from 'rxjs';
 
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompraService {
-  url: string = "http://localhost:5000/Compra";
+  private url: string = `${environment.host}/compras`
 
   private listaCAmbio = new Subject<Compra[]>();
 
@@ -20,7 +21,7 @@ export class CompraService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Compra[]>(this.url);
+    return this.http.get<Compra[]>(this.url+"/lista");
   }
 
 
@@ -37,7 +38,7 @@ export class CompraService {
 
 
   modificar(compra: Compra) {
-    return this.http.put(this.url + "/" + compra.id, compra);
+    return this.http.put(this.url, compra);
   }
 
   listarId(id: number) {

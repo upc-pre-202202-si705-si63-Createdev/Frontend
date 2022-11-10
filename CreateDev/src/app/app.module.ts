@@ -61,6 +61,12 @@ import { PrincipalLandingComponent } from './page/principal/principal-landing/pr
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
+
+import { DetalleCompraListarComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-listar.component';
+import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
+import { DetalleCompraBuscarComponent } from './page/detalle-compra/detalle-compra-buscar/detalle-compra-buscar.component';
+import { DetalleCompraDialogoComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-dialogo/detalle-compra-dialogo.component';
+
 import { SolicitudDisenioDialogoComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-dialogo/solicitud-disenio-dialogo.component';
 import { ClientesBuscarComponent } from './page/Clientes/Clientes-buscar/clientes-buscar.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
@@ -69,6 +75,7 @@ import { ArtesanosBuscarComponent } from './page/Artesanos/artesanos-buscar/arte
 import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
 import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/artesanos-dialogo/artesanos-dialogo.component';
 import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
+
 
 
 @NgModule({
@@ -115,6 +122,12 @@ import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solici
     PrincipalPageComponent,
     SolicitudDisenioListarComponent,
     SolicitudDisenioCreaeditaComponent,
+
+    DetalleCompraListarComponent,
+    DetalleCompraCreaeditaComponent,
+    DetalleCompraBuscarComponent,
+    DetalleCompraDialogoComponent,
+    
     SolicitudDisenioDialogoComponent,
     ClientesBuscarComponent,
     ClientesCreaeditaComponent,
@@ -123,6 +136,7 @@ import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solici
     ArtesanosCreaeditaComponent,
     ArtesanosDialogoComponent,
     SolicitudDisenioBuscarComponent
+
 
   ],
   imports: [

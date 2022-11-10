@@ -4,6 +4,7 @@ import { CompraService } from 'src/app/service/compra.service';
 import { Compra } from 'src/app/model/Compra';
 
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import * as moment from 'moment';
 
 
 
@@ -20,6 +21,14 @@ export class CompraCreaeditaComponent implements OnInit {
   id: number = 0;
 
 
+  listaCompras : Compra[] = [];
+  idCompraSeleccionada : number=0;
+
+
+  maxFecha: Date = moment().add(-1, 'days').toDate();
+  fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
+
+
   constructor(private CompraService: CompraService, private router: Router,
     private route: ActivatedRoute) { }
 
@@ -29,13 +38,13 @@ export class CompraCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
-
   }
 
   init() {
     if (this.edicion) {
       this.CompraService.listarId(this.id).subscribe(data => {
         this.compra = data;
+        console.log(data);
       })
     }
 
@@ -43,9 +52,14 @@ export class CompraCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    if (this.compra.id > 0 && this.compra.nombre_Cliente.length > 0 && this.compra.cantidad_total > 0 && this.compra.cantidad_total > 0 && this.compra.precio_total > 0 && this.compra.peso_total > 0 && (this.compra.Tipo_Comprobante == 1 || this.compra.Tipo_Comprobante == 2) && this.compra.fecha_cancelacion != "") {
+    if (this.compra.id >= 0 && this.compra.nombre_usuario.length > 0 && this.compra.cantidad_total > 0 && this.compra.cantidad_total > 0 && this.compra.precio_total > 0 && this.compra.peso_total > 0 && (this.compra.tipo_comprobante == 1 || this.compra.tipo_comprobante == 2) ) {
+      let c = new Compra();
+      c.id = this.idCompraSeleccionada;
+      this.compra.fecha_cancelacion =  moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
+      
+      
       if (this.edicion) {
-        this.CompraService.modificar(this.compra).subscribe(data => {
+        this.CompraService.modificar(this.compra).subscribe(() => {
           this.CompraService.listar().subscribe(data => {
             this.CompraService.setLista(data);
           })
@@ -58,7 +72,7 @@ export class CompraCreaeditaComponent implements OnInit {
         })
       }
 
-      this.router.navigate(['compra']);
+      this.router.navigate(['home/page/compra']);
     }
 
     else {

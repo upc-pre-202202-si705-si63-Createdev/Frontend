@@ -17,8 +17,8 @@ import { Component, OnInit } from '@angular/core';
 export class CompraListarComponent implements OnInit {
 
   dataSource: MatTableDataSource<Compra> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre_Cliente', 'Cantidad_Total',
-    'Precio_Total', 'Peso_Total', 'Tipo_Comprobante', 'Fecha_Cancelacion', 'accion1','accion2'];
+  displayedColumns: string[] = ['id', 'nombre_usuario', 'cantidad_total',
+    'precio_total', 'peso_total', 'tipo_comprobante', 'fecha_cancelacion', 'accion1','accion2'];
 
   idMayor: number = 0;
 

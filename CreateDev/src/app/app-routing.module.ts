@@ -1,4 +1,8 @@
+
+import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
+
 import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
+
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
 import { PrincipalLandingComponent } from './page/principal/principal-landing/principal-landing.component';
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
@@ -91,6 +95,12 @@ const routes: Routes = [
               { path: 'nuevo', component: TipoProductoCreaeditaComponent },
               { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
             ]
+          },
+          {
+            path: 'detallecompras', component: DetalleCompraComponent, children: [
+              { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
+              { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
+            ]
           }
         ]
       }
@@ -98,6 +108,7 @@ const routes: Routes = [
   }
 
 ];
+
 
 
 

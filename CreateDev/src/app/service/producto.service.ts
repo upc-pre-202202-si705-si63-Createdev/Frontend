@@ -2,13 +2,14 @@ import { Producto } from './../model/Producto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject , EMPTY } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
 
-  url: string = "http://localhost:5000/producto"
+  private url: string = `${environment.host}/producto`
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -16,7 +17,7 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Producto[]>(this.url);
+    return this.http.get<Producto[]>(this.url+"/lista");
   }
 
   insertar(producto: Producto) {
