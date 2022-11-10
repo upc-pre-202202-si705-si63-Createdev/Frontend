@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Params, Router, ActivatedRoute } from '@angular/router';
-import { ProductoService } from 'src/app/service/producto.service'; 
+import { ProductoService } from 'src/app/service/producto.service';
 import { Producto } from './../../../model/Producto';
 
 import * as moment from 'moment';
@@ -12,18 +12,18 @@ import * as moment from 'moment';
 })
 export class ProductoCreaeditaComponent implements OnInit {
 
- producto: Producto = new Producto();
+  producto: Producto = new Producto();
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
 
-  listaCompras : Producto[] = [];
-  idProductoSeleccionado : number=0;
+  listaCompras: Producto[] = [];
+  idProductoSeleccionado: number = 0;
 
   maxFecha: Date = moment().add(-1, 'days').toDate();
   fechaSeleccionada: Date = moment().add(-1, 'days').toDate();
 
-  constructor(private productoService: ProductoService,private router: Router,private route: ActivatedRoute) { }
+  constructor(private productoService: ProductoService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -34,11 +34,11 @@ export class ProductoCreaeditaComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.producto.nombre.length > 0 && this.producto.descripcion.length > 0 && this.producto.stock > 0 && this.producto.peso > 0 && this.producto.precio_unitario > 0 && this.producto.material.length > 0 && this.producto.fecha_creacion.length > 0 && this.producto.lugar_fabricacion.length > 0 ) {
+    if (this.producto.nombre.length > 0 && this.producto.descripcion.length > 0 && this.producto.stock > 0 && this.producto.peso > 0 && this.producto.precio_unitario > 0 && this.producto.material.length > 0 && this.producto.fecha_creacion.length > 0 && this.producto.lugar_fabricacion.length > 0) {
 
       let c = new Producto();
       c.id = this.idProductoSeleccionado;
-      this.producto.fecha_creacion =  moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
+      this.producto.fecha_creacion = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
 
 
       if (this.edicion) {
@@ -49,13 +49,13 @@ export class ProductoCreaeditaComponent implements OnInit {
         })
       } else {
 
-      this.productoService.insertar(this.producto).subscribe(data => {
-        this.productoService.listar().subscribe(data => {
-          this.productoService.setLista(data);
+        this.productoService.insertar(this.producto).subscribe(data => {
+          this.productoService.listar().subscribe(data => {
+            this.productoService.setLista(data);
+          })
         })
-      })
-    }
-      this.router.navigate(['/producto']);
+      }
+      this.router.navigate(['/home/page/producto']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

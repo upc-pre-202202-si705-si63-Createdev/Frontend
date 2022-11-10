@@ -83,6 +83,8 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
       this.solicitudDisenioService.listarId(this.id).subscribe(data => {
         this.solicitud = data;
         console.log(data);
+        this.idArtesanoSeleccionado = data.artesano.idArtesano;
+        this.idClienteSeleccionado = data.cliente.idCliente;
         this.idPedidoSeleccionado = data.pedido.id;
       });
     }
