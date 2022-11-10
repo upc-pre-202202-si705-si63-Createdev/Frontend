@@ -7,9 +7,6 @@
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -64,6 +61,16 @@
       <td mat-cell *matCellDef="let element"> {{element.lugar_fabricacion}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="tipo_producto">
+      <th mat-header-cell *matHeaderCellDef> ID del Tipo de Producto </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipo_producto}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="artesano">
+    <th mat-header-cell *matHeaderCellDef> Artesano </th>
+    <td mat-cell *matCellDef="let element"> {{element.artesano}} </td>
+</ng-container>
+
     <ng-container matColumnDef="accion1">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
@@ -79,19 +86,6 @@
       </td>
     </ng-container>
 
-
-    <!-- Position Column -->
-    <!--<ng-container matColumnDef="Tipo_Producto_id">
-    <th mat-header-cell *matHeaderCellDef> ID del Tipo de Producto </th>
-    <td mat-cell *matCellDef="let element"> {{element.Tipo_Producto_id}} </td>
-  </ng-container>
-
-
-    <ng-container matColumnDef="artesanos_usuario_id">
-      <th mat-header-cell *matHeaderCellDef> ID Artesanos Usuario </th>
-      <td mat-cell *matCellDef="let element"> {{element.artesanos_usuario_id}} </td>
-    </ng-container>
-  -->
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

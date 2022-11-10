@@ -1,3 +1,6 @@
+import { Tipo_Producto } from './tipo-producto';
+import { Artesano } from './Artesanos';
+
 export class Producto {
     id: number = 0;
     nombre: string = "";
@@ -8,9 +11,6 @@ export class Producto {
     material: string = "";
     fecha_creacion: string = "";
     lugar_fabricacion: string = "";
+    tipo_producto: Tipo_Producto = new Tipo_Producto();
+    artesano: Artesano = new Artesano();
 }
-
-/*
-Tipo_Producto_id: number = 0;
-artesanos_usuario_id: number = 0;
-*/
