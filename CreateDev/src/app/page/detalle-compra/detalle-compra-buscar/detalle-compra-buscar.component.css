@@ -1,0 +1,13 @@
+.container{
+    background-color: whitesmoke;
+    opacity:0.8;
+    border: 1px solid black;
+    
+   }
+   .container button{
+    background-color:#FF8A05;
+    color: white;
+    font: bold 20px 'Maven Pro', san-serif;
+    border-color: #FF8A05;
+    border-radius: 10px;
+}

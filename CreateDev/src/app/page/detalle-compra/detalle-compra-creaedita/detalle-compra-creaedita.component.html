@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Detalle de Compra</h1>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="idVehiculo" [(ngModel)]="detalleCompra.id">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Compra</mat-label>
+        <mat-select [(value)]="idDeCompraSeleccionada" required>
+            <mat-option *ngFor="let p of listaCompra" [value]="p.id">
+                {{p.nombre_usuario}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Cantidad</mat-label>
+        <input matInput placeholder="Licencia" [(ngModel)]="detalleCompra.cantidad">
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Producto</mat-label>
+        <mat-select [(value)]="idProductoSeleccionado" required>
+            <mat-option *ngFor="let p of listaProducto" [value]="p.id">
+                {{p.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field class="example-full-width">
+        <mat-label>Precio Unitario</mat-label>
+        <input matInput placeholder="Licencia" [(ngModel)]="detalleCompra.precio_unitario">
+    </mat-form-field>
+    <br>
+    
+
+    <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="accent" routerLink="/home/page/detallecompras">Cancelar</button>
+    <p>{{mensaje}}</p>
+    </div>
+    

@@ -58,6 +58,10 @@ import { PrincipalLandingComponent } from './page/principal/principal-landing/pr
 import { PrincipalPageComponent } from './page/principal/principal-page/principal-page.component';
 import { SolicitudDisenioListarComponent } from './page/solicitud-disenio/solicitud-disenio-listar/solicitud-disenio-listar.component';
 import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/solicitud-disenio-creaedita/solicitud-disenio-creaedita.component';
+import { DetalleCompraListarComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-listar.component';
+import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
+import { DetalleCompraBuscarComponent } from './page/detalle-compra/detalle-compra-buscar/detalle-compra-buscar.component';
+import { DetalleCompraDialogoComponent } from './page/detalle-compra/detalle-compra-listar/detalle-compra-dialogo/detalle-compra-dialogo.component';
 
 
 @NgModule({
@@ -103,7 +107,11 @@ import { SolicitudDisenioCreaeditaComponent } from './page/solicitud-disenio/sol
     PrincipalLandingComponent,
     PrincipalPageComponent,
     SolicitudDisenioListarComponent,
-    SolicitudDisenioCreaeditaComponent
+    SolicitudDisenioCreaeditaComponent,
+    DetalleCompraListarComponent,
+    DetalleCompraCreaeditaComponent,
+    DetalleCompraBuscarComponent,
+    DetalleCompraDialogoComponent
 
 
 
