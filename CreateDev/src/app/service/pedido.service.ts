@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PedidoService {
-  private url: string = `${environment.host}/pedidos`
+  private url: string = "http://localhost:8083/pedidos"
   private listaCambio = new Subject<Pedido[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }

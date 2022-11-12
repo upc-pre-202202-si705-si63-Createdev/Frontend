@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class TipoComporbanteService {
 
- url: string = "http://localhost:5000/Tipo_Comprobante"
+ url: string = "http://localhost:8083/Tipo_Comprobante"
   constructor(private http: HttpClient) { }
   private listaCambio = new Subject<Tipo_Comprobante[]>()
   private confirmaEliminacion = new Subject<Boolean>()

@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SolicitudDisenioService {
 
-  private url: string = `${environment.host}/solicitudes`
+  private url: string = "http://localhost:8083/solicitudes"
   private listaCambio = new Subject<solicitud_disenio[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }

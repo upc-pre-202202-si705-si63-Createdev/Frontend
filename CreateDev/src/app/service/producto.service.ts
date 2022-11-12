@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductoService {
 
-  private url: string = `${environment.host}/producto`
+  private url: string = "http://localhost:8083/producto"
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

@@ -10,7 +10,7 @@ import { EMPTY, Subject } from 'rxjs';
 export class ArtesanosService {
 
   //url: string = "http://localhost:5000/Clientes"
-  private url: string = `${environment.host}/artesanos`
+  private url: string = "http://localhost:8083/artesanos"
   private listaCambio = new Subject<Artesano[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

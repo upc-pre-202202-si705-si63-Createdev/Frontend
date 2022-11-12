@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CompraService {
-  private url: string = `${environment.host}/compras`
+  private url: string = "http://localhost:8083/compras"
 
   private listaCAmbio = new Subject<Compra[]>();
 

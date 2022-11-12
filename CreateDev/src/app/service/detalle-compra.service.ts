@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
 export class DetalleCompraService {
 
   
-  private url: string = `${environment.host}/detallecompras`
+  private url: string = "http://localhost:8083/detallecompras"
 
   private listaCAmbio = new Subject<detalle_compra[]>();
 

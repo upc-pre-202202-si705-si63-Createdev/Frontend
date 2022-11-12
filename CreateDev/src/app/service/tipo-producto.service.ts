@@ -9,7 +9,7 @@ import { Tipo_Producto } from '../model/tipo-producto';
 })
 export class TipoProductoService {
 
-  url: string = "http://localhost:5000/Tipo_Producto"
+  url: string = "http://localhost:8083/Tipo_Producto"
   private listaCambio = new Subject<Tipo_Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
