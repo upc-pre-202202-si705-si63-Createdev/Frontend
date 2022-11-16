@@ -11,13 +11,13 @@ import { TipoComprobanteDialogoComponent } from './tipo-comprobante-dialogo/tipo
 })
 export class TipoComprobanteListarComponent implements OnInit {
   dataSource: MatTableDataSource<Tipo_Comprobante> = new MatTableDataSource();
-  displayedColumns:string[]=['id','tipo','acciones','acciones2'];
-  private idMayor: number=0;
+  displayedColumns: string[] = ['id', 'tipo', 'acciones', 'acciones2'];
+  private idMayor: number = 0;
   constructor(private ps: TipoComporbanteService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.ps.listar().subscribe((data: Tipo_Comprobante[] | undefined) => {
-      this.dataSource=new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data);
     })
     this.ps.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
@@ -25,11 +25,11 @@ export class TipoComprobanteListarComponent implements OnInit {
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-  } 
+  }
   confirmar(id: number) {
     this.idMayor = id;
     this.dialog.open(TipoComprobanteDialogoComponent);
-    
+
   }
   eliminar(id: number) {
     this.ps.eliminar(id).subscribe(() => {

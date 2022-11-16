@@ -27,7 +27,7 @@ ngOnInit(): void {
 
   }
   aceptar(): void {
-    if (this.Tipo_Comprobante.tipo.length > 0 ) {
+    if (this.Tipo_Comprobante.comprobante.length > 0 ) {
       if (this.edicion) {
       this.TipoComporbanteService.modificar(this.Tipo_Comprobante).subscribe (data => {
         this.TipoComporbanteService.listar().subscribe(data => {
@@ -43,7 +43,7 @@ ngOnInit(): void {
         })
       })
     }
-      this.router.navigate(['/Tipo Comprobante']);
+      this.router.navigate(['home/page/tipo-comprobante']);
     } 
     else {
       this.mensaje = "Complete los valores requeridos";

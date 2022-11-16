@@ -61,13 +61,13 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Tipo de Producto</mat-label>
-    <input matInput required placeholder="tipo_producto" [(ngModel)]="producto.tipo_producto">
+    <input matInput required placeholder="tipo_producto" [(ngModel)]="producto.tipo_producto.id">
   </mat-form-field>
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Artesano</mat-label>
-    <input matInput required placeholder="artesano" [(ngModel)]="producto.artesano">
+    <input matInput required placeholder="artesano" [(ngModel)]="producto.artesano.usuario.nameUsuarios">
   </mat-form-field>
   <br>
 

@@ -8,30 +8,30 @@ import { UsuariosDialogoComponent } from './usuarios-dialogo/usuarios-dialogo.co
 @Component({
   selector: 'app-usuarios-listar',
   templateUrl: './usuarios-listar.component.html',
-  styleUrls: ['./usuarios-listar.component.css'] 
+  styleUrls: ['./usuarios-listar.component.css']
 })
 export class UsuariosListarComponent implements OnInit {
 
 
   lista: Usuario[] = [];
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource();
-  displayedColumns:string[]=['idUsuarios','emailUsuarios','contrasenaUsuarios','nameUsuarios','lastnameUsuarios','telefonoUsuarios','direccionUsuarios','acciones','accion2'];
+  displayedColumns: string[] = ['idUsuarios', 'emailUsuarios', 'nameUsuarios', 'lastnameUsuarios', 'telefonoUsuarios', 'direccionUsuarios', 'acciones', 'accion2'];
   private idMayor: number = 0;
-  constructor(private ps: UsuariosService,private dialog: MatDialog) { }
+  constructor(private ps: UsuariosService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data=> {
+    this.ps.listar().subscribe(data => {
       this.lista = data;
-      this.dataSource=new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data);
     })
 
     this.ps.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
-    }); 
+    });
     this.ps.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-    
+
   }
 
   confirmar(id: number) {
