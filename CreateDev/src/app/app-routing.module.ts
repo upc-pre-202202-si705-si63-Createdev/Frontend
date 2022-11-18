@@ -34,6 +34,7 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
+import { UsuariosCorreoComponent } from './page/Usuarios/usuarios-correo/usuarios-correo.component';
 
 const routes: Routes = [
 
@@ -63,7 +64,8 @@ const routes: Routes = [
           {
             path: 'Usuarios', component: UsuariosComponent, children: [
               { path: 'nuevo', component: UsuariosCreaeditaComponent },
-              { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
+              { path: 'edicion/:id', component: UsuariosCreaeditaComponent },
+              { path: 'correo', component: UsuariosCorreoComponent}
             ]
           },
            {
