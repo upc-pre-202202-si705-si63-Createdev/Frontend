@@ -14,7 +14,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill">
-        <mat-label>Seleccione Usaurio</mat-label>
+        <mat-label>Seleccione Usuario</mat-label>
         <mat-select [(value)]="idUsuarioSeleccionado" required>
             <mat-option *ngFor="let p of listaUsuarios" [value]="p.idUsuarios">
                 {{p.nameUsuarios}}
