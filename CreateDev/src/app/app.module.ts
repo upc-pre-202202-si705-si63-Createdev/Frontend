@@ -77,6 +77,8 @@ import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/art
 import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
 import { UsuariosCorreoComponent } from './page/Usuarios/usuarios-correo/usuarios-correo.component';
 import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
+import { LoginComponent } from './page/login/login.component';
+import { LoginRegisterComponent } from './page/login/login-register/login-register.component';
 
 
 
@@ -140,7 +142,9 @@ import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-ca
     ArtesanosDialogoComponent,
     SolicitudDisenioBuscarComponent,
     UsuariosCorreoComponent,
-    PedidoCantidadComponent
+    PedidoCantidadComponent,
+    LoginComponent,
+    LoginRegisterComponent
 
 
 
