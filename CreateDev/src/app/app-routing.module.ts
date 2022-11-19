@@ -35,6 +35,7 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
+import { SolicitudDisenioCantidadpsComponent } from './page/solicitud-disenio/solicitud-disenio-cantidadps/solicitud-disenio-cantidadps.component';
 
 const routes: Routes = [
 
@@ -58,7 +59,8 @@ const routes: Routes = [
           {
             path: 'solicitud', component: SolicitudDisenioComponent, children: [
               { path: 'nuevo', component: SolicitudDisenioCreaeditaComponent },
-              { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent }
+              { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent },
+              { path: 'cantidadproxsol', component: SolicitudDisenioCantidadpsComponent }
             ]
           },
           {

@@ -1,3 +1,4 @@
+import { Cantidadproxsol } from './../model/Cantidadproxsol';
 import { solicitud_disenio } from './../model/solicitud-disenio';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -40,5 +41,10 @@ export class SolicitudDisenioService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+
+  buscarCantidadSxP()
+  {
+    return this.http.get<Cantidadproxsol[]>(`${this.url}/cantidadproxsol`);
   }
 }
