@@ -33,7 +33,7 @@ export class ProductoService {
   }
 
   modificar(producto: Producto) {
-    return this.http.put(this.url + "/" + producto.id, producto);
+    return this.http.put(this.url + "/" + producto.idProducto, producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);

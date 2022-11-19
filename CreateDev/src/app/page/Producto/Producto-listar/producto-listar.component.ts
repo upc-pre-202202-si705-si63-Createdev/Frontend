@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class ProductoListarComponent implements OnInit {
 
   dataSource: MatTableDataSource<Producto> = new MatTableDataSource();
-  displayedColumns:string[]=['id','nombre','descripcion','stock','peso','precio_unitario','material','fecha_creacion','lugar_fabricacion','tipo_producto','artesano', 'accion1','accion2']; //,'Tipo_Producto_id','artesanos_usuario_id'
+  displayedColumns:string[]=['idProducto','nameProducto','descripcionProducto','stockProducto','pesoProducto','precioProducto','materialProducto','fechaProducto','lugarfabricacionProducto','tipoproductoProducto','artesanoProducto', 'accion1','accion2']; //,'Tipo_Producto_id','artesanos_usuario_id'
 
   private idMayor: number = 0;
 

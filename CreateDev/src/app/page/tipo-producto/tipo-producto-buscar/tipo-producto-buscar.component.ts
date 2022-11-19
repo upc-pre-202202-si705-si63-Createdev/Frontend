@@ -20,7 +20,7 @@ export class TipoProductoBuscarComponent implements OnInit {
     let array: Tipo_Producto[] = [];
     this.tipo_productoService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.tipo.includes(e.target.value)) {
+        if (element.tipoTipoProducto.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

@@ -52,7 +52,7 @@ export class DetalleCompraCreaeditaComponent implements OnInit {
       c.id = this.idDeCompraSeleccionada;
 
       let p = new Producto();
-      p.id = this.idProductoSeleccionado;
+      p.idProducto = this.idProductoSeleccionado;
 
       if(this.edicion){
         this.detaCompra.modificar(this.detalleCompra).subscribe(() => {

@@ -14,7 +14,7 @@ import { TipoProductoDialogoComponent } from './tipo-producto-dialogo/tipo-produ
 export class TipoProductoListarComponent implements OnInit {
 
   dataSource: MatTableDataSource<Tipo_Producto> = new MatTableDataSource();
-  displayedColumns:string[]=['id','tipo', 'accion1','accion2'];
+  displayedColumns:string[]=['idTipoProducto','tipoTipoProducto', 'accion1','accion2'];
   private idMayor: number = 0;
 
   constructor(private tps: TipoProductoService, private dialog: MatDialog) { }
