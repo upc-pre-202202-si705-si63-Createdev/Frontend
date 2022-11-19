@@ -76,6 +76,8 @@ import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedit
 import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/artesanos-dialogo/artesanos-dialogo.component';
 import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
 import { UsuariosCorreoComponent } from './page/Usuarios/usuarios-correo/usuarios-correo.component';
+import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
+
 
 
 
@@ -137,7 +139,9 @@ import { UsuariosCorreoComponent } from './page/Usuarios/usuarios-correo/usuario
     ArtesanosCreaeditaComponent,
     ArtesanosDialogoComponent,
     SolicitudDisenioBuscarComponent,
-    UsuariosCorreoComponent
+    UsuariosCorreoComponent,
+    PedidoCantidadComponent
+
 
 
   ],

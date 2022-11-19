@@ -1,3 +1,4 @@
+import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
 
 import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
 
@@ -46,7 +47,8 @@ const routes: Routes = [
           {
             path: 'pedido', component: PedidoComponent, children: [
               { path: 'nuevo', component: PedidoCreaeditaComponent },
-              { path: 'edicion/:id', component: PedidoCreaeditaComponent }
+              { path: 'edicion/:id', component: PedidoCreaeditaComponent },
+              {path: 'cantidadescliente',component:PedidoCantidadComponent}
             ]
           },
           {

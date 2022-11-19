@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Pedido } from '../model/Pedido';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Respuesta } from '../model/Respuesta';
 @Injectable({
   providedIn: 'root'
 })
@@ -38,5 +39,9 @@ export class PedidoService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  buscarCantidaddepedidosxcliente() {
+    return this.http.get<Respuesta[]>(`${this.url}/cantidades*cliente`);
+
   }
 }
