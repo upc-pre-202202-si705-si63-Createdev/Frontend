@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductoService {
 
-  private url: string = `${environment.host}/producto`
+  private url: string = "https://createdev-ricse-prueba.herokuapp.com/producto"
   private listaCambio = new Subject<Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

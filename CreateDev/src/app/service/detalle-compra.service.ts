@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
 export class DetalleCompraService {
 
   
-  private url: string = `${environment.host}/detallecompras`
+  private url: string = "https://createdev-ricse-prueba.herokuapp.com/detallecompras"
 
   private listaCAmbio = new Subject<detalle_compra[]>();
 

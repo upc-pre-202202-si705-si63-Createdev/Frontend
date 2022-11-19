@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
 })
 export class TipoComporbanteService {
 
- url: string = "http://localhost:5000/Tipo_Comprobante"
+ url: string = "https://createdev-ricse-prueba.herokuapp.com/Tipo_Comprobante"
   constructor(private http: HttpClient) { }
   private listaCambio = new Subject<Tipo_Comprobante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
