@@ -1,3 +1,4 @@
+import { ArtesanosNprovinciaComponent } from './page/Artesanos/artesanos-nprovincia/artesanos-nprovincia.component';
 
 import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
 
@@ -75,7 +76,8 @@ const routes: Routes = [
           {
             path: 'artesanos', component: ArtesanosComponent, children: [
               { path: 'nuevo', component: ArtesanosCreaeditaComponent },
-              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent }
+              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent },
+              { path: 'nprovincias', component:ArtesanosNprovinciaComponent }
             ]
           },
           {
