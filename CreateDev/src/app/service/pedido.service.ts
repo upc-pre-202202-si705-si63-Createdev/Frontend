@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PedidoService {
-  private url: string = `${environment.host}/pedidos`
+  private url: string = "https://createdev-prueba-back.herokuapp.com"
   private listaCambio = new Subject<Pedido[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }
