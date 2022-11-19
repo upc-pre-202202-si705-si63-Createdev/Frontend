@@ -26,8 +26,8 @@
     <mat-form-field appearance="fill">
         <mat-label>Seleccione Producto</mat-label>
         <mat-select [(value)]="idProductoSeleccionado" required>
-            <mat-option *ngFor="let p of listaProducto" [value]="p.id">
-                {{p.nombre}}
+            <mat-option *ngFor="let p of listaProducto" [value]="p.idProducto">
+                {{p.nameProducto}}
             </mat-option>
         </mat-select>
     </mat-form-field>
