@@ -1,6 +1,11 @@
 <div class="container">
-  <div style=" text-align: center;">
+  <div>
     <h1>Lista de productos</h1>
+    <div>
+      <a routerLink="/home/page/producto/solicitudes-producto"><button class="btn_busqueda">Cantidad de Productos por Lugar</button></a>
+      <a routerLink="/home/page/producto/productos-artesano"><button class="btn_busqueda">Productos por Artesano</button></a>
+    </div>
+
   </div>
 
   <app-producto-buscar></app-producto-buscar>
@@ -64,12 +69,12 @@
     <ng-container matColumnDef="tipoproductoProducto">
       <th mat-header-cell *matHeaderCellDef> Tipo de Producto </th>
       <td mat-cell *matCellDef="let element"> {{element.tipoproductoProducto.tipoTipoProducto}} </td>
-  </ng-container>
+    </ng-container>
 
-  <ng-container matColumnDef="artesanoProducto">
-    <th mat-header-cell *matHeaderCellDef> Artesano </th>
-    <td mat-cell *matCellDef="let element"> {{element.artesanoProducto.usuario.nameUsuarios}} </td>
-</ng-container>
+    <ng-container matColumnDef="artesanoProducto">
+      <th mat-header-cell *matHeaderCellDef> Artesano </th>
+      <td mat-cell *matCellDef="let element"> {{element.artesanoProducto.usuario.nameUsuarios}} </td>
+    </ng-container>
 
     <ng-container matColumnDef="accion1">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
