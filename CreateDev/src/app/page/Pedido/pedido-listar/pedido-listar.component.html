@@ -1,6 +1,9 @@
 <div class="container">
   <h1>Lista de pedidos</h1>
   <app-pedido-buscar></app-pedido-buscar>
+  <div>
+    <a routerLink="/home/login/page/pedido/cantidadescliente"><button class="btn_busqueda">Cantidad de pedidos realizados por clientes</button></a>
+</div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- 1 -->
