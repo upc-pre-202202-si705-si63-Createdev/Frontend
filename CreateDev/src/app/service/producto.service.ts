@@ -1,3 +1,5 @@
+import { productosPorArtesano } from './../model/productos-artesano';
+import { SolicitudesProducto } from './../model/solicitudes-producto';
 import { Producto } from './../model/Producto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -8,6 +10,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProductoService {
+
+  //private url: string = "https://createdev-prueba-back.herokuapp.com"
 
   private url: string = `${environment.host}/producto`
   private listaCambio = new Subject<Producto[]>()
@@ -33,7 +37,7 @@ export class ProductoService {
   }
 
   modificar(producto: Producto) {
-    return this.http.put(this.url + "/" + producto.id, producto);
+    return this.http.put(this.url + "/" + producto.idProducto, producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);
@@ -55,4 +59,11 @@ export class ProductoService {
     return EMPTY;
   }
 
+  buscarSolicitudesProducto() {
+    return this.http.get<SolicitudesProducto[]>(`${this.url}/solicitudes-productos`);
+  }
+
+  buscarProductosPorArtesano() {
+    return this.http.get<productosPorArtesano[]>(`${this.url}/productos-artesano`);
+  }
 }

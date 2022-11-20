@@ -1,3 +1,8 @@
+import { Cantidadproxsol } from './../model/Cantidadproxsol';
+
+import { SolicitudesArtesano } from './../model/solicitudes-artesano';
+import { SolicitudesRecientes } from './../model/solicitudes-recientes';
+
 import { solicitud_disenio } from './../model/solicitud-disenio';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -9,7 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SolicitudDisenioService {
 
-  private url: string = `${environment.host}/solicitudes`
+  private url: string = "https://createdev-prueba-back.herokuapp.com"
   private listaCambio = new Subject<solicitud_disenio[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }
@@ -40,5 +45,16 @@ export class SolicitudDisenioService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+
+  buscarCantidadSxP()
+  {
+    return this.http.get<Cantidadproxsol[]>(`${this.url}/cantidadproxsol`);
+
+  buscarSolicitudesArtesanos() {
+    return this.http.get<SolicitudesArtesano[]>(`${this.url}/solicitudes-artesanos`);
+  }
+  buscarSolicitudesRecientes() {
+    return this.http.get<SolicitudesRecientes[]>(`${this.url}/solicitudes-mas-recientes`);
   }
 }

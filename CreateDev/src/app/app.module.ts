@@ -75,10 +75,19 @@ import { ArtesanosBuscarComponent } from './page/Artesanos/artesanos-buscar/arte
 import { ArtesanosCreaeditaComponent } from './page/Artesanos/artesanos-creaedita/artesanos-creaedita.component';
 import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/artesanos-dialogo/artesanos-dialogo.component';
 import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
+
 import { UsuariosCorreoComponent } from './page/Usuarios/usuarios-correo/usuarios-correo.component';
 import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
 import { LoginComponent } from './page/login/login.component';
 import { LoginRegisterComponent } from './page/login/login-register/login-register.component';
+
+
+import { ArtesanosNprovinciaComponent } from './page/Artesanos/artesanos-nprovincia/artesanos-nprovincia.component';
+import { SolicitudDisenioCantidadpsComponent } from './page/solicitud-disenio/solicitud-disenio-cantidadps/solicitud-disenio-cantidadps.component';
+import { SolicitudDisenioRecientesComponent } from './page/solicitud-disenio/solicitud-disenio-recientes/solicitud-disenio-recientes.component';
+import { SolicitudDisenioArtesanosComponent } from './page/solicitud-disenio/solicitud-disenio-artesanos/solicitud-disenio-artesanos.component';
+import { ProductoCantidadLugarComponent } from './page/Producto/producto-cantidad-lugar/producto-cantidad-lugar.component';
+import { ProductoProductosArtesanoComponent } from './page/Producto/producto-productos-artesano/producto-productos-artesano.component';
 
 
 
@@ -141,10 +150,18 @@ import { LoginRegisterComponent } from './page/login/login-register/login-regist
     ArtesanosCreaeditaComponent,
     ArtesanosDialogoComponent,
     SolicitudDisenioBuscarComponent,
+
     UsuariosCorreoComponent,
     PedidoCantidadComponent,
     LoginComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+
+    ArtesanosNprovinciaComponent,
+    SolicitudDisenioCantidadpsComponent
+    SolicitudDisenioRecientesComponent,
+    SolicitudDisenioArtesanosComponent,
+    ProductoCantidadLugarComponent,
+    ProductoProductosArtesanoComponent
 
 
 

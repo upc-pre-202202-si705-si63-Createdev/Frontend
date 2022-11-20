@@ -32,12 +32,18 @@ export class ArtesanosService {
     return this.http.delete(`${this.url}/${id}`);
   }
   buscar(texto:string) {
-    //console.log("algo")
+    console.log("algo")
     if (texto.length != 0) {
-      return this.http.post<Artesano[]>(`${this.url}/buscar`, texto.toLowerCase(),{});
+      return this.http.post<Artesano[]>(`${this.url}/buscarprovincia`, texto.toLowerCase(),{});
   }
     return EMPTY;
   }
+
+  buscarnprovincia() {
+    return this.http.get<Artesano[]>(`${this.url}/buscarnprovincia`);
+    }
+
+    
   listarID(id: number) {
 
     return this.http.get<Artesano>(`${this.url}/${id}`);
