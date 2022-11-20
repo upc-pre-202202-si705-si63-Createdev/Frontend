@@ -77,6 +77,8 @@ import { ArtesanosDialogoComponent } from './page/Artesanos/Artesanos-listar/art
 import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solicitud-disenio-buscar/solicitud-disenio-buscar.component';
 import { ArtesanosNprovinciaComponent } from './page/Artesanos/artesanos-nprovincia/artesanos-nprovincia.component';
 import { SolicitudDisenioCantidadpsComponent } from './page/solicitud-disenio/solicitud-disenio-cantidadps/solicitud-disenio-cantidadps.component';
+import { SolicitudDisenioRecientesComponent } from './page/solicitud-disenio/solicitud-disenio-recientes/solicitud-disenio-recientes.component';
+import { SolicitudDisenioArtesanosComponent } from './page/solicitud-disenio/solicitud-disenio-artesanos/solicitud-disenio-artesanos.component';
 
 
 
@@ -140,6 +142,8 @@ import { SolicitudDisenioCantidadpsComponent } from './page/solicitud-disenio/so
     SolicitudDisenioBuscarComponent,
     ArtesanosNprovinciaComponent,
     SolicitudDisenioCantidadpsComponent
+    SolicitudDisenioRecientesComponent,
+    SolicitudDisenioArtesanosComponent
 
 
   ],
