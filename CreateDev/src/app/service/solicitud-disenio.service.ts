@@ -47,9 +47,9 @@ export class SolicitudDisenioService {
     this.confirmaEliminacion.next(estado);
   }
 
-  buscarCantidadSxP()
-  {
+  buscarCantidadSxP() {
     return this.http.get<Cantidadproxsol[]>(`${this.url}/cantidadproxsol`);
+  }
 
   buscarSolicitudesArtesanos() {
     return this.http.get<SolicitudesArtesano[]>(`${this.url}/solicitudes-artesanos`);
@@ -58,3 +58,4 @@ export class SolicitudDisenioService {
     return this.http.get<SolicitudesRecientes[]>(`${this.url}/solicitudes-mas-recientes`);
   }
 }
+

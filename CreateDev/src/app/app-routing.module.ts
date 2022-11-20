@@ -121,90 +121,79 @@ const routes: Routes = [
                   { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
                   { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
                 ]
+              },
+              {
+                path: 'producto', component: ProductoComponent, children: [
+                  { path: 'nuevo', component: ProductoCreaeditaComponent },
+                  { path: 'edicion/:id', component: ProductoCreaeditaComponent },
+                  { path: 'solicitudes-producto', component: ProductoCantidadLugarComponent },
+                  { path: 'productos-artesano', component: ProductoProductosArtesanoComponent }
+                ]
+              },
+              {
+                path: 'solicitud', component: SolicitudDisenioComponent, children: [
+                  { path: 'nuevo', component: SolicitudDisenioCreaeditaComponent },
+                  { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent },
+                  { path: 'cantidadproxsol', component: SolicitudDisenioCantidadpsComponent },
+                  { path: 'solicitudes-artesanos', component: SolicitudDisenioArtesanosComponent },
+                  { path: 'solicitudes-mas-recientes', component: SolicitudDisenioRecientesComponent }
+                ]
+              },
+              {
+                path: 'Usuarios', component: UsuariosComponent, children: [
+                  { path: 'nuevo', component: UsuariosCreaeditaComponent },
+                  { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
+                ]
+              },
+              {
+                path: 'clientes', component: ClientesComponent, children: [
+                  { path: 'nuevo', component: ClientesCreaeditaComponent },
+                  { path: 'edicion/:id', component: ClientesCreaeditaComponent }
+                ]
+              },
+              {
+                path: 'artesanos', component: ArtesanosComponent, children: [
+                  { path: 'nuevo', component: ArtesanosCreaeditaComponent },
+                  { path: 'edicion/:id', component: ArtesanosCreaeditaComponent },
+                  { path: 'nprovincias', component: ArtesanosNprovinciaComponent }
+                ]
+              },
+              {
+                path: 'compra', component: CompraComponent, children: [
+                  { path: 'nuevo', component: CompraCreaeditaComponent },
+                  { path: 'edicion/:id', component: CompraCreaeditaComponent }
+                ]
+              },
+              {
+                path: 'tipo-comprobante', component: TipoComprobanteComponent, children: [
+                  { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
+                  { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
+                ]
+              },
+              {
+                path: 'tipo-producto', component: TipoProductoComponent, children: [
+                  { path: 'nuevo', component: TipoProductoCreaeditaComponent },
+                  { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
+                ]
+              },
+              {
+                path: 'detallecompras', component: DetalleCompraComponent, children: [
+                  { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
+                  { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
+                ]
               }
-
-            path: 'pedido', component: PedidoComponent, children: [
-              { path: 'nuevo', component: PedidoCreaeditaComponent },
-              { path: 'edicion/:id', component: PedidoCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'producto', component: ProductoComponent, children: [
-              { path: 'nuevo', component: ProductoCreaeditaComponent },
-              { path: 'edicion/:id', component: ProductoCreaeditaComponent },
-              { path: 'solicitudes-producto', component: ProductoCantidadLugarComponent },
-              { path: 'productos-artesano', component: ProductoProductosArtesanoComponent }
-            ]
-          },
-          {
-            path: 'solicitud', component: SolicitudDisenioComponent, children: [
-              { path: 'nuevo', component: SolicitudDisenioCreaeditaComponent },
-              { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent },
-              { path: 'cantidadproxsol', component: SolicitudDisenioCantidadpsComponent },
-              { path: 'solicitudes-artesanos', component: SolicitudDisenioArtesanosComponent },
-              { path: 'solicitudes-mas-recientes', component: SolicitudDisenioRecientesComponent }
-
-            ]
-          },
-          {
-            path: 'Usuarios', component: UsuariosComponent, children: [
-              { path: 'nuevo', component: UsuariosCreaeditaComponent },
-              { path: 'edicion/:id', component: UsuariosCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'clientes', component: ClientesComponent, children: [
-              { path: 'nuevo', component: ClientesCreaeditaComponent },
-              { path: 'edicion/:id', component: ClientesCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'artesanos', component: ArtesanosComponent, children: [
-              { path: 'nuevo', component: ArtesanosCreaeditaComponent },
-              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent },
-              { path: 'nprovincias', component:ArtesanosNprovinciaComponent }
-            ]
-          },
-          {
-            path: 'compra', component: CompraComponent, children: [
-              { path: 'nuevo', component: CompraCreaeditaComponent },
-              { path: 'edicion/:id', component: CompraCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'tipo-comprobante', component: TipoComprobanteComponent, children: [
-              { path: 'nuevo', component: TipoComprobanteCreaeditaComponent },
-              { path: 'edicion/:id', component: TipoComprobanteCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'tipo-producto', component: TipoProductoComponent, children: [
-              { path: 'nuevo', component: TipoProductoCreaeditaComponent },
-              { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
-            ]
-          },
-          {
-            path: 'detallecompras', component: DetalleCompraComponent, children: [
-              { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
-              { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
             ]
           }
         ]
       }
     ]
   }
-
 ];
 
-
-
-
-
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
 export class AppRoutingModule { }
 
 

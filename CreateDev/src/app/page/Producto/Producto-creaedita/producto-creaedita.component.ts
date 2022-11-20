@@ -83,9 +83,6 @@ export class ProductoCreaeditaComponent implements OnInit {
       }
       this.router.navigate(['/home/login/page/producto']);
     } else {
-      this.router.navigate(['/home/page/producto']);
-    }
-    else {
       this.mensaje = "Complete los valores requeridos";
     }
   }

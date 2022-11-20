@@ -157,7 +157,7 @@ import { ProductoProductosArtesanoComponent } from './page/Producto/producto-pro
     LoginRegisterComponent,
 
     ArtesanosNprovinciaComponent,
-    SolicitudDisenioCantidadpsComponent
+    SolicitudDisenioCantidadpsComponent,
     SolicitudDisenioRecientesComponent,
     SolicitudDisenioArtesanosComponent,
     ProductoCantidadLugarComponent,
