@@ -1,6 +1,9 @@
 import { ProductoProductosArtesanoComponent } from './page/Producto/producto-productos-artesano/producto-productos-artesano.component';
 import { ProductoCantidadLugarComponent } from './page/Producto/producto-cantidad-lugar/producto-cantidad-lugar.component';
+import { ArtesanosNprovinciaComponent } from './page/Artesanos/artesanos-nprovincia/artesanos-nprovincia.component';
+
 import { SolicitudDisenioRecientesComponent } from './page/solicitud-disenio/solicitud-disenio-recientes/solicitud-disenio-recientes.component';
+
 
 import { DetalleCompraCreaeditaComponent } from './page/detalle-compra/detalle-compra-creaedita/detalle-compra-creaedita.component';
 
@@ -37,7 +40,11 @@ import { ProductoCreaeditaComponent } from './page/Producto/Producto-creaedita/p
 import { TipoProductoCreaeditaComponent } from './page/tipo-producto/tipo-producto-creaedita/tipo-producto-creaedita.component';
 import { SolicitudDisenioComponent } from './page/solicitud-disenio/solicitud-disenio.component';
 import { ClientesCreaeditaComponent } from './page/Clientes/Clientes-creaedita/clientes-creaedita.component';
+
+import { SolicitudDisenioCantidadpsComponent } from './page/solicitud-disenio/solicitud-disenio-cantidadps/solicitud-disenio-cantidadps.component';
+
 import { SolicitudDisenioArtesanosComponent } from './page/solicitud-disenio/solicitud-disenio-artesanos/solicitud-disenio-artesanos.component';
+
 
 const routes: Routes = [
 
@@ -64,8 +71,10 @@ const routes: Routes = [
             path: 'solicitud', component: SolicitudDisenioComponent, children: [
               { path: 'nuevo', component: SolicitudDisenioCreaeditaComponent },
               { path: 'edicion/:id', component: SolicitudDisenioCreaeditaComponent },
+              { path: 'cantidadproxsol', component: SolicitudDisenioCantidadpsComponent },
               { path: 'solicitudes-artesanos', component: SolicitudDisenioArtesanosComponent },
               { path: 'solicitudes-mas-recientes', component: SolicitudDisenioRecientesComponent }
+
             ]
           },
           {
@@ -83,7 +92,8 @@ const routes: Routes = [
           {
             path: 'artesanos', component: ArtesanosComponent, children: [
               { path: 'nuevo', component: ArtesanosCreaeditaComponent },
-              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent }
+              { path: 'edicion/:id', component: ArtesanosCreaeditaComponent },
+              { path: 'nprovincias', component:ArtesanosNprovinciaComponent }
             ]
           },
           {

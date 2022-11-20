@@ -11,7 +11,6 @@ import { ArtesanosDialogoComponent } from './artesanos-dialogo/artesanos-dialogo
   styleUrls: ['./artesanos-listar.component.css']
 })
 export class ArtesanosListarComponent implements OnInit {
-
   lista: Artesano[] = [];
   dataSource: MatTableDataSource<Artesano> = new MatTableDataSource();
   displayedColumns: string[] = ['idArtesano', 'provincia','informacion', 'usuarios', 'acciones','acciones2'];
@@ -46,6 +45,9 @@ export class ArtesanosListarComponent implements OnInit {
         this.ArtesanosService.setLista(data);/* se ejecuta la línea 27 */
       });
     });
+  }
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
   }
 
 }
