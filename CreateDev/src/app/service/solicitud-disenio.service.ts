@@ -1,5 +1,8 @@
+import { Cantidadproxsol } from './../model/Cantidadproxsol';
+
 import { SolicitudesArtesano } from './../model/solicitudes-artesano';
 import { SolicitudesRecientes } from './../model/solicitudes-recientes';
+
 import { solicitud_disenio } from './../model/solicitud-disenio';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -43,6 +46,11 @@ export class SolicitudDisenioService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+  buscarCantidadSxP()
+  {
+    return this.http.get<Cantidadproxsol[]>(`${this.url}/cantidadproxsol`);
+
   buscarSolicitudesArtesanos() {
     return this.http.get<SolicitudesArtesano[]>(`${this.url}/solicitudes-artesanos`);
   }

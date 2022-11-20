@@ -2,7 +2,9 @@
   <div style=" text-align: center;">
     <h1>Lista de Artesanos</h1>
   </div>
-
+  <div>
+    <a routerLink="/home/page/artesanos/nprovincias"><button class="btn_busqueda">Artesanos que viven en la provincia de Lima</button></a>
+</div>
   <app-artesanos-buscar></app-artesanos-buscar>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
