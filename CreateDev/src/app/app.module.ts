@@ -78,6 +78,7 @@ import { SolicitudDisenioBuscarComponent } from './page/solicitud-disenio/solici
 import { SolicitudDisenioRecientesComponent } from './page/solicitud-disenio/solicitud-disenio-recientes/solicitud-disenio-recientes.component';
 import { SolicitudDisenioArtesanosComponent } from './page/solicitud-disenio/solicitud-disenio-artesanos/solicitud-disenio-artesanos.component';
 import { ProductoCantidadLugarComponent } from './page/Producto/producto-cantidad-lugar/producto-cantidad-lugar.component';
+import { ProductoProductosArtesanoComponent } from './page/Producto/producto-productos-artesano/producto-productos-artesano.component';
 
 
 
@@ -141,7 +142,8 @@ import { ProductoCantidadLugarComponent } from './page/Producto/producto-cantida
     SolicitudDisenioBuscarComponent,
     SolicitudDisenioRecientesComponent,
     SolicitudDisenioArtesanosComponent,
-    ProductoCantidadLugarComponent
+    ProductoCantidadLugarComponent,
+    ProductoProductosArtesanoComponent
 
 
   ],

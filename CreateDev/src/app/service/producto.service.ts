@@ -1,3 +1,4 @@
+import { productosPorArtesano } from './../model/productos-artesano';
 import { SolicitudesProducto } from './../model/solicitudes-producto';
 import { Producto } from './../model/Producto';
 import { HttpClient } from '@angular/common/http';
@@ -60,6 +61,9 @@ export class ProductoService {
 
   buscarSolicitudesProducto() {
     return this.http.get<SolicitudesProducto[]>(`${this.url}/solicitudes-productos`);
+  }
 
+  buscarProductosPorArtesano() {
+    return this.http.get<productosPorArtesano[]>(`${this.url}/productos-artesano`);
   }
 }

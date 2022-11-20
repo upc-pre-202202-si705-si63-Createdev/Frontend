@@ -1,3 +1,4 @@
+import { ProductoProductosArtesanoComponent } from './page/Producto/producto-productos-artesano/producto-productos-artesano.component';
 import { ProductoCantidadLugarComponent } from './page/Producto/producto-cantidad-lugar/producto-cantidad-lugar.component';
 import { SolicitudDisenioRecientesComponent } from './page/solicitud-disenio/solicitud-disenio-recientes/solicitud-disenio-recientes.component';
 
@@ -55,7 +56,8 @@ const routes: Routes = [
             path: 'producto', component: ProductoComponent, children: [
               { path: 'nuevo', component: ProductoCreaeditaComponent },
               { path: 'edicion/:id', component: ProductoCreaeditaComponent },
-              { path: 'solicitudes-producto', component: ProductoCantidadLugarComponent }
+              { path: 'solicitudes-producto', component: ProductoCantidadLugarComponent },
+              { path: 'productos-artesano', component: ProductoProductosArtesanoComponent }
             ]
           },
           {
