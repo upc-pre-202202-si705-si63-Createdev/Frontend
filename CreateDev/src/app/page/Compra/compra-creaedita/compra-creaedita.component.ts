@@ -72,7 +72,7 @@ export class CompraCreaeditaComponent implements OnInit {
         })
       }
 
-      this.router.navigate(['home/page/compra']);
+      this.router.navigate(['home/login/page/compra']);
     }
 
     else {

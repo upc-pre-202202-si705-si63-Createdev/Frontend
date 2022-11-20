@@ -4,6 +4,9 @@
   </div>
 
   <app-usuarios-buscar></app-usuarios-buscar>
+  <div>
+    <a routerLink="/home/login/page/Usuarios/correo"><button class="btn_busqueda">Clientes con proveedor de correo @gmail.com</button></a>
+</div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -71,7 +74,7 @@
   <div class="example-button-container">
 
     <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
-      routerLink="/home/page/Usuarios/nuevo">
+      routerLink="/home/login/page/Usuarios/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>

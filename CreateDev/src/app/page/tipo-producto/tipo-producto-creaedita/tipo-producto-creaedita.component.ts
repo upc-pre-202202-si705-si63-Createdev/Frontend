@@ -40,7 +40,7 @@ export class TipoProductoCreaeditaComponent implements OnInit {
         })
       })
     }
-      this.router.navigate(['/home/page/tipo-producto']);
+      this.router.navigate(['/home/login/page/tipo-producto']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

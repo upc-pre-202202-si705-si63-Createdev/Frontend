@@ -71,7 +71,7 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
           })
         });
       }
-      this.router.navigate(['home/page/solicitud']);
+      this.router.navigate(['home/login/page/solicitud']);
     }
     else {
       this.mensaje = "Complete los valores requeridos";

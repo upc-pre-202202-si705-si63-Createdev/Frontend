@@ -53,6 +53,9 @@ export class UsuariosService {
     }
     return EMPTY;
   }
+  buscarcorreo(){
+    return this.http.get<Usuario[]>(`${this.url}/buscarcorreo`)
+  }
 }
 
 

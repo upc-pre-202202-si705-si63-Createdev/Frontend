@@ -41,7 +41,7 @@ export class PedidoCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['home/page/pedido']);
+      this.router.navigate(['home/login/page/pedido']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

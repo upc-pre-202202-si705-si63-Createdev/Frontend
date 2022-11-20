@@ -9,12 +9,12 @@
     <br>
     
     <mat-form-field class="example-full-width">
-        <mat-label>Nombre</mat-label>
+        <mat-label>DNI</mat-label>
         <input matInput placeholder="dni" [(ngModel)]="clientes.dni">
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill">
-        <mat-label>Seleccione Usaurio</mat-label>
+        <mat-label>Seleccione Usuario</mat-label>
         <mat-select [(value)]="idUsuarioSeleccionado" required>
             <mat-option *ngFor="let p of listaUsuarios" [value]="p.idUsuarios">
                 {{p.nameUsuarios}}
@@ -23,6 +23,6 @@
     </mat-form-field>
     <br>
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/home/page/clientes">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/home/login/page/clientes">Cancelar</button>
     </div>
     
