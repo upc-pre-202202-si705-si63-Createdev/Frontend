@@ -43,7 +43,7 @@ ngOnInit(): void {
         })
       })
     }
-      this.router.navigate(['home/page/tipo-comprobante']);
+      this.router.navigate(['home/login/page/tipo-comprobante']);
     } 
     else {
       this.mensaje = "Complete los valores requeridos";

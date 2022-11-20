@@ -70,7 +70,7 @@ export class DetalleCompraCreaeditaComponent implements OnInit {
           console.log(err);
         });
       }
-      this.router.navigate(['home/page/detallecompras']);
+      this.router.navigate(['home/login/page/detallecompras']);
     }
     else{
       this.mensaje = "Complete los valores requeridos";

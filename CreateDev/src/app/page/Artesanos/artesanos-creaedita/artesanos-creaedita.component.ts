@@ -57,7 +57,7 @@ export class ArtesanosCreaeditaComponent implements OnInit {
           })
         });
       }
-      this.router.navigate(['/home/page/artesanos']);
+      this.router.navigate(['/home/login/page/artesanos']);
 
     }
     else {

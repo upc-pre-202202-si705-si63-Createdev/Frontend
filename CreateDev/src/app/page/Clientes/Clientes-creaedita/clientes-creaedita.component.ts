@@ -59,7 +59,7 @@ export class ClientesCreaeditaComponent implements OnInit {
           })
         });
       }
-      this.router.navigate(['/home/page/clientes']);
+      this.router.navigate(['/home/login/page/clientes']);
 
     }
     else {
