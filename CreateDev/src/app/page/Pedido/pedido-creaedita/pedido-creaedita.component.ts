@@ -34,7 +34,7 @@ export class PedidoCreaeditaComponent implements OnInit {
           })
         })
       } else {
-console.log("Ingresó");
+        console.log("Ingresó");
         this.PedidoService.insertar(this.pedido).subscribe(data => {
           this.PedidoService.listar().subscribe(data => {
             this.PedidoService.setLista(data);

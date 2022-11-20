@@ -47,8 +47,14 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
 
   aceptar() {
     if (this.idPedidoSeleccionado > 0 && this.idArtesanoSeleccionado && this.idClienteSeleccionado) {
+      let a = new Artesano();
+      let c = new Cliente();
       let p = new Pedido();
+      a.idArtesano = this.idArtesanoSeleccionado;
+      c.idCliente = this.idClienteSeleccionado;
       p.id = this.idPedidoSeleccionado;
+      this.solicitud.artesano = a;
+      this.solicitud.cliente = c;
       this.solicitud.pedido = p;
       this.solicitud.fecha = moment(this.fechaSeleccionada).format('YYYY-MM-DDTHH:mm:ss');
       if (this.edicion) {
@@ -77,6 +83,8 @@ export class SolicitudDisenioCreaeditaComponent implements OnInit {
       this.solicitudDisenioService.listarId(this.id).subscribe(data => {
         this.solicitud = data;
         console.log(data);
+        this.idArtesanoSeleccionado = data.artesano.idArtesano;
+        this.idClienteSeleccionado = data.cliente.idCliente;
         this.idPedidoSeleccionado = data.pedido.id;
       });
     }

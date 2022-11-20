@@ -1,7 +1,7 @@
 import { Producto } from './../model/Producto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject , EMPTY } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -17,11 +17,11 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Producto[]>(this.url+"/lista");
+    return this.http.get<Producto[]>(this.url + "/lista");
   }
 
   insertar(producto: Producto) {
-        return this.http.post(this.url, producto);
+    return this.http.post(this.url, producto);
   }
 
   setLista(listaNueva: Producto[]) {
@@ -33,7 +33,7 @@ export class ProductoService {
   }
 
   modificar(producto: Producto) {
-    return this.http.put(this.url + "/" + producto.id, producto);
+    return this.http.put(this.url + "/" + producto.idProducto, producto);
   }
   listarId(id: number) {
     return this.http.get<Producto>(`${this.url}/${id}`);

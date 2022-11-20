@@ -1,6 +1,6 @@
 <div class="container">
     <div style=" text-align: center;">
-      <h1 style="font-size: 80px; background-color:#FF8A05;color: rgb(255, 255, 255)">Lista de Detalles de Compra</h1>
+      <h1>Lista de Detalles de Compra</h1>
     </div>
 
     <app-detalle-compra-buscar></app-detalle-compra-buscar>
@@ -25,7 +25,7 @@
 
         <ng-container matColumnDef="idProducto">
             <th mat-header-cell *matHeaderCellDef> Id del Producto </th>
-            <td mat-cell *matCellDef="let element"> {{element.idProducto.id}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.idProducto.nombre}} </td>
         </ng-container>
 
 
@@ -51,9 +51,12 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+
+    <br>
+
     <div class="example-button-container">
 
-        <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+        <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
             routerLink="/home/page/detallecompras/nuevo">
             <mat-icon>plus_one</mat-icon>
         </button>

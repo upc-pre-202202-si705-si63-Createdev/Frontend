@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Subject , EMPTY} from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Tipo_Producto } from '../model/tipo-producto';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,14 +10,14 @@ import { Tipo_Producto } from '../model/tipo-producto';
 })
 export class TipoProductoService {
 
-  url: string = "https://createdev-ricse-prueba.herokuapp.com/Tipo_Producto"
+  url: string = `${environment.host}/tipoproducto`
   private listaCambio = new Subject<Tipo_Producto[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
 
   listar() {
-    return this.http.get<Tipo_Producto[]>(this.url);
+    return this.http.get<Tipo_Producto[]>(this.url+"/lista");
   }
 
   insertar(tipo_producto: Tipo_Producto) {
@@ -32,7 +33,7 @@ export class TipoProductoService {
   }
   
   modificar(tipo_producto: Tipo_Producto) {
-    return this.http.put(this.url + "/" + tipo_producto.id, tipo_producto);
+    return this.http.put(this.url + "/" + tipo_producto.idTipoProducto, tipo_producto);
   }
   listarId(id: number) {
     return this.http.get<Tipo_Producto>(`${this.url}/${id}`);

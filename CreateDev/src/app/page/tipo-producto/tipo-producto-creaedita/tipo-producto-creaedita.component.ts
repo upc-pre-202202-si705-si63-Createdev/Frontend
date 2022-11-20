@@ -18,14 +18,14 @@ export class TipoProductoCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
-      this.id = data['id'];
-      this.edicion = data['id'] != null;
+      this.id = data['idTipoProducto'];
+      this.edicion = data['idTipoProducto'] != null;
       this.init();
     });
   }
 
   aceptar(): void {
-    if (this.tipo_producto.tipo.length > 0){
+    if (this.tipo_producto.tipoTipoProducto.length > 0){
       if (this.edicion) {
         this.tipo_productoService.modificar(this.tipo_producto).subscribe(data => {
           this.tipo_productoService.listar().subscribe(data => {
@@ -40,7 +40,7 @@ export class TipoProductoCreaeditaComponent implements OnInit {
         })
       })
     }
-      this.router.navigate(['/tipo-producto']);
+      this.router.navigate(['/home/page/tipo-producto']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

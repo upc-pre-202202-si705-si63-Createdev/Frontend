@@ -7,91 +7,85 @@
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
     <!-- Position Column -->
-    <ng-container matColumnDef="id">
+    <ng-container matColumnDef="idProducto">
       <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.idProducto}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="nombre">
+    <ng-container matColumnDef="nameProducto">
       <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.nameProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="descripcion">
+    <ng-container matColumnDef="descripcionProducto">
       <th mat-header-cell *matHeaderCellDef> Descripción </th>
-      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.descripcionProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="stock">
+    <ng-container matColumnDef="stockProducto">
       <th mat-header-cell *matHeaderCellDef> Stock </th>
-      <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.stockProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="peso">
+    <ng-container matColumnDef="pesoProducto">
       <th mat-header-cell *matHeaderCellDef> Peso </th>
-      <td mat-cell *matCellDef="let element"> {{element.peso}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.pesoProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="precio_unitario">
+    <ng-container matColumnDef="precioProducto">
       <th mat-header-cell *matHeaderCellDef> Precio Unitario </th>
-      <td mat-cell *matCellDef="let element"> {{element.precio_unitario}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.precioProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="material">
+    <ng-container matColumnDef="materialProducto">
       <th mat-header-cell *matHeaderCellDef> Material </th>
-      <td mat-cell *matCellDef="let element"> {{element.material}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.materialProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="fecha_creacion">
+    <ng-container matColumnDef="fechaProducto">
       <th mat-header-cell *matHeaderCellDef> Fecha de Creación </th>
-      <td mat-cell *matCellDef="let element"> {{element.fecha_creacion}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.fechaProducto}} </td>
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="lugar_fabricacion">
+    <ng-container matColumnDef="lugarfabricacionProducto">
       <th mat-header-cell *matHeaderCellDef> Lugar de Fabricación </th>
-      <td mat-cell *matCellDef="let element"> {{element.lugar_fabricacion}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.lugarfabricacionProducto}} </td>
     </ng-container>
+
+    <ng-container matColumnDef="tipoproductoProducto">
+      <th mat-header-cell *matHeaderCellDef> Tipo de Producto </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipoproductoProducto.tipoTipoProducto}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="artesanoProducto">
+    <th mat-header-cell *matHeaderCellDef> Artesano </th>
+    <td mat-cell *matCellDef="let element"> {{element.artesanoProducto.usuario.nameUsuarios}} </td>
+</ng-container>
 
     <ng-container matColumnDef="accion1">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-          [routerLink]="['edicion', element?.id]">Actualizar</button>
+          [routerLink]="['edicion', element?.idProducto]">Actualizar</button>
 
       </td>
     </ng-container>
     <ng-container matColumnDef="accion2">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+        <button mat-raised-button color="warn" (click)="confirmar(element.idProducto)">Eliminar</button>
 
       </td>
     </ng-container>
 
-
-    <!-- Position Column -->
-    <!--<ng-container matColumnDef="Tipo_Producto_id">
-    <th mat-header-cell *matHeaderCellDef> ID del Tipo de Producto </th>
-    <td mat-cell *matCellDef="let element"> {{element.Tipo_Producto_id}} </td>
-  </ng-container>
-
-
-    <ng-container matColumnDef="artesanos_usuario_id">
-      <th mat-header-cell *matHeaderCellDef> ID Artesanos Usuario </th>
-      <td mat-cell *matCellDef="let element"> {{element.artesanos_usuario_id}} </td>
-    </ng-container>
-  -->
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -100,8 +94,8 @@
   <br>
 
   <div class="example-button-container">
-    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-      routerLink="/producto/nuevo">
+    <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
+      routerLink="/home/page/producto/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>

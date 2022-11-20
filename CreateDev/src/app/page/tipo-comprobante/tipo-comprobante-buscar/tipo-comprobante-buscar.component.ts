@@ -17,7 +17,7 @@ export class TipoComprobanteBuscarComponent implements OnInit {
     let array: Tipo_Comprobante[] = [];
     this.TipoComporbanteService.listar().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.tipo.includes(e.target.value)) {
+        if (element.comprobante.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

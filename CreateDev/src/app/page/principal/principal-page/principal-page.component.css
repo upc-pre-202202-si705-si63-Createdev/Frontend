@@ -31,7 +31,7 @@ a {
 
 .nav-link {
     font-weight: 600;
-    padding-right: 20px;
+    padding-right: 10px;
     text-decoration: none;
     color: black;
     font: bold 3rem 'Maven Pro', san-serif;
@@ -42,10 +42,8 @@ a {
 
 #dis {
     display: flex;
-
     padding-bottom: 0;
-    padding-right: 20px;
-
+    padding-right: 0px;
 }
 
 html,

@@ -1,16 +1,16 @@
-export class Producto {
-    id: number = 0;
-    nombre: string = "";
-    descripcion: string = ""
-    stock: number = 0;
-    peso: number = 0;
-    precio_unitario: number = 0;
-    material: string = "";
-    fecha_creacion: string = "";
-    lugar_fabricacion: string = "";
-}
+import { Tipo_Producto } from './tipo-producto';
+import { Artesano } from './Artesanos';
 
-/*
-Tipo_Producto_id: number = 0;
-artesanos_usuario_id: number = 0;
-*/
+export class Producto {
+    idProducto: number = 0;
+    nameProducto: string = "";
+    descripcionProducto: string = ""
+    stockProducto: number = 0;
+    pesoProducto: number = 0;
+    precioProducto: number = 0;
+    materialProducto: string = "";
+    fechaProducto: string = "";
+    lugarfabricacionProducto: string = "";
+    tipoproductoProducto: Tipo_Producto = new Tipo_Producto();
+    artesanoProducto: Artesano = new Artesano();
+}

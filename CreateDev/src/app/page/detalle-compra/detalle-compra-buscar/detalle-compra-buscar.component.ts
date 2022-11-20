@@ -18,7 +18,7 @@ export class DetalleCompraBuscarComponent implements OnInit {
     let array : detalle_compra[]=[];
     this.detacompraSer.listar().subscribe(data=>{
       data.forEach((element,index)=>{
-        if(element.idProducto.nombre.includes(e.target.value)){
+        if(element.idProducto.nameProducto.includes(e.target.value)){
           array.push(data[index]);
         }
       });

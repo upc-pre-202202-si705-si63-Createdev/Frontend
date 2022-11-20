@@ -1,66 +1,87 @@
-
 <div class="container">
 
   <h1>Agregar Producto</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="producto.id">
+    <input matInput placeholder="id" [(ngModel)]="producto.idProducto">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput required placeholder="nombre" [(ngModel)]="producto.nombre">
+    <input matInput required placeholder="nombre" [(ngModel)]="producto.nameProducto">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Descripcion</mat-label>
-    <input matInput required placeholder="descripcion" [(ngModel)]="producto.descripcion">
+    <input matInput required placeholder="descripcion" [(ngModel)]="producto.descripcionProducto">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Stock</mat-label>
-    <input matInput required placeholder="stock" [(ngModel)]="producto.stock">
+    <input matInput required placeholder="stock" [(ngModel)]="producto.stockProducto">
   </mat-form-field>
-  
+
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Peso</mat-label>
-    <input matInput required placeholder="peso" [(ngModel)]="producto.peso">
+    <input matInput required placeholder="peso" [(ngModel)]="producto.pesoProducto">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Precio Unitario</mat-label>
-    <input matInput required placeholder="precio unitario" [(ngModel)]="producto.precio_unitario">
+    <input matInput required placeholder="precio unitario" [(ngModel)]="producto.precioProducto">
   </mat-form-field>
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Material</mat-label>
-    <input matInput required placeholder="material" [(ngModel)]="producto.material">
+    <input matInput required placeholder="material" [(ngModel)]="producto.materialProducto">
   </mat-form-field>
   <br>
 
-  <mat-form-field class="example-full-width">
+  <mat-form-field appearance="fill">
     <mat-label>Fecha de Creacion</mat-label>
-    <input matInput required placeholder="fecha de creacion" [(ngModel)]="producto.fecha_creacion">
-  </mat-form-field>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada" [max]="maxFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Lugar de Fabricacion</mat-label>
-    <input matInput required placeholder="lugar de fabricacion" [(ngModel)]="producto.lugar_fabricacion">
+    <input matInput required placeholder="lugar de fabricacion" [(ngModel)]="producto.lugarfabricacionProducto">
   </mat-form-field>
   <br>
 
-  
+  <mat-form-field appearance="fill">  <!--Tipo_Producto-->
+    <mat-label>Seleccione Tipo de Producto</mat-label>
+    <mat-select [(value)]="idTipoProductoSeleccionado" required>
+        <mat-option *ngFor="let p of listaTipo_Producto" [value]="p.idTipoProducto">
+            {{p.tipoTipoProducto}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+
+<mat-form-field appearance="fill">  <!--Tipo_Producto-->
+  <mat-label>Seleccione Artesano</mat-label>
+  <mat-select [(value)]="idArtesanoSeleccionado" required>
+      <mat-option *ngFor="let p of listaArtesanos" [value]="p.idArtesano">
+          {{p.usuario.nameUsuarios}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+
+
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/producto">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/home/page/producto">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>

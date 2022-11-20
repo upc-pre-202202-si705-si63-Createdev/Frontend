@@ -21,12 +21,6 @@
       <td mat-cell *matCellDef="let element"> {{element.emailUsuarios}} </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="contrasenaUsuarios">
-      <th mat-header-cell *matHeaderCellDef> contraseña </th>
-      <td mat-cell *matCellDef="let element"> {{element.contrasenaUsuarios}} </td>
-    </ng-container>
-
 
     <ng-container matColumnDef="nameUsuarios">
       <th mat-header-cell *matHeaderCellDef> nombre </th>
@@ -76,7 +70,7 @@
 
   <div class="example-button-container">
 
-    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
       routerLink="/home/page/Usuarios/nuevo">
       <mat-icon>plus_one</mat-icon>
     </button>
