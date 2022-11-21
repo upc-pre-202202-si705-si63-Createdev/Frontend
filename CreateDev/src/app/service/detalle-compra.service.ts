@@ -1,3 +1,4 @@
+import { RespuestaCompra2 } from './../model/RespuestaCompra2';
 import { RespuestaCompra } from './../model/RespuestaCompra';
 import { detalle_compra } from './../model/detalle-compra';
 import { HttpClient } from '@angular/common/http';
@@ -58,5 +59,9 @@ export class DetalleCompraService {
 
   query1() {
     return this.http.get<RespuestaCompra[]>(this.url+"/query1");
+  }
+
+  query2() {
+    return this.http.get<RespuestaCompra2[]>(this.url+"/query2");
   }
 }

@@ -1,3 +1,4 @@
+import { DetalleCompraQuery2Component } from './page/detalle-compra/detalle-compra-query2/detalle-compra-query2.component';
 import { DetalleCompraQuery1Component } from './page/detalle-compra/detalle-compra-query1/detalle-compra-query1.component';
 
 import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
@@ -121,7 +122,8 @@ const routes: Routes = [
                 path: 'detallecompras', component: DetalleCompraComponent, children: [
                   { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
                   { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent },
-                  { path: 'query1', component: DetalleCompraQuery1Component }
+                  { path: 'query1', component: DetalleCompraQuery1Component },
+                  { path: 'query2', component: DetalleCompraQuery2Component }
                 ]
               },
               {
