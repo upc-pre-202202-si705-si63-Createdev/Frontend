@@ -1,3 +1,4 @@
+import { RespuestaCompra } from './../model/RespuestaCompra';
 import { detalle_compra } from './../model/detalle-compra';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -53,5 +54,9 @@ export class DetalleCompraService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+
+  query1() {
+    return this.http.get<RespuestaCompra[]>(this.url+"/query1");
   }
 }

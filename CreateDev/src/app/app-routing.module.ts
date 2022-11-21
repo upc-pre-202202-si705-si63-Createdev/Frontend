@@ -1,3 +1,4 @@
+import { DetalleCompraQuery1Component } from './page/detalle-compra/detalle-compra-query1/detalle-compra-query1.component';
 
 import { PedidoCantidadComponent } from './page/Pedido/pedido-cantidad/pedido-cantidad.component';
 import { ProductoProductosArtesanoComponent } from './page/Producto/producto-productos-artesano/producto-productos-artesano.component';
@@ -119,7 +120,8 @@ const routes: Routes = [
               {
                 path: 'detallecompras', component: DetalleCompraComponent, children: [
                   { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
-                  { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
+                  { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent },
+                  { path: 'query1', component: DetalleCompraQuery1Component }
                 ]
               },
               {
@@ -174,12 +176,6 @@ const routes: Routes = [
                 path: 'tipo-producto', component: TipoProductoComponent, children: [
                   { path: 'nuevo', component: TipoProductoCreaeditaComponent },
                   { path: 'edicion/:id', component: TipoProductoCreaeditaComponent }
-                ]
-              },
-              {
-                path: 'detallecompras', component: DetalleCompraComponent, children: [
-                  { path: 'nuevo', component: DetalleCompraCreaeditaComponent },
-                  { path: 'edicion/:id', component: DetalleCompraCreaeditaComponent }
                 ]
               }
             ]
