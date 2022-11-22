@@ -14,7 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SolicitudDisenioService {
 
-  private url: string = "https://createdev-prueba-back.herokuapp.com"
+  private url: string = `${environment.host}/solicitudes`
   private listaCambio = new Subject<solicitud_disenio[]>()
   private confirmaEliminacion = new Subject<Boolean>();
   constructor(private http: HttpClient) { }

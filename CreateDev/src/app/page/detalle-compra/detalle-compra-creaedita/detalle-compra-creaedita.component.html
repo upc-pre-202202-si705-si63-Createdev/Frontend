@@ -3,15 +3,15 @@
     
     <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
-        <input matInput placeholder="idVehiculo" [(ngModel)]="detalleCompra.id">
+        <input matInput placeholder="id" [(ngModel)]="detalleCompra.id">
     </mat-form-field>
     <br>
 
     <mat-form-field appearance="fill">
         <mat-label>Seleccione Compra</mat-label>
         <mat-select [(value)]="idDeCompraSeleccionada" required>
-            <mat-option *ngFor="let p of listaCompra" [value]="p.id">
-                {{p.nombre_usuario}}
+            <mat-option *ngFor="let c of listaCompra" [value]="c.id">
+                {{c.nombre_usuario}}
             </mat-option>
         </mat-select>
     </mat-form-field>
@@ -19,7 +19,7 @@
     
     <mat-form-field class="example-full-width">
         <mat-label>Cantidad</mat-label>
-        <input matInput placeholder="Licencia" [(ngModel)]="detalleCompra.cantidad">
+        <input matInput placeholder="cantidad" [(ngModel)]="detalleCompra.cantidad">
     </mat-form-field>
     <br>
     
@@ -35,7 +35,7 @@
     
     <mat-form-field class="example-full-width">
         <mat-label>Precio Unitario</mat-label>
-        <input matInput placeholder="Licencia" [(ngModel)]="detalleCompra.precio_unitario">
+        <input matInput placeholder="precio_unitario" [(ngModel)]="detalleCompra.precio_unitario">
     </mat-form-field>
     <br>
     

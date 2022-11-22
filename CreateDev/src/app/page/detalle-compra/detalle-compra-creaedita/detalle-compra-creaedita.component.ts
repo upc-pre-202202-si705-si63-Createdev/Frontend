@@ -15,7 +15,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class DetalleCompraCreaeditaComponent implements OnInit {
 
   detalleCompra : detalle_compra = new detalle_compra();
-  producto : Producto = new Producto();
+ 
 
   id : number=0;
 
@@ -54,6 +54,10 @@ export class DetalleCompraCreaeditaComponent implements OnInit {
       let p = new Producto();
       p.idProducto = this.idProductoSeleccionado;
 
+
+      this.detalleCompra.idCompra= c;
+      this.detalleCompra.idProducto=p;
+
       if(this.edicion){
         this.detaCompra.modificar(this.detalleCompra).subscribe(() => {
           this.detaCompra.listar().subscribe(data => {
@@ -66,8 +70,6 @@ export class DetalleCompraCreaeditaComponent implements OnInit {
           this.detaCompra.listar().subscribe(data => {
             this.detaCompra.setLista(data);
           });
-        }, err => {
-          console.log(err);
         });
       }
       this.router.navigate(['home/login/page/detallecompras']);
@@ -87,9 +89,7 @@ export class DetalleCompraCreaeditaComponent implements OnInit {
         this.detalleCompra = data
         console.log(data);
         this.idDeCompraSeleccionada = data.idCompra.id;
-
-        console.log(data);
-        this.idProductoSeleccionado = data.idCompra.id;
+        this.idProductoSeleccionado = data.idProducto.idProducto;
       });
 
     }

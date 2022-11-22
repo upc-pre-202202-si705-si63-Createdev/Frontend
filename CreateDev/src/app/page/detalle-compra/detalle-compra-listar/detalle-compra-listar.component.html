@@ -1,6 +1,10 @@
 <div class="container">
     <div style=" text-align: center;">
       <h1>Lista de Detalles de Compra</h1>
+      <div>
+        <a routerLink="/home/login/page/detallecompras/query1"><button class="btn_busqueda">Informe de Compra</button></a>
+        <a routerLink="/home/login/page/detallecompras/query2"><button class="btn_busqueda"> Cantidad de Compras realizadas por cada Artesano </button></a>
+      </div>
     </div>
 
     <app-detalle-compra-buscar></app-detalle-compra-buscar>
@@ -24,8 +28,8 @@
 
 
         <ng-container matColumnDef="idProducto">
-            <th mat-header-cell *matHeaderCellDef> Id del Producto </th>
-            <td mat-cell *matCellDef="let element"> {{element.idProducto.nombre}} </td>
+            <th mat-header-cell *matHeaderCellDef> Nombre Producto </th>
+            <td mat-cell *matCellDef="let element"> {{element.idProducto.nameProducto}} </td>
         </ng-container>
 
 

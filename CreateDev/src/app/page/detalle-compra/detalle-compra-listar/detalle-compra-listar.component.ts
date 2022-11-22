@@ -19,7 +19,7 @@ export class DetalleCompraListarComponent implements OnInit {
   constructor(private ps: DetalleCompraService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe((data: detalle_compra[] | undefined) => {
+    this.ps.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 
